@@ -1,10 +1,6 @@
 ---
-- hosts: webservers # Isso é uma play
+- hosts: webservers
   gather_facts: no
   remote_user: root
-  vars:
-    # Possível definir variáveis para essa play
-  tasks: # Sequência de tasks a serem executadas em ordem, cada task é uma chamada a módulo.
-  - name: make sure connection is working 
-    ping:
-#- hosts: dbs <= outras plays podem ser declaradas
+  roles:
+    - health-checker
