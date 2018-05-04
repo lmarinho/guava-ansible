@@ -1,0 +1,67 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Core / Helpers ................................... //
+
+:focus {outline:none;}
+.pull-right { float: right; }
+.invisible { visibility: hidden !important; }
+
+@mixin underline($y-position, $y-height, $color, $transparency) {
+  background-image: linear-gradient(to bottom, transparent 50%, transparentize($color, $transparency) 50%);
+  background-position: 0 $y-position;
+  background-repeat: repeat-x;
+  background-size: 4px $y-height;
+  text-decoration: none;
+}
+
+@mixin invisible-text {
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999em;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-slow {
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+}
+
+@mixin transition {
+  -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+@mixin transition-fast {
+  -webkit-transition: all .1s linear;
+          transition: all .1s linear;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin full-background {
+  background-position: center center fixed;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+@mixin centered-circle($radius-top, $radius-right:$radius-top, $radius-bottom:$radius-top, $radius-left:$radius-top) {
+  width: 3500px;
+  left: 50%;
+  margin-left: -1750px;
+  border-radius: $radius-top $radius-right $radius-bottom $radius-left;
+  overflow: hidden;
+}
+
+@mixin texture($color) {
+  background: url(/images/texture-background-#{$color}@2x.png) repeat;
+  background-size: 120px auto;
+}

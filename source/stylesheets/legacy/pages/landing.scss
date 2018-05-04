@@ -1,0 +1,219 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Pages / Landing .................................. //
+
+.landing-section {
+  @include clearfix;
+  position: relative;
+  overflow: hidden;
+  background-color: $white;
+  .type-link.is-serif {
+    cursor: pointer;
+    margin-top: modular-scale(1);
+  }
+}
+
+.landing-services {
+  padding-top: 100px;
+  padding-bottom: modular-scale(13);
+  @media (min-width: $break-desk-sm-min) { padding-bottom: modular-scale(14); }
+  @media (min-width: $break-desk-md-min) {
+    padding-top: 140px;
+    padding-bottom: modular-scale(15);
+  }
+}
+.landing-services-text {
+  position: relative;
+  z-index: 1;
+}
+.landing-services-boxes {
+  margin-top: modular-scale(5);
+  position: relative;
+  z-index: 1;
+  @media (min-width: $break-desk-sm-min) {
+    margin-top: modular-scale(9);
+    width: 88%;
+  }
+  @media (min-width: $break-desk-md-min) { width: 670px; }
+}
+.landing-services-item {
+  @include transition;
+  width: 100%;
+  height: 160px;
+  box-sizing: border-box;
+  float: left;
+  border: 3px solid $guava-dark;
+  background-color: $white;
+  margin-bottom: 15px;
+  .type-header-service { @include transition; }
+  &:hover, &:focus, &:active {
+    background-color: $guava;
+    border-color: $guava;
+    .type-header-service { color: $white; }
+    .icon-fill { fill: $white; }
+    .icon-stroke { stroke: $white; }
+  }
+  @media (min-width: $break-desk-sm-min) {
+    width: 48%;
+    height: 260px;
+    margin-bottom: 0;
+    &:first-child { margin-right: 4%; }
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 45%;
+    height: 260px;
+    &:first-child { margin-right: 10%; }
+  }
+}
+.landing-services-link {
+  position: relative;
+  padding: 15px;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  .icon {
+    width: 62px;
+    display: block;
+    position: absolute;
+    right: 15px;
+    bottom: 3px;
+    .icon-stroke { stroke-width: 4px; }
+  }
+}
+
+.landing-process { z-index: 0; }
+.landing-process-circles {
+  position: relative;
+  margin-top: 40px;
+  padding: 70px 0 310px;
+  overflow: hidden;
+  .type-label-circles {
+    position: absolute;
+    z-index: 1;
+    color: $white;
+  }
+  @media (min-width: $break-desk-md-min) { padding: 110px 0 370px; }
+}
+
+.landing-work {
+  z-index: 1;
+  margin-bottom: modular-scale(5);
+  padding-top: modular-scale(12);
+  padding-bottom: modular-scale(2);
+  top: -250px;
+  margin-bottom: -250px;
+  background-color: $gray-darkest;
+  .grid-content { z-index: 1; }
+  @media (min-width: $break-desk-sm-min) { padding-bottom: modular-scale(5); }
+  @media (min-width: $break-desk-md-min) {
+    padding-top: modular-scale(14);
+    padding-bottom: modular-scale(10);
+  }
+}
+.landing-work-list {
+  width: 100%;
+  margin-top: modular-scale(6);
+  @media (min-width: $break-desk-sm-min) {
+    margin-top: modular-scale(4);
+    width: 85%;
+  }
+  @media (min-width: $break-desk-md-min) {
+    margin-top: modular-scale(6);
+    width: 100%;
+  }
+}
+.landing-work-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 43%;
+  padding: 0 2%;
+  margin-bottom: 30px;
+  text-align: center;
+  .logo { width: 90%; }
+  .logo-fill { fill: transparentize($gray-dark, 0.2); }
+  &.is-small {
+    .logo { width: 75%; }
+  }
+  &.is-big {
+    .logo { width: 100%; }
+  }
+  &.is-trueandco { margin: 16px 0 19px; }
+  @media (min-width: $break-mobi-md-min) and (max-width: $break-desk-sm-max) {
+    width: 28%;
+    margin-bottom: 40px;
+    &.is-trueandco { margin: 16px 0 48px; }
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 27%;
+    margin-bottom: 30px;
+    &.is-trueandco { margin: 16px 0 19px; }
+    &.is-elife,
+    &.is-endossa { padding-left: 0; }
+  }
+}
+
+.landing-about {
+  margin-bottom: -76px;
+  overflow: hidden;
+  @media (min-width: $break-desk-sm-min) { margin-bottom: -116px; }
+  @media (min-width: $break-desk-md-min) { margin-bottom: -146px; }
+  .figure-photo {
+    position: relative;
+    top: -76px;
+    text-align: center;
+    @media (min-width: $break-desk-sm-min) { top: -116px; }
+    @media (min-width: $break-desk-md-min) { top: -146px; }
+  }
+}
+
+.landing-about-wrapper {
+  background: url(/images/pattern-x-small.svg) repeat;
+  background-size: 63px 61px;
+  background-position: 5px 5px;
+  position: relative;
+  margin: 112px 0;
+  padding: 60px 0 28px;
+  z-index: 1;
+  @media (min-width: $break-desk-sm-min) {
+    padding: 50px 0 45px;
+    background-position: 8px 7px;
+  }
+  @media (min-width: $break-desk-md-min) { padding: 62px 0 86px; }
+  .grid-content { top: 3px; }
+  .type-header-section {
+    display: inline;
+    background-color: $white;
+  }
+  .type-text {
+    padding: 6px 0;
+    margin-top: ms-sans(4);
+    background-color: $white;
+  }
+  .type-link { background-color: $white; }
+  &:before {
+    content: '';
+    position: absolute;
+    top: -112px;
+    left: 0;
+    background: url(/images/pattern-x-top.svg) no-repeat;
+    background-size: 2560px 112px;
+    background-position: 48px 0;
+    width: 100%;
+    height: 112px;
+    @media (min-width: $break-desk-sm-min) { background-position: 51px 0; }
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -112px;
+    left: 0;
+    background: url(/images/pattern-x-bottom.svg) no-repeat;
+    background-size: 2560px 112px;
+    background-position: 17px 6px;
+    width: 100%;
+    height: 112px;
+    @media (min-width: $break-desk-sm-min) { background-position: 20px 6px; }
+  }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/icon-check</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g class="icon-check-line" stroke-width="3" stroke="#F9F9F9">
+            <polyline id="Line" transform="translate(16.706177, 16.950180) scale(-1, 1) rotate(-360.000000) translate(-16.706177, -16.950180) " points="9.41235352 12 18.9169766 21.9003601 24 16.9501801"></polyline>
+        </g>
+    </g>
+</svg>

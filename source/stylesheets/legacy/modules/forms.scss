@@ -1,0 +1,359 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Forms .................................. //
+
+// Call to Action
+
+.form-group {
+  position: relative;
+  .type-caption { color: $gray-dark; }
+}
+
+.form-group-cta {
+  @include clearfix;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+  @media (min-width: $break-desk-sm-min) {
+    width: 48%;
+    float: left;
+    margin-bottom: 0;
+  }
+  @media (min-width: $break-desk-md-min) { width: 54%; }
+}
+
+.form-input-cta {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  display: block;
+  border: none;
+  background-color: transparent;
+  z-index: 3;
+  padding: 8px 10px 6px;
+  font-size: ms-sans(3);
+  line-height: ms-sans(4);
+  text-transform: capitalize;
+  &.is-process,
+  &.is-services { color: darken($green-darkest, 17%); }
+  &.is-work { color: $guava-darker; }
+  &.is-about-us { color: darken($yellow-darkest, 13%); }
+  &:focus {
+    outline: none;
+    z-index: 3;
+  }
+  &:focus, &:valid {
+    ~ .form-label-cta {
+      outline: none;
+      bottom: 100%;
+      font-size: ms-sans(2);
+      line-height: ms-sans(4);
+      z-index: 2;
+    }
+    ~ .form-cta-highlight {
+      height: 42px;
+      background-color: $white;
+      z-index: 1;
+    }
+  }
+}
+
+.form-label-cta {
+  @include transition-fast;
+  font-size: ms-sans(3);
+  font-weight: $medium;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  bottom: 20%;
+  color: $gray-darkest;
+  opacity: 0.35;
+  &.is-work { opacity: 0.4; }
+}
+
+.form-cta-highlight {
+  @include transition-fast;
+  width: 100%;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  height: 3px;
+  background-color: $white;
+}
+
+// Start a Project
+
+fieldset {
+  @include clearfix;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: block;
+  legend { display: none; }
+}
+
+.form-startdate,
+.form-timeframe,
+.form-budget {
+  margin-bottom: 30px;
+  @media (min-width: $break-desk-sm-max) { margin-bottom: 50px; }
+}
+
+.form-group-start {
+  @include clearfix;
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.form-input-start {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  display: block;
+  border: none;
+  background-color: transparent;
+  z-index: 3;
+  padding: 10px;
+  font-size: ms-sans(1);
+  line-height: ms-sans(1);
+  &:focus {
+    outline: none;
+    z-index: 3;
+  }
+  &:focus, &:valid {
+    ~ .form-label-start {
+      outline: none;
+      bottom: 100%;
+      font-size: modular-scale(-1);
+      z-index: 2;
+      color: $gray-darkest;
+    }
+    ~ .form-start-highlight {
+      height: 34px;
+      background-color: $white;
+      z-index: 1;
+    }
+  }
+}
+
+
+.form-input-start::-webkit-input-placeholder { color: transparent; }
+.form-input-start::-moz-placeholder { color: transparent; }
+.form-input-start:-ms-input-placeholder { color: transparent; }
+
+.form-label-start {
+  @include transition-fast;
+  font-size: modular-scale(-1);
+  font-weight: $medium;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  bottom: 20%;
+  color: $gray-dark;
+}
+
+.form-start-highlight {
+  @include transition-fast;
+  width: 100%;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  height: 3px;
+  background-color: $white;
+}
+
+.form-text-area {
+  @include transition-fast;
+  width: 100%;
+  border: 0;
+  height: 80px;
+  margin-top: 10px;
+  font-size: ms-sans(0);
+  line-height: ms-sans(2);
+  padding: 7px;
+  box-sizing: border-box;
+  resize: none;
+  border: 3px solid transparent;
+  &:focus { border-color: darken($gray-lighter, 9%); }
+}
+
+.form-title {
+  @include transition-fast;
+  font-size: modular-scale(-1);
+  font-weight: $medium;
+  position: relative;
+  color: $gray-darkest;
+  display: block;
+}
+
+.form-project {
+  background-color: $gray-lighter;
+  padding: 60px 30px 110px;
+  margin-bottom: 200px;
+  @media (min-width: $break-desk-sm-min) { padding: 60px 50px 110px; }
+}
+
+.form-group-radio {
+  box-sizing: border-box;
+	position: relative;
+	display: block;
+  padding: 7px 0 0 27px;
+  margin: 12px 0;
+	cursor: pointer;
+  width: 100%;
+  .type-form { display: block; }
+  @media (min-width: $break-desk-sm-max) {
+    float: left;
+    width: 30%;
+    padding: 30px 0 0;
+    margin: 0;
+    .type-form { text-align: center; }
+    &:first-of-type {
+      width: 20%;
+      .form-radio-check,
+      .form-input-radio { left: 0; }
+      .type-form { text-align: left; }
+    }
+    &:last-of-type {
+      width: 20%;
+      .form-radio-check,
+      .form-input-radio {
+        right: 0;
+        left: auto;
+      }
+      .type-form { text-align: right; }
+    }
+  }
+}
+
+.form-group-inline {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  padding-left: 27px;
+  margin-right: 20px;
+  margin-top: 4px;
+  cursor: pointer;
+  .form-radio-check,
+  .form-input-radio { left: 0; }
+}
+
+.form-input-radio {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  &:focus + .form-radio-check { border: 3px solid darken($gray, 30%); }
+  &:checked ~ .form-radio-check {
+    background: $gray-lighter;
+    border: 3px solid $guava-lightest;
+    &:after { opacity: 1; }
+  }
+  @media (min-width: $break-desk-sm-max) { left: calc(50% - 11px); }
+}
+
+.form-radio-check {
+  @include transition-fast;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  border: 3px solid darken($gray, 7%);
+  background: $gray-lighter;
+  &:after {
+    @include transition-fast;
+    content: '';
+    position: absolute;
+    display: block;
+    opacity: 0;
+    top: 4px;
+    left: 4px;
+    width: 7px;
+    height: 7px;
+    background: $guava-lightest;
+    border-radius: 50%;
+  }
+  @media (min-width: $break-desk-sm-max) { left: calc(50% - 11px); }
+}
+
+// Budget
+
+.form-line {
+  background-color: $gray-light;
+  display: block;
+  position: absolute;
+  margin: 0;
+  width: 3px;
+  height: calc(100% - 12px);
+  top: 2px;
+  left: 9px;
+  @media (min-width: $break-desk-sm-max) {
+    width: 100%;
+    height: 3px;
+    top: 12px;
+    left: 0;
+  }
+}
+
+// Files
+
+.form-files {
+  .type-file-upload,
+  .type-file-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  .form-title { margin-bottom: 5px; }
+}
+
+.form-files-group {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  & + & { margin-top: 10px; }
+  .type-form { margin-left: 7px; }
+}
+
+.form-files-upload {
+  display: inline-block;
+  &:hover, &:focus, &:active {
+    .button {
+      background-color: $yellow-darkest;
+      .icon-fill { fill: $white; }
+    }
+  }
+}
+
+.form-files-remove {
+  &:hover, &:focus, &:active {
+    .button {
+      background-color: $guava-light;
+      .icon-fill { fill: $white; }
+    }
+  }
+}
+
+.form-input-upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  height: 100%;
+
+  &.is-hidden { width: 0; }
+}

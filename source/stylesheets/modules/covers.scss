@@ -1,0 +1,207 @@
+///////////////////////////////////////////////////////////
+// Covers                                       (Module) //
+///////////////////////////////////////////////////////////
+
+figure { margin: 0; }
+
+#cover {
+  padding: ($gutter-small / 2) ($gutter-small / 2) 0;
+  @media (min-width: $sm) { padding: ($gutter / 2) ($gutter / 2) 0; }
+
+  + hr + section {
+    padding-top: ($gutter-small / 2);
+    @media (min-width: $sm) { padding-top: ($gutter / 2); }
+  }
+}
+
+.cover {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: calc(#{$grid-body-max-width} - #{$gutter-small});
+  height: calc(100vh - #{$gutter-small} );
+  min-height: auto;
+  background-color: $brand-primary;
+  @media (min-width: $sm) {
+    width: calc(100vw - #{$gutter});
+    max-width: calc(#{$grid-body-max-width} - #{$gutter});
+    height: calc(100vh - #{$gutter});
+    min-height: auto;
+    max-height: 1080px;
+  }
+  .is-lead { font-weight: $medium; }
+
+  > .of-hero {
+    height: 100%;
+    .is-row {
+      align-items: flex-end;
+      height: inherit;
+    }
+    .is-content {
+      @include make-col-ready;
+      @media (min-width: $sm) {
+        @include make-col(12);
+        @include make-col-offset(4);
+      }
+      @media (min-width: $md) {
+        @include make-col(8);
+        @include make-col-offset(8);
+      }
+      margin-bottom: 2rem;
+      p + p { margin-top: .75rem; }
+    }
+    h1 {
+      position: relative;
+      margin-bottom: $h1-margin;
+      &::after {
+        position: absolute;
+        bottom: -($h1-margin / 3);
+        display: block;
+        width: 200%;
+        height: 4px;
+        content: "";
+      }
+    }
+  }
+
+  &.of-landing {
+    height: calc(100vh - #{$gutter-small});
+    min-height: 530px;
+    background-image: image-url("illustration-landing-xs-4@2x.png");
+    background-repeat: no-repeat;
+    background-position: 50% 18%;
+    background-size: auto 60%;
+    h1 {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding-right: 10%;
+      padding-left: 10%;
+      margin-bottom: 2.2rem;
+      color: $white;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      text-align: center;
+    }
+    @media (min-width: $sm) {
+      height: calc(100vh - #{$gutter});
+      min-height: 565px;
+      background-image: image-url("illustration-landing-sm@2x.png");
+      background-size: 135% auto;
+      h1 { bottom: 4rem; }
+    }
+    @media (min-width: $md) {
+      background-image: image-url("illustration-landing-lg-2@2x.png");
+      background-size: cover;
+      h1 {
+        bottom: 5rem;
+        padding-right: 15%;
+        padding-left: 15%;
+      }
+    }
+    .logo { fill: $white; }
+  }
+
+  &.of-services {
+    min-height: 740px;
+    background-color: $gray-lighter;
+    background-image: image-url("texture-background-gray@2x.png");
+    background-repeat: repeat;
+    background-size: 150px;
+    .of-guava .at-cover { fill: $guava; }
+    h1::after { background-color: $green-dark; }
+    h1, p, { color: $brand-primary; }
+    figure {
+      position: absolute;
+      top: -1.6rem;
+      right: -17rem;
+      pointer-events: none;
+    }
+    img {
+      display: block;
+      width: 722px;
+      height: auto;
+    }
+    @media (min-width: $sm) {
+      min-height: 565px;
+      figure {
+        top: -$gutter;
+        right: -3rem;
+        transform: rotate(-10deg);
+      }
+    }
+    @media (min-width: $md) {
+      img { width: 802px; }
+    }
+    @media (min-width: $lg) {
+      img { width: 882px; }
+    }
+  }
+
+  &.of-process {
+    min-height: 730px;
+    background-color: $gray-darkest;
+    background-image: image-url("pattern-stars@2x.png"),
+    linear-gradient(to bottom,
+    transparentize($gray-darkest, .1) 50%,
+    transparentize($gray-darkest, .1) 50%),
+    image-url("texture-background-white@2x.png");
+    background-repeat: repeat, repeat, repeat;
+    background-size: 1500px auto, 100%, 150px auto;
+    @media (min-width: $sm) { min-height: 565px; }
+    .of-guava .at-cover { fill: $guava; }
+    h1::after { background-color: $brand-primary; }
+    h1, p, {
+      color: $white;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+    }
+    .diagram {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      @media (min-width: $sm) { top: 5%; }
+    }
+  }
+
+  &.of-work {
+    min-height: 710px;
+    background-color: $green-light;
+    background-image: image-url("texture-background-green@2x.png"),
+    linear-gradient(to bottom,
+    transparentize($green-light, 1) 0%,
+    transparentize($green-light, .4) 100%),
+    image-url("pattern-work@2x.png");
+    background-repeat: repeat, repeat, repeat;
+    background-size: 150px auto, 100%, 571px auto;
+    .of-guava .at-cover { fill: $guava; }
+    @media (min-width: $sm) { min-height: 565px; }
+
+    h1::after { background-color: $brand-primary; }
+    h1, p, { color: $black; }
+  }
+
+  &.of-about-us {
+    min-height: 710px;
+    background-color: $black;
+    background-image: linear-gradient(to bottom,
+    transparentize($black, 1) 0%,
+    transparentize($black, .2) 100%),
+    image-url("picture-about.jpg");
+    background-position: 16%;
+    background-size: auto 105%;
+    @media (min-width: $sm) {
+      min-height: 565px;
+      background-position: 16%;
+      background-size: 100%, cover;
+    }
+    .logo { fill: $white; }
+    .is-content {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1::after { background-color: $brand-primary; }
+    h1, p, { color: $white; }
+  }
+}

@@ -1,0 +1,158 @@
+///////////////////////////////////////////////////////////
+// Grid                                         (Module) //
+///////////////////////////////////////////////////////////
+
+$columns:       $grid-columns;
+$gutter:        $grid-gutter-width-base;
+$gutter-small:  $grid-gutter-width-small;
+$border-width:  $gutter / 2;
+$menu-width:    15rem; // 300px
+$grid-body-max-width: 1680px;
+
+body {
+  margin: 0;
+  background-color: $gray-lightest;
+}
+
+.grid {
+  &.is-body-wrapper {
+    position: relative;
+    max-width: $grid-body-max-width;
+    margin-right: auto;
+    margin-left: auto;
+    overflow-x: hidden;
+    background-color: $white;
+  }
+
+  &.is-row { @include make-row; }
+
+  &.is-container {
+    @include make-container;
+    // Overwrite Bootstrap's padding.
+    @media (max-width: 360px) { padding: 0 $gutter-small; }
+    @media (min-width: 361px) { padding: 0 $gutter !important; }
+    @media (min-width: 420px) { padding: 0 $gutter !important; }
+    @media (max-width: $xs)   { padding: 0 $gutter; }
+    @media (min-width: $sm)   { padding: 0 $gutter; }
+    // Add a maximum width at extra large displays.
+    @media (min-width: $xl) {
+      @include make-container-max-widths;
+    }
+    &.is-fluid { width: 100%; }
+  }
+
+  .at-footer {
+    &.is-left-column {
+      @include make-col(16);
+      @media (min-width: $sm) { @include make-col(6); }
+      @media (min-width: $md) { @include make-col(4); }
+    }
+    &.is-right-column {
+      @include make-col(16);
+      @media (min-width: $sm) { @include make-col(10); }
+      @media (min-width: $md) { @include make-col(12); }
+    }
+  }
+
+  &.is-wrapper { transition: transform .3s ease; }
+
+  &.has-menu {
+    overflow-y: hidden;
+    .is-wrapper { transform: translateX(-$menu-width); }
+    .menu {
+      overflow-y: auto;
+      transform: translateX(0);
+    }
+  }
+
+  [class*="-column"] {
+    @include make-col-ready;
+    &.is-25-wide { @include make-col($columns / 4); }
+    &.is-50-wide { @media (min-width: $sm) { @include make-col($columns / 2); } }
+    &.is-75-wide { @include make-col(($columns / 4) * 3); }
+
+    &.of-wide-content {
+      @media (min-width: $sm) {
+        @include make-col(14);
+        @include make-col-offset(1);
+      }
+      @media (min-width: $md) {
+        @include make-col(10);
+        @include make-col-offset(4);
+      }
+      > .has-sideheader {
+        h3, p { @include make-col-ready; }
+        @media (min-width: $sm) {
+          h3 { @include make-col(3.5); }
+          p, ul { @include make-col(12.5); }
+        }
+      }
+    }
+
+    &.of-superwide-content {
+      @media (min-width: $md) {
+        @include make-col(12);
+        @include make-col-offset(4);
+      }
+      @media (min-width: $lg) {
+        @include make-col(10);
+        @include make-col-offset(4);
+      }
+    }
+
+    &.of-ultrawide-content {
+      @media (min-width: $md) {
+        @include make-col(12);
+        @include make-col-offset(4);
+      }
+    }
+
+    &.of-article-content {
+      @media (min-width: $sm) {
+        @include make-col(12);
+        @include make-col-offset(2);
+      }
+      @media (min-width: $md) {
+        @include make-col(8);
+        @include make-col-offset(4);
+      }
+      .of-sidetext {
+        @media (min-width: $sm) { @include make-col(12); }
+        @media (min-width: $md) { @include make-col(10); }
+      }
+    }
+
+    &.of-ultrawide-form {
+      @media (min-width: $md) {
+        @include make-col(11);
+        @include make-col-offset(4);
+      }
+    }
+
+    &.of-sidenote {
+      @media (min-width: $sm) {
+        @include make-col(12);
+        @include make-col-offset(2);
+      }
+      @media (min-width: $md) { @include make-col(16); }
+    }
+
+    &.of-intro-content {
+      @include make-col-offset(1);
+      @include make-col(15);
+      @media(min-width: $sm) { padding-bottom: 1rem; }
+      @media (min-width: $sm) {
+        @include make-col-offset(2);
+        @include make-col(14);
+      }
+      @media (min-width: $md) {
+        @include make-col-offset(4);
+        @include make-col(12);
+      }
+      @media (min-width: $lg) {
+        @include make-col-offset(4);
+        @include make-col(12);
+      }
+    }
+  }
+}

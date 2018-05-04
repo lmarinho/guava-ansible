@@ -1,0 +1,88 @@
+///////////////////////////////////////////////////////////
+// Buttons                                      (Module) //
+///////////////////////////////////////////////////////////
+
+.button {
+  @include font-size(tiny, 1, 1, .1rem);
+  display: block;
+  padding: .3rem .3rem .25rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-style: solid;
+  @media (min-width: $sm) { display: inline-block; }
+
+  &:focus { outline: none; }
+
+  &.is-link {
+    color: $text-link;
+    font-weight: $medium;
+    text-decoration: none;
+    border-color: $brand-primary;
+    border-width: 2px;
+    &.of-case {
+      color: $green;
+      border-color: $brand-secondary;
+    }
+    &.has-icon {
+      .of-small-arrow { fill: $brand-primary; }
+    }
+  }
+
+  &.is-label {
+    color: $gray;
+    font-weight: $medium;
+    text-decoration: none;
+    border-color: $gray;
+    border-width: 2px;
+    &.is-soon-label { cursor: wait; }
+  }
+
+  &.is-default {
+    @include font-size(button);
+    padding: .65rem 1rem .55rem;
+    font-weight: $bold;
+    text-decoration: none;
+    border-width: 3px;
+    .icon { vertical-align: 0%; }
+  }
+
+  &.is-toggle {
+    position: fixed;
+    top: 1.4rem;
+    right: 1.2rem;
+    z-index: 100;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    &.at-landing svg { fill: $white; }
+    &.at-service svg { fill: $brand-primary; }
+    &.at-about-us svg { fill: $white; }
+    &.at-work svg { fill: $brand-primary; }
+    &.at-process svg { fill: $brand-primary; }
+    &.has-menu .menu svg { fill: $brand-primary; }
+    @media (min-width: $md) { display: none; }
+  }
+
+  &.is-huge {
+    @include font-size(subtitle-alt, $spacing-xs: .06rem);
+    @include font-family($sans, $semibold, normal);
+    width: 100%;
+    padding: 1.3rem 1rem 1.15rem;
+    line-height: 1.32rem;
+    cursor: pointer;
+    svg {
+      margin-left: .5rem;
+      vertical-align: -6%;
+    }
+    @media (min-width: $md) { line-height: 1.68rem; }
+  }
+
+  &.is-submit {
+    margin-top: -3px;
+    color: $white;
+    background-color: $guava;
+    border: $form-border solid $form-black;
+    svg { fill: $white; }
+  }
+}

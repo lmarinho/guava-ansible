@@ -1,0 +1,107 @@
+///////////////////////////////////////////////////////////
+// Pictures                                     (Module) //
+///////////////////////////////////////////////////////////
+
+.picture {
+  display: block;
+  height: auto;
+  pointer-events: none;
+
+  &.of-astronaut {
+    width: 177.3px;
+    @media (min-width: $sm) { width: 235px; }
+    @media (min-width: $md) { width: 235.4px; }
+  }
+
+  &.of-satellite {
+    width: 267px;
+    @media (min-width: $sm) { width: 503px; }
+    @media (min-width: $md) { width: 556px; }
+  }
+
+  &.of-spaceship {
+    width: 286px;
+    @media (min-width: $sm) { width: 388px; }
+    @media (min-width: $md) { width: 384px; }
+  }
+
+  &.of-planets {
+    width: 270px;
+    @media (min-width: $sm) { width: 303px; }
+    @media (min-width: $md) { width: 374px; }
+  }
+
+  &.of-rover {
+    width: 278px;
+    @media (min-width: $sm) { width: 435px; }
+    @media (min-width: $md) { width: 442px; }
+  }
+
+  &.of-togetherness { width: 105px; }
+
+  &.at-landing {
+    &.of-leaves {
+      width: 622px;
+      @media (min-width: $sm) { width: 662px; }
+    }
+    &.of-astronaut {
+      width: 185px;
+      @media (min-width: $sm) { width: 224px; }
+    }
+  }
+
+  &.of-stamp {
+    &.is-studio {
+      &.also-big { width: 176px; }
+      &.also-small {
+        width: 79px;
+        height: 79px;
+        background-image: image-url("stamp-studio-small@2x.png");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        transform: rotate(-20deg);
+        &.is-lang-pt { background-image: image-url("stamp-studio-small-pt@2x.png"); }
+        &.is-not-checked {
+          background-image: image-url("stamp-studio-small-gray@2x.png");
+          &.is-lang-pt { background-image: image-url("stamp-studio-small-gray-pt@2x.png"); }
+        }
+      }
+    }
+
+    &.is-team {
+      &.also-big { width: 265px; }
+      &.also-small {
+        width: 94px;
+        height: 73px;
+        background-image: image-url("stamp-team-aug-small@2x.png");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        &.is-lang-pt { background-image: image-url("stamp-team-aug-small-pt@2x.png"); }
+        &.is-not-checked {
+          background-image: image-url("stamp-team-aug-small-gray@2x.png");
+          &.is-lang-pt { background-image: image-url("stamp-team-aug-small-gray-pt@2x.png"); }
+        }
+      }
+    }
+  }
+
+  &.of-books { width: 132px; }
+
+  &.of-team {
+    &.also-small {
+      width: 150px;
+      height: auto;
+      @media (min-width: $sm) { width: 230px; }
+    }
+  }
+
+  &.of-tropical-rb {
+    width: auto;
+    height: calc(100% - #{map-get($size-mobile, subtitle-alt) + .5rem});
+  }
+
+  &.of-chat {
+    width: 108px;
+    height: auto;
+  }
+}

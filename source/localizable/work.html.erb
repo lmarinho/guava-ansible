@@ -1,0 +1,562 @@
+---
+title: Work by Guava
+---
+
+<% content_for :additional_js do %>
+  <%= javascript_include_tag :'section-highlight' %>
+  <%= javascript_include_tag :'dynamic-menu' %>
+  <%= javascript_include_tag :'logo-transition' %>
+<% end %>
+
+<% content_for :language_link do %>
+  <%= partial 'language-link', locals: { type: 'short', color: 'red' }%>
+<% end %>
+
+<header id="cover">
+  <div class="cover of-work">
+    <span class="logo of-guava at-cover">
+      <%= inline_svg 'guava' %>
+    </span>
+    <div class="grid is-container of-hero">
+      <div class="grid is-row">
+        <div class="grid is-content">
+          <h1><%= t(:'work.title') %></h1>
+          <p class="is-lead also-serif hasnt-widow"><%= t(:'work.subtitle') %></p>
+          <p><%= t(:'work.intro') %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="icon of-arrow-down at-work / js-scroll-indicator"
+    data-scroll-indicator-target=".page-work.is-project.also-regular" data-scroll-indicator-offset="100">
+    <%= inline_svg 'icon-arrow-big', class: 'icon of-big-arrow' %>
+  </span>
+</header>
+
+<hr>
+
+<main role="main" class="grid-main">
+  <section id="projects" class="page-work are-minicases">
+    <div class="grid is-container">
+      <div class="grid are-columns of-ultrawide-content">
+        <h2><%= t(:'work.projects.title') %></h2>
+      </div>
+    </div>
+
+    <article class="page-work is-project also-regular">
+      <div class="grid is-container">
+        <div class="grid are-columns of-ultrawide-content">
+          <div class="grid is-row">
+            <header class="is-header">
+              <h3><%= t(:'work.projects.trueandco.title') %></h3>
+              <figure class="is-image of-trueandco">
+                <%= image_tag 'cases/true&co.jpg', alt: t(:'pictures.trueandco') %>
+              </figure>
+              <figure>
+                <%= image_tag t(:'files.team-aug.small'), class: 'is-stamp of-team', alt: t(:'graphics.stamps.team-aug') %>
+                <figcaption><%= t(:'work.stamps.team-aug') %></figcaption>
+              </figure>
+            </header>
+            <section class="is-content">
+              <figure class="is-client">
+                <%= inline_svg 'client-trueandco', class: 'logo of-client is-trueandco' %>
+              </figure>
+              <p class="is-body"><%= t(:'work.projects.trueandco.intro') %></p>
+              <h4><%= t(:'work.subheaders.solved') %></h4>
+              <p class="is-body"><%= t(:'work.projects.trueandco.problem') %></p>
+              <small class="button is-label is-soon-label"><%= t(:'work.labels.soon') %></small>
+              <h4><%= t(:'work.subheaders.tech-stack') %></h4>
+              <ul>
+                <li>
+                  <figure title="<%= t(:'tech-stack.rails') %>">
+                    <%= inline_svg 'tech-stack-rails', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.meteor') %>">
+                    <%= inline_svg 'tech-stack-meteor', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.postgresql') %>">
+                    <%= inline_svg 'tech-stack-postgresql', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.elasticsearch') %>">
+                    <%= inline_svg 'tech-stack-elasticsearch', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.docker') %>">
+                    <%= inline_svg 'tech-stack-docker', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.aws') %>">
+                    <%= inline_svg 'tech-stack-aws', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="page-work is-project also-regular">
+      <div class="grid is-container">
+        <div class="grid are-columns of-ultrawide-content">
+          <div class="grid is-row">
+            <header class="is-header">
+              <h3><%= t(:'work.projects.teslabit.title') %></h3>
+              <figure class="is-image of-teslabit">
+                <%= image_tag 'cases/teslabit.jpg', alt: t(:'pictures.teslabit') %>
+              </figure>
+              <figure>
+                <%= image_tag t(:'files.studio.small'), class: 'is-stamp of-studio', alt: t(:'graphics.stamps.studio') %>
+                <figcaption><%= t(:'work.stamps.studio') %></figcaption>
+              </figure>
+            </header>
+            <section class="is-content">
+              <figure class="is-client at-right">
+                <%= inline_svg 'client-teslabit', class: 'logo of-client is-teslabit' %>
+              </figure>
+              <p class="is-body"><%= t(:'work.projects.teslabit.intro') %></p>
+              <h4><%= t(:'work.subheaders.solved') %></h4>
+              <p class="is-body"><%= t(:'work.projects.teslabit.problem') %></p>
+              <small class="button is-label is-soon-label"><%= t(:'work.labels.soon') %></small>
+              <h4><%= t(:'work.subheaders.tech-stack') %></h4>
+              <ul>
+                <li>
+                  <figure title="<%= t(:'tech-stack.rails') %>">
+                    <%= inline_svg 'tech-stack-rails', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.javascript') %>">
+                    <%= inline_svg 'tech-stack-javascript', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.mysql') %>">
+                    <%= inline_svg 'tech-stack-mysql', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.elasticsearch') %>">
+                    <%= inline_svg 'tech-stack-elasticsearch', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="page-work is-project also-feat">
+      <div class="grid is-container">
+        <div class="grid are-columns of-ultrawide-content">
+          <div class="grid is-row">
+            <header class="is-header">
+              <h3><%= t(:'work.projects.buzzmonitor.title') %></h3>
+              <figure class="is-client">
+                <%= inline_svg 'client-buzzmonitor', class: 'logo of-client is-buzzmonitor' %>
+              </figure>
+              <figure class="is-image of-buzzmonitor">
+                <%= image_tag 'cases/buzzmonitor.jpg', alt: t(:'pictures.buzzmonitor') %>
+              </figure>
+              <figure>
+                <%= image_tag t(:'files.team-aug.small'), class: 'is-stamp of-team', alt: t(:'graphics.stamps.team-aug') %>
+                <figcaption><%= t(:'work.stamps.team-aug') %></figcaption>
+              </figure>
+            </header>
+            <section class="is-quote">
+              <blockquote class="is-framed has-cite">
+                <%= t(:'work.projects.buzzmonitor.quote.text') %>
+                <cite><%= t(:'work.projects.buzzmonitor.quote.author') %></cite>
+              </blockquote>
+            </section>
+            <section class="is-content">
+              <p class="is-body"><%= t(:'work.projects.buzzmonitor.intro') %></p>
+              <h4><%= t(:'work.subheaders.solved') %></h4>
+              <p class="is-body"><%= t(:'work.projects.buzzmonitor.problem') %></p>
+              <small class="button is-label is-soon-label"><%= t(:'work.labels.soon') %></small>
+              <h4><%= t(:'work.subheaders.tech-stack') %></h4>
+              <ul>
+                <li>
+                  <figure title="<%= t(:'tech-stack.rails') %>">
+                    <%= inline_svg 'tech-stack-rails', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.java') %>">
+                    <%= inline_svg 'tech-stack-java', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.angularjs') %>">
+                    <%= inline_svg 'tech-stack-angularjs', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.d3js') %>">
+                    <%= inline_svg 'tech-stack-d3js', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.rabbitmq') %>">
+                    <%= inline_svg 'tech-stack-rabbitmq', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.elasticsearch') %>">
+                    <%= inline_svg 'tech-stack-elasticsearch', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.mongodb') %>">
+                    <%= inline_svg 'tech-stack-mongodb', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.heroku') %>">
+                    <%= inline_svg 'tech-stack-heroku', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="page-work is-project also-regular">
+      <div class="grid is-container">
+        <div class="grid are-columns of-ultrawide-content">
+          <div class="grid is-row">
+            <header class="is-header">
+              <h3><%= t(:'work.projects.storenvy.title') %></h3>
+              <figure class="is-image of-storenvy">
+                <%= image_tag 'cases/storenvy.jpg', alt: t(:'pictures.storenvy') %>
+              </figure>
+              <figure>
+                <%= image_tag t(:'files.team-aug.small'), class: 'is-stamp of-team', alt: t(:'graphics.stamps.team-aug') %>
+                <figcaption><%= t(:'work.stamps.team-aug') %></figcaption>
+              </figure>
+            </header>
+            <section class="is-content">
+              <figure class="is-client at-right">
+                <%= inline_svg 'client-storenvy', class: 'logo of-client is-storenvy' %>
+              </figure>
+              <p class="is-body"><%= t(:'work.projects.storenvy.intro') %></p>
+              <h4><%= t(:'work.subheaders.solved') %></h4>
+              <p class="is-body"><%= t(:'work.projects.storenvy.problem') %></p>
+              <h4><%= t(:'work.subheaders.tech-stack') %></h4>
+              <ul>
+                <li>
+                  <figure title="<%= t(:'tech-stack.rails') %>">
+                    <%= inline_svg 'tech-stack-rails', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.javascript') %>">
+                    <%= inline_svg 'tech-stack-javascript', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.mysql') %>">
+                    <%= inline_svg 'tech-stack-mysql', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.elasticsearch') %>">
+                    <%= inline_svg 'tech-stack-elasticsearch', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="page-work is-project also-regular">
+      <div class="grid is-container">
+        <div class="grid are-columns of-ultrawide-content">
+          <div class="grid is-row">
+            <header class="is-header">
+              <h3><%= t(:'work.projects.endossa.title') %></h3>
+              <figure class="is-image of-endossa">
+                <%= image_tag 'cases/endossa.jpg', alt: t(:'pictures.endossa') %>
+              </figure>
+              <figure>
+                <%= image_tag t(:'files.studio.small'), class: 'is-stamp of-studio', alt: t(:'graphics.stamps.studio') %>
+                <figcaption><%= t(:'work.stamps.studio') %></figcaption>
+              </figure>
+            </header>
+            <section class="is-content">
+              <figure class="is-client">
+                <%= inline_svg 'client-endossa', class: 'logo of-client is-endossa' %>
+              </figure>
+              <p class="is-body"><%= t(:'work.projects.endossa.intro') %></p>
+              <h4><%= t(:'work.subheaders.solved') %></h4>
+              <p class="is-body"><%= t(:'work.projects.endossa.problem') %></p>
+              <h4><%= t(:'work.subheaders.tech-stack') %></h4>
+              <ul>
+                <li>
+                  <figure title="<%= t(:'tech-stack.rails') %>">
+                    <%= inline_svg 'tech-stack-rails', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.backbonejs') %>">
+                    <%= inline_svg 'tech-stack-backbonejs', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.coffeescript') %>">
+                    <%= inline_svg 'tech-stack-coffeescript', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.postgresql') %>">
+                    <%= inline_svg 'tech-stack-postgresql', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.docker') %>">
+                    <%= inline_svg 'tech-stack-docker', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="page-work is-project also-regular">
+      <div class="grid is-container">
+        <div class="grid are-columns of-ultrawide-content">
+          <div class="grid is-row">
+            <header class="is-header">
+              <h3><%= t(:'work.projects.metamaster.title') %></h3>
+              <figure class="is-image of-metamaster">
+                <%= image_tag 'cases/metamaster.jpg', alt: t(:'pictures.metamaster') %>
+              </figure>
+              <figure>
+                <%= image_tag t(:'files.studio.small'), class: 'is-stamp of-studio', alt: t(:'graphics.stamps.studio') %>
+                <figcaption><%= t(:'work.stamps.studio') %></figcaption>
+              </figure>
+            </header>
+            <section class="is-content">
+              <figure class="is-client at-right">
+                <%= inline_svg 'client-metamaster', class: 'logo of-client is-metamaster' %>
+              </figure>
+              <p class="is-body"><%= t(:'work.projects.metamaster.intro') %></p>
+              <h4><%= t(:'work.subheaders.solved') %></h4>
+              <p class="is-body"><%= t(:'work.projects.metamaster.problem') %></p>
+              <h4><%= t(:'work.subheaders.tech-stack') %></h4>
+              <ul>
+                <li>
+                  <figure title="<%= t(:'tech-stack.rails') %>">
+                    <%= inline_svg 'tech-stack-rails', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.angularjs') %>">
+                    <%= inline_svg 'tech-stack-angularjs', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.postgresql') %>">
+                    <%= inline_svg 'tech-stack-postgresql', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="<%= t(:'tech-stack.heroku') %>">
+                    <%= inline_svg 'tech-stack-heroku', class: 'logo of-stack is-small at-work' %>
+                  </figure>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="page-work is-project also-legacy">
+      <div class="grid is-container">
+        <div class="grid are-columns of-ultrawide-content">
+          <div class="grid is-row">
+            <article class="is-legacy">
+              <header class="is-header">
+                <h3><%= t(:'work.projects.dailyhelper.title') %></h3>
+                <figure class="is-client">
+                  <%= inline_svg 'client-dailyhelper', class: 'logo of-client is-dailyhelper' %>
+                </figure>
+                <figure>
+                  <%= image_tag t(:'files.studio.small'), class: 'is-stamp of-studio', alt: t(:'graphics.stamps.studio') %>
+                  <figcaption><%= t(:'work.stamps.studio') %></figcaption>
+                </figure>
+              </header>
+              <section class="is-content">
+                <p class="is-body"><%= t(:'work.projects.dailyhelper.intro') %></p>
+                <h4><%= t(:'work.subheaders.solved') %></h4>
+                <p class="is-body"><%= t(:'work.projects.dailyhelper.problem') %></p>
+                <h4><%= t(:'work.subheaders.tech-stack') %></h4>
+                <ul>
+                  <li>
+                    <figure title="<%= t(:'tech-stack.rails') %>">
+                      <%= inline_svg 'tech-stack-rails', class: 'logo of-stack is-small at-work' %>
+                    </figure>
+                  </li>
+                  <li>
+                    <figure title="<%= t(:'tech-stack.coffeescript') %>">
+                      <%= inline_svg 'tech-stack-coffeescript', class: 'logo of-stack is-small at-work' %>
+                    </figure>
+                  </li>
+                  <li>
+                    <figure title="<%= t(:'tech-stack.postgresql') %>">
+                      <%= inline_svg 'tech-stack-postgresql', class: 'logo of-stack is-small at-work' %>
+                    </figure>
+                  </li>
+                  <li>
+                    <figure title="<%= t(:'tech-stack.heroku') %>">
+                      <%= inline_svg 'tech-stack-heroku', class: 'logo of-stack is-small at-work' %>
+                    </figure>
+                  </li>
+                </ul>
+              </section>
+            </article>
+
+            <article class="is-legacy">
+              <header class="is-header">
+                <h3><%= t(:'work.projects.la.title') %></h3>
+                <figure class="is-client">
+                  <%= inline_svg 'client-la', class: 'logo of-client is-la' %>
+                </figure>
+                <figure>
+                  <%= image_tag t(:'files.team-aug.small'), class: 'is-stamp of-team', alt: t(:'graphics.stamps.studio') %>
+                  <figcaption><%= t(:'work.stamps.studio') %></figcaption>
+                </figure>
+              </header>
+              <section class="is-content">
+                <p class="is-body"><%= t(:'work.projects.la.intro') %></p>
+                <h4><%= t(:'work.subheaders.solved') %></h4>
+                <p class="is-body"><%= t(:'work.projects.la.problem') %></p>
+                <h4><%= t(:'work.subheaders.tech-stack') %></h4>
+                <ul>
+                  <li>
+                    <figure title="<%= t(:'tech-stack.rails') %>">
+                      <%= inline_svg 'tech-stack-rails', class: 'logo of-stack is-small at-work' %>
+                    </figure>
+                  </li>
+                  <li>
+                    <figure title="<%= t(:'tech-stack.javascript') %>">
+                      <%= inline_svg 'tech-stack-javascript', class: 'logo of-stack is-small at-work' %>
+                    </figure>
+                  </li>
+                  <li>
+                    <figure title="<%= t(:'tech-stack.mysql') %>">
+                      <%= inline_svg 'tech-stack-mysql', class: 'logo of-stack is-small at-work' %>
+                    </figure>
+                  </li>
+                </ul>
+              </section>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <hr>
+
+  <section id="clients" class="page-work are-clients">
+    <div class="grid is-container">
+      <div class="grid are-columns of-superwide-content">
+        <h2><%= t(:'work.clients.title') %></h2>
+      </div>
+    </div>
+    <div class="grid is-container">
+      <div class="grid are-columns of-superwide-content">
+        <div class="grid is-row">
+          <ul>
+            <li class="is-inloco">
+              <figure>
+                <%= inline_svg 'client-inloco', class: 'logo of-client is-inloco' %>
+                <figcaption><%= t(:'work.clients.inloco') %></figcaption>
+              </figure>
+            </li>
+            <li class="is-elife">
+              <figure>
+                <%= inline_svg 'client-elife', class: 'logo of-client is-elife' %>
+                <figcaption><%= t(:'work.clients.elife') %></figcaption>
+              </figure>
+            </li>
+            <li class="is-zurb">
+              <figure>
+                <%= inline_svg 'client-zurb', class: 'logo of-client is-zurb' %>
+                <figcaption><%= t(:'work.clients.zurb') %></figcaption>
+              </figure>
+            </li>
+            <li class="is-trueandco">
+              <figure>
+                <%= inline_svg 'client-trueandco', class: 'logo of-client is-trueandco' %>
+                <figcaption><%= t(:'work.clients.trueandco') %></figcaption>
+              </figure>
+            </li>
+            <li class="is-dailyhelper">
+              <figure>
+                <%= inline_svg 'client-dailyhelper', class: 'logo of-client is-dailyhelper' %>
+                <figcaption><%= t(:'work.clients.dailyhelper') %></figcaption>
+              </figure>
+            </li>
+            <li class="is-hero">
+              <figure>
+                <%= inline_svg 'client-hero', class: 'logo of-client is-hero' %>
+                <figcaption><%= t(:'work.clients.hero') %></figcaption>
+              </figure>
+            </li>
+            <li class="is-storenvy">
+              <figure>
+                <%= inline_svg 'client-storenvy', class: 'logo of-client is-storenvy' %>
+                <figcaption><%= t(:'work.clients.storenvy') %></figcaption>
+              </figure>
+            </li>
+            <li class="is-kfp">
+              <figure>
+                <%= inline_svg 'client-kfp', class: 'logo of-client is-kfp' %>
+                <figcaption><%= t(:'work.clients.kfp') %></figcaption>
+              </figure>
+            </li>
+            <li class="is-teslabit">
+              <figure>
+                <%= inline_svg 'client-teslabit', class: 'logo of-client is-teslabit' %>
+                <figcaption><%= t(:'work.clients.teslabit') %></figcaption>
+              </figure>
+            </li>
+            <li class="is-la">
+              <figure>
+                <%= inline_svg 'client-la', class: 'logo of-client is-la' %>
+                <figcaption><%= t(:'work.clients.la') %></figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%= partial 'cta', locals: { page: 'work' } %>
+<%= partial 'footer', locals: { page: 'work' } %>
+
+<% content_for :masks do %>
+  <div class="mask is-section" data-menu-class="on-green-background" data-menu-mask-of="#cover"></div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#projects"></div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#clients"></div>
+<% end %>

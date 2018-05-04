@@ -1,0 +1,96 @@
+///////////////////////////////////////////////////////////
+// Icons                                        (Module) //
+///////////////////////////////////////////////////////////
+
+
+.has-icon { position: relative; }
+.icon { display: block; }
+
+.of-flag {
+  position: absolute;
+  top: .1rem;
+  left: -1.1rem;
+  width: 16px;
+  height: 16px;
+  fill: $brand-primary;
+}
+
+.of-mail {
+  position: absolute;
+  top: .3rem;
+  left: -1rem;
+  width: 13px;
+  height: 13px;
+  fill: $brand-primary;
+}
+
+.of-pin {
+  position: absolute;
+  top: .2rem;
+  left: -1.1rem;
+  width: 17px;
+  height: 17px;
+  fill: $brand-primary;
+}
+
+.of-xoxo {
+  width: 32px;
+  height: 32px;
+}
+
+.of-small-arrow {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  line-height: inherit;
+}
+
+.of-big-arrow {
+  position: absolute;
+  width: 32px;
+  height: 16px;
+}
+
+.of-close {
+  &.without-border {
+    width: 32px;
+    height: 32px;
+    path {
+      &:first-of-type { display: none; }
+      fill: $brand-primary;
+    }
+  }
+}
+
+.of-lock { margin: 0 auto .5rem; }
+
+.of-remove { transform: rotate(45deg); }
+
+.of-arrow-down {
+  display: none;
+  @media (min-width: $sm) {
+    position: fixed;
+    bottom: 1rem;
+    left: 1.75rem;
+    z-index: 1000;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    pointer-events: auto;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .5s ease;
+    &.at-about-us { fill: $guava; }
+    &.at-services { fill: $guava; }
+    &.at-work { fill: $guava; }
+    &.at-process { fill: $guava; }
+    &.fade {
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+    &:hover {
+      bottom: 2rem;
+      transition: bottom .3s ease-in-out;
+    }
+  }
+}

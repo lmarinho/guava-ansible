@@ -1,0 +1,88 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Paterns ................................ //
+
+.pattern-landing-services {
+  width: 1900px;
+  position: absolute;
+  z-index: 0;
+  top: calc(-5vw + 44px);
+  left: calc(50% - 70px);
+  margin-left: -400px;
+  img { width: 100%; }
+  @media (min-width: $break-desk-sm-min) {
+    top: -15px;
+    img { width: 80%; }
+  }
+  @media (min-width: $break-desk-md-min) {
+    top: 60px;
+    img { width: 100%; }
+  }
+}
+
+.pattern-about-header {
+  background: url(/images/pattern-x.svg) repeat;
+  background-size: 282px auto;
+  background-position: -7px 47px;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: -72px;
+  z-index: 0;
+  width: 100%;
+}
+
+.pattern-services-header {
+  width: 730px;
+  position: absolute;
+  left: 45%;
+  top: 25px;
+  margin-left: -410px;
+  display: block;
+  @media (min-width: $break-desk-sm-min) {
+    width: 920px;
+    left: 52%;
+    top: 45px;
+    margin-left: -410px;
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 1158px;
+    left: 46%;
+    top: -35px;
+    margin-left: -396px;
+  }
+}
+
+.pattern-services-categories {
+  position: absolute;
+  img { width: 100%; }
+  &.is-left {
+    @include size(260px, auto);
+    left: -80px;
+    top: 0;
+  }
+  &.is-right {
+    @include size(588px, auto);
+    right: -488px;
+    top: 0;
+  }
+  @media (min-width: $break-desk-sm-min) {
+    &.is-left {
+      left: 41px;
+      top: 70px;
+    }
+    &.is-right {
+      right: -548px;
+      top: -80px;
+    }
+  }
+  @media (min-width: $break-desk-md-min) {
+    &.is-left {
+      left: -49px;
+      top: -6px;
+    }
+    &.is-right { top: 0; }
+  }
+}

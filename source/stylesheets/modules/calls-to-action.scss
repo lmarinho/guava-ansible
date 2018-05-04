@@ -1,0 +1,50 @@
+///////////////////////////////////////////////////////////
+// Calls to actions                             (Module) //
+///////////////////////////////////////////////////////////
+
+@mixin cta-themes($lead, $action, $background) {
+  background-color: $background;
+  background-image: linear-gradient(to bottom,
+                                    transparentize($background, .1) 0%,
+                                    $background 100%),
+                    image-url("texture-background-black@2x.png"),
+                    image-url("pattern-io@2x.png");
+  .is-lead { color: $lead; }
+  .button {
+    color: $action;
+    border-color: $action;
+  }
+  .icon path { fill: $action; }
+}
+
+.call-to-action {
+  padding: 4rem 0;
+  margin: 0 auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-repeat: repeat;
+  background-size: 100%, 100px auto, 510px  65px;
+  &.at-services {
+    @include cta-themes($gray-darker, $brand-primary, $green-light);
+    background-image: linear-gradient(to bottom,
+                                      transparentize($green-light, .1) 0%,
+                                      $green-light 100%),
+                      image-url("texture-background-black@2x.png"),
+  }
+  &.at-about-us { @include cta-themes($white, $green-light, $guava-light); }
+  &.at-work {
+    @include cta-themes($white, $green-light, $gray-darker);
+    background-image: image-url("texture-background-black@2x.png");
+    background-size: 100px auto;
+  }
+  &.at-process {
+    @include cta-themes($gray-darker, $brand-primary, $yellow-light);
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+  }
+  .is-lead { margin-top: 0; }
+  .button {
+    margin-top: 3rem;
+    @media (min-width: $sm) { margin-top: 2.3rem; }
+  }
+}

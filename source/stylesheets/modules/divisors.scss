@@ -1,0 +1,71 @@
+///////////////////////////////////////////////////////////
+// Divisor                                     (Module) //
+///////////////////////////////////////////////////////////
+
+$divisors-scale-factor: 1;
+.divisor {
+  position: absolute;
+
+  &.has-rounded-top {
+    top: 0;
+    left: 50%;
+    border-radius: 50% 50% 0 0;
+    transform-origin: left top;
+  }
+
+  &.has-rounded-bottom {
+    bottom: .25rem;
+    left: 50%;
+    border-radius: 0 0 50% 50%;
+    transform-origin: left bottom;
+  }
+
+  &.is-dark {
+    background: image-url("pattern-stars@2x.png"),
+      image-url("texture-background-black@2x.png");
+    background-color: $gray-darkest;
+    background-size: 1500px auto, 120px auto;
+  }
+
+  &.is-white { background: $white; }
+
+  &.is-lefty {
+    width: 270rem;
+    height: 480rem;
+    margin-left: -145rem;
+    // transform: scale(100);
+    // width: 110rem;
+    // height: 160%;
+    // margin-left: -65rem;
+    transform: scaleX($divisors-scale-factor);
+  }
+
+  &.is-centered {
+    width: 260rem;
+    height: 480rem;
+    margin-left: -130rem;
+    // transform: scale(100);
+    // width: 110rem;
+    // height: 120%;
+    // margin-left: -57.5rem;
+    transform: scaleX($divisors-scale-factor);
+  }
+
+  &.is-righty {
+    width: 240rem;
+    height: 400rem;
+    margin-left: -110rem;
+    // transform: scale(100);
+    // width: 110rem;
+    // height: 160%;
+    // margin-left: -47.5rem;
+    transform: scaleX($divisors-scale-factor);
+  }
+
+  &[class*="-texture"] {
+    background-repeat: repeat;
+    background-size: 150px;
+  }
+  &.has-guava-texture { background-image: image-url("texture-background-guava@2x.png"); }
+  &.has-green-texture { background-image: image-url("texture-background-green@2x.png"); }
+}

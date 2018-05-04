@@ -1,0 +1,206 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Footers ................................ //
+
+.footer {
+  padding: modular-scale(3) modular-scale(2) modular-scale(2);
+  clear: both;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  @media (min-width: $break-desk-sm-min) { padding: modular-scale(4) modular-scale(3) modular-scale(3); }
+}
+
+.footer-about-info {
+  @include clearfix;
+  position: relative;
+  overflow: hidden;
+  .type-link {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .logo-guava {
+    @include size(120px, 34px);
+    margin-bottom: 10px;
+  }
+  .logo-guava-fill { fill: $guava-dark; }
+  @media (min-width: $break-desk-sm-min) {
+    overflow: visible;
+    position: initial;
+  }
+}
+
+.footer-about-text {
+  color: $gray-dark;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-about-content { float: left; }
+
+.footer-about-group,
+.footer-about-address {
+  .icon {
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+}
+
+.footer-about-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  .type-link {
+    color: $guava-dark;
+    &.is-button { display: inline-block; }
+  }
+}
+
+.footer-about-item { margin-bottom: 20px; }
+
+.footer-about-address {
+  .icon { vertical-align: top; }
+  .type-link {
+    color: $guava-dark;
+    font-style: normal;
+    span {
+      @include transition;
+      @extend .type-link.is-negative;
+      display: inline-block;
+    }
+    &:hover, &:active, &:focus {
+      span { @include underline(-14px, 28px, $guava, 0.8); }
+    }
+  }
+}
+
+.footer-about-social {
+  position: absolute;
+  right: 0;
+  width: 36px;
+  .type-icon {
+    margin-right: 8px;
+    margin-bottom: 15px;
+    display: block;
+    &:last-child { margin-right: 0; }
+  }
+  @media (min-width: $break-desk-sm-min) {
+    width: auto;
+    right: calc(100% - 124px - #{modular-scale(3)});
+    bottom: 25px;
+    .type-icon {
+      margin-bottom: 0;
+      display: inline-block;
+    }
+  }
+  @media (min-width: $break-desk-md-min) {
+    right: 34px;
+    top: 275px;
+    bottom: auto;
+  }
+}
+
+.footer-content {
+  display: block;
+  border-bottom: 1px solid $gray-light;
+  padding-bottom: 35px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.footer-content-wrapper {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.footer-content-group {
+  width: 100%;
+  list-style: none;
+  position: relative;
+  margin-bottom: 30px;
+  .type-section-symbol { margin-bottom: 11px; }
+  &:last-child { margin-bottom: 0; }
+  &:before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background-color: $gray-lighter;
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 25%;
+    float: left;
+    margin-bottom: 0;
+    &:before { display: none; }
+  }
+}
+
+.footer-content-subgroup {
+  .footer-link-title {
+    margin-bottom: 12px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    &:last-child { margin-right: 0; }
+    @media (min-width: $break-desk-md-min) { display: block; }
+  }
+}
+
+
+.footer-content-subgroup,
+.footer-content-more {
+  list-style: none;
+  padding: 0;
+}
+.footer-content-more {
+  li:last-child { margin-bottom: 3px; }
+}
+
+.footer-link-section,
+.footer-link-page {
+  color: $gray-darkest;
+  display: inline-block;
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+
+.footer-link-page {
+  position: relative;
+  z-index: 1;
+  &:before {
+    content: '';
+    width: calc(100% + 15px);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: -1;
+    @media (min-width: $break-desk-md-min) { display: none; }
+  }
+}
+
+.footer-copyright {
+  width: 100%;
+  color: $gray-dark;
+  small { line-height: ms-sans(2); }
+  @media (min-width: $break-desk-md-min) { @include make-col(12); }
+}
+.footer-copyright-credits {
+  letter-spacing: -0.03rem;
+  a {
+    @include transition;
+    @extend .type-link.is-default;
+    color: $gray-dark;
+    cursor: pointer;
+  }
+  @media (min-width: $break-desk-sm-min) and (max-width: $break-desk-md-min) { letter-spacing: -0.035rem; }
+}

@@ -1,0 +1,292 @@
+---
+title: Process by Guava
+---
+
+<% content_for :additional_js do %>
+  <%= javascript_include_tag :'section-highlight' %>
+  <%= javascript_include_tag :'dynamic-menu' %>
+  <%= javascript_include_tag :'logo-transition' %>
+  <%= javascript_include_tag :'circles-nav' %>
+<% end %>
+
+<% content_for :language_link do %>
+  <%= partial 'language-link', locals: { type: 'short', color: 'red' }%>
+<% end %>
+
+<nav class="diagram of-circles at-fixed-menu" id="menu-steps" role="presentation">
+  <ul>
+    <li role="presentation">
+      <%= link_to t('process.kick-off.title'), '#kick-off',  class: "of-kickoff is-nav / nav-link" %>
+    </li>
+    <li role="presentation">
+      <%= link_to t('process.immersion.title'), '#immersion',  class: "of-immersion is-nav / nav-link" %>
+    </li>
+    <li role="presentation">
+      <%= link_to t('process.discovery.title'), '#discovery',  class: "of-discovery is-nav / nav-link" %>
+    </li>
+    <li role="presentation">
+      <%= link_to t('process.build.title'), '#build',  class: "of-build is-nav / nav-link" %>
+    </li>
+    <li role="presentation">
+      <%= link_to t('process.publishing.title'), '#publishing',  class: "of-publishing is-nav / nav-link" %>
+    </li>
+    <li role="presentation">
+      <%= link_to t('process.maintenance.title'), '#maintenance',  class: "of-maintenance is-nav / nav-link" %>
+    </li>
+  </ul>
+  <figcaption><%= t(:'graphics.circles') %></figcaption>
+</nav>
+
+<article>
+  <header id="cover">
+    <div class="cover of-process">
+      <span class="logo of-guava at-cover">
+        <%= inline_svg 'guava' %>
+      </span>
+      <figure class="diagram of-circles at-process-header">
+        <div class="of-kickoff"></div>
+        <div class="of-immersion"></div>
+        <div class="of-discovery"></div>
+        <div class="of-build"></div>
+        <div class="of-publishing"></div>
+        <div class="of-maintenance"></div>
+      </figure>
+
+      <div class="grid is-container of-hero">
+        <div class="grid is-row">
+          <div class="grid is-content">
+            <h1><%= t(:'process.title') %></h1>
+            <p class="is-lead also-serif hasnt-widow"><%= t(:'process.subtitle') %></p>
+            <p><%= t(:'process.intro') %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="icon of-arrow-down at-process / js-scroll-indicator"
+      data-scroll-indicator-target="#intro .grid.is-container" data-scroll-indicator-offset="150">
+      <%= inline_svg 'icon-arrow-big', class: 'icon of-big-arrow' %>
+    </span>
+  </header>
+
+  <hr>
+
+  <section id="intro">
+    <div class="grid is-container / page-process is-intro">
+      <div class="grid are-columns of-intro-content">
+        <h2 class="is-alternative"><%= t(:'process.overview.title') %></h2>
+        <ol>
+          <li>
+            <% link_to '#kick-off', class: '' do %>
+            <figure class="of-circle">
+              <div class="diagram of-circles at-content of-kickoff"></div>
+            </figure>
+            <div class="is-intro-item">
+              <h3><%= t(:'process.overview.kick-off.title') %></h3>
+              <small><%= t(:'process.overview.kick-off.text') %></small>
+            </div>
+            <% end %>
+          </li>
+          <li>
+            <% link_to '#immersion', class: '' do %>
+            <figure class="of-circle">
+              <div class="diagram of-circles at-content of-immersion"></div>
+            </figure>
+            <div class="is-intro-item">
+              <h3><%= t(:'process.overview.immersion.title') %></h3>
+              <small><%= t(:'process.overview.immersion.text') %></small>
+            </div>
+            <% end %>
+          </li>
+          <li>
+            <% link_to '#discovery', class: '' do %>
+            <figure class="of-circle">
+              <div class="diagram of-circles at-content of-discovery"></div>
+            </figure>
+            <div class="is-intro-item">
+              <h3><%= t(:'process.overview.discovery.title') %></h3>
+              <small><%= t(:'process.overview.discovery.text') %></small>
+            </div>
+            <% end %>
+          </li>
+          <li>
+            <% link_to '#build', class: '' do %>
+            <figure class="of-circle">
+              <div class="diagram of-circles at-content of-build"></div>
+            </figure>
+            <div class="is-intro-item">
+              <h3><%= t(:'process.overview.build.title') %></h3>
+              <small><%= t(:'process.overview.build.text') %></small>
+            </div>
+            <% end %>
+          </li>
+          <li class="is-green">
+            <% link_to '#publishing', class: '' do %>
+            <figure class="of-circle">
+              <div class="diagram of-circles at-content of-publishing"></div>
+            </figure>
+            <div class="is-intro-item">
+              <h3><%= t(:'process.overview.publishing.title') %></h3>
+              <small><%= t(:'process.overview.publishing.text') %></small>
+            </div>
+            <% end %>
+          </li>
+          <li class="is-green">
+            <% link_to '#maintenance', class: '' do %>
+            <figure class="of-circle">
+              <div class="diagram of-circles at-content of-maintenance"></div>
+            </figure>
+            <div class="is-intro-item">
+              <h3><%= t(:'process.overview.maintenance.title') %></h3>
+              <small><%= t(:'process.overview.maintenance.text') %></small>
+            </div>
+            <% end %>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <main role="main">
+    <section id="kick-off" class="page-process is-kickoff">
+      <div class="grid is-container is-column of-article-content">
+        <h2><%= t(:'process.kick-off.title') %></h2>
+        <p class="is-body"><%= t(:'process.kick-off.text-a') %></p>
+        <p class="is-body"><%= t(:'process.kick-off.text-b') %></p>
+        <p class="is-body"><%= t(:'process.kick-off.text-c') %></p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="immersion" class="page-process is-immersion">
+      <div class="grid is-container is-column of-article-content">
+        <figure role="presentation">
+          <%= image_tag 'illustration-process-astronaut@2x.png', class: 'picture of-astronaut', alt: t(:'illustrations.astronaut') %>
+        </figure>
+        <h2><%= t(:'process.immersion.title') %></h2>
+        <p class="is-body"><%= t(:'process.immersion.text-a') %></p>
+        <p class="is-body"><%= t(:'process.immersion.text-b') %></p>
+        <br><span class="helper of-float"></span>
+        <blockquote class="is-quote">
+          <%= t(:'process.immersion.quote') %>
+        </blockquote>
+        <p class="is-body"><%= t(:'process.immersion.text-c') %></p>
+      </div>
+      <span class="divisor has-rounded-top is-righty is-dark"></span>
+    </section>
+
+    <hr>
+
+    <section id="discovery" class="page-process is-discovery" data-offset="200">
+      <div class="grid is-container is-column of-article-content">
+        <p class="is-lead also-serif"><%= t(:'process.craft-cycle.lead') %></p>
+        <figure role="presentation">
+          <%= image_tag 'illustration-process-satellite@2x.png', class: 'picture of-satellite', alt: t(:'illustrations.satellite') %>
+        </figure>
+        <h2><%= t(:'process.discovery.title') %></h2>
+        <h3><%= t(:'process.discovery.understand.title') %></h3>
+        <p class="is-body"><%= t(:'process.discovery.understand.text') %></p>
+        <h3><%= t(:'process.discovery.prototype.title') %></h3>
+        <p class="is-body"><%= t(:'process.discovery.prototype.text') %></p>
+        <h3><%= t(:'process.discovery.validate.title') %></h3>
+        <p class="is-body"><%= t(:'process.discovery.validate.text') %></p>
+      </div>
+      <span class="divisor has-rounded-top is-centered is-white"></span>
+    </section>
+
+    <hr>
+
+    <section id="build" class="page-process is-build">
+      <div class="grid is-container is-column of-article-content">
+        <figure role="presentation">
+          <%= image_tag 'illustration-process-spaceship@2x.png', class: 'picture of-spaceship', alt: t(:'illustrations.spaceship') %>
+        </figure>
+        <h2><%= t(:'process.build.title') %></h2>
+        <h3><%= t(:'process.build.visual.title') %></h3>
+        <p class="is-body"><%= t(:'process.build.visual.text') %></p>
+        <h3><%= t(:'process.build.frontend.title') %></h3>
+        <p class="is-body"><%= t(:'process.build.frontend.text') %></p>
+        <h3><%= t(:'process.build.backend.title') %></h3>
+        <span class="helper of-float"></span>
+        <blockquote class="is-quote">
+          <%= t(:'process.build.backend.quote') %>
+        </blockquote>
+        <p class="is-body"><%= t(:'process.build.backend.text') %></p>
+      </div>
+      <span class="divisor has-rounded-bottom is-centered is-white"></span>
+    </section>
+
+    <hr>
+
+    <section id="publishing" class="page-process is-publishing" data-scroll-offset="350">
+      <div class="grid is-container is-column of-article-content">
+        <figure role="presentation">
+          <%= image_tag 'illustration-process-planets@2x.png', class: 'picture of-planets', alt: t(:'illustrations.planets') %>
+        </figure>
+        <h2><%= t(:'process.publishing.title') %></h2>
+        <p class="is-body"><%= t(:'process.publishing.text') %></p>
+        <p class="is-lead also-serif"><%= t(:'process.interlude.lead') %></p>
+      </div>
+      <span class="divisor has-rounded-bottom is-lefty is-dark"></span>
+    </section>
+
+    <hr>
+
+    <section id="maintenance" class="page-process is-maintenance" data-scroll-offset="200">
+      <div class="grid is-container is-column of-article-content">
+        <h2><%= t(:'process.maintenance.title') %></h2>
+        <p class="is-body"><%= t(:'process.maintenance.text-a') %></p>
+        <br><span class="helper of-float"></span>
+        <blockquote class="is-quote">
+          <%= t(:'process.maintenance.quote') %>
+        </blockquote>
+        <p class="is-body"><%= t(:'process.maintenance.text-b') %></p>
+        <figure role="presentation">
+          <%= image_tag 'illustration-process-rover@2x.png', class: 'picture of-rover', alt: t(:'illustrations.rover') %>
+        </figure>
+        <p class="is-lead also-serif"><%= t(:'process.closing.lead') %></p>
+      </div>
+    </section>
+
+    <hr>
+
+    <footer id="footer" class="footer of-article">
+      <div class="grid is-container">
+        <div class="grid are-columns of-article-content">
+          <figure role="presentation">
+            <%= image_tag 'illustration-process-togetherness@2x.png', class: 'picture of-togetherness', alt: t(:'illustrations.togetherness') %>
+          </figure>
+          <small><%= t(:'process.footnote.text') %></small>
+        </div>
+      </div>
+    </footer>
+  </article>
+</main>
+
+
+<%= partial 'sidenotes' %>
+<%= partial 'cta', locals: { page: 'process' } %>
+<%= partial 'footer', locals: { page: 'process' } %>
+
+
+<% content_for :masks do %>
+  <div class="mask is-section" data-menu-class="on-dark-background" data-menu-mask-of="#cover"></div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#intro"></div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#kick-off"></div>
+  <div class="mask is-section" data-menu-mask-of="#immersion">
+    <div class="mask is-section" data-menu-class="on-dark-background" data-menu-mask-of="#immersion .divisor"></div>
+  </div>
+  <div class="mask is-section" data-menu-mask-of="#discovery">
+    <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#discovery .divisor"></div>
+  </div>
+  <div class="mask is-section" data-menu-mask-of="#build">
+    <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#build .divisor"></div>
+  </div>
+  <div class="mask is-section" data-menu-mask-of="#publishing">
+    <div class="mask is-section" data-menu-class="on-dark-background" data-menu-mask-of="#publishing .divisor"></div>
+  </div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#maintenance"></div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#footer"></div>
+<% end %>

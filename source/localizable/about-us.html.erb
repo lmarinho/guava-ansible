@@ -1,0 +1,205 @@
+---
+title: About Guava
+---
+
+<% content_for :additional_js do %>
+  <%= javascript_include_tag :'section-highlight' %>
+  <%= javascript_include_tag :'dynamic-menu' %>
+  <%= javascript_include_tag :'logo-transition' %>
+<% end %>
+
+<% content_for :language_link do %>
+  <%= partial 'language-link', locals: { type: 'short', color: 'white' }%>
+<% end %>
+
+<article>
+  <header id="cover">
+    <div class="cover of-about-us">
+      <span class="logo of-guava at-cover">
+        <%= inline_svg 'guava' %>
+      </span>
+      <div class="grid is-container of-hero">
+        <div class="grid is-row">
+          <div class="grid is-content">
+            <h1><%= t(:'about-us.title') %></h1>
+            <p class="is-lead also-serif hasnt-widow"><%= t(:'about-us.subtitle') %></p>
+            <p><%= t(:'about-us.intro') %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="icon of-arrow-down at-about-us / js-scroll-indicator"
+      data-scroll-indicator-target="#team .grid.is-container" data-scroll-indicator-offset="100">
+      <%= inline_svg 'icon-arrow-big', class: 'icon of-big-arrow' %>
+    </span>
+  </header>
+
+  <hr>
+
+  <main role="main">
+    <section id="team" class="page-about is-team">
+      <div class="grid is-container">
+        <div class="grid are-columns of-wide-content">
+          <h2><span><%= t(:'about-us.team.title') %></span></h2>
+          <ul>
+            <li class="is-guilherme">
+              <figure>
+                <%= image_tag 'illustration-team-guilherme-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.guilherme') %>
+              </figure>
+              <h4><%= t(:'about-us.team.guilherme.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.guilherme.role') %></em>
+            </li>
+            <li class="is-lailson">
+              <figure>
+                <%= image_tag 'illustration-team-lailson-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.lailson') %>
+              </figure>
+              <h4><%= t(:'about-us.team.lailson.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.lailson.role') %></em>
+            </li>
+            <li class="is-lucas">
+              <figure>
+                <%= image_tag 'illustration-team-lucas-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.lucas') %>
+              </figure>
+              <h4><%= t(:'about-us.team.lucas.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.lucas.role') %></em>
+            </li>
+            <li class="is-chico">
+              <figure>
+                <%= image_tag 'illustration-team-chico-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.chico') %>
+              </figure>
+              <h4><%= t(:'about-us.team.chico.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.chico.role') %></em>
+            </li>
+            <li class="is-daniel">
+              <figure>
+                <%= image_tag 'illustration-team-daniel-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.daniel') %>
+              </figure>
+              <h4><%= t(:'about-us.team.daniel.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.daniel.role') %></em>
+            </li>
+            <li class="is-filipe">
+              <figure>
+                <%= image_tag 'illustration-team-filipe-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.filipe') %>
+              </figure>
+              <h4><%= t(:'about-us.team.filipe.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.filipe.role') %></em>
+            </li>
+            <li class="is-juliana">
+              <figure>
+                <%= image_tag 'illustration-team-juliana-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.juliana') %>
+              </figure>
+              <h4><%= t(:'about-us.team.juliana.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.juliana.role') %></em>
+            </li>
+            <li class="is-leo">
+              <figure>
+                <%= image_tag 'illustration-team-leo-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.leonardo') %>
+              </figure>
+              <h4><%= t(:'about-us.team.leo.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.leo.role') %></em>
+            </li>
+            <li class="is-renatinha">
+              <figure>
+                <%= image_tag 'illustration-team-renatinha-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.renatinha') %>
+              </figure>
+              <h4><%= t(:'about-us.team.renatinha.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.renatinha.role') %></em>
+            </li>
+            <li class="is-ronney">
+              <figure>
+                <%= image_tag 'illustration-team-ronney-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.ronney') %>
+              </figure>
+              <h4><%= t(:'about-us.team.ronney.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.ronney.role') %></em>
+            </li>
+            <li class="is-sergio">
+              <figure>
+                <%= image_tag 'illustration-team-sergio-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.sergio') %>
+              </figure>
+              <h4><%= t(:'about-us.team.sergio.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.sergio.role') %></em>
+            </li>
+            <li class="is-tiago">
+              <figure>
+                <%= image_tag 'illustration-team-tiago-small@2x.png', class: 'picture of-team also-small', alt: t(:'illustrations.team.tiago') %>
+              </figure>
+              <h4><%= t(:'about-us.team.tiago.title') %></h4>
+              <em class="is-small"><%= t(:'about-us.team.tiago.role') %></em>
+            </li>
+            <li class="is-new-position" title="<%= t(:'about-us.team.call-to-arms.text') %>">
+              <span><%= link_to t('menu.work-with-us'), 'mailto:chega.ai@guava.com.br' %></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="history" class="page-about is-history">
+      <span class="divisor has-rounded-top is-righty"></span>
+      <div class="grid is-container">
+        <figure role="presentation">
+          <%= image_tag 'picture-big-g@2x.png', alt: t(:'pictures.guava-hq') %>
+        </figure>
+        <div class="grid are-columns of-article-content">
+          <div class="grid is-row">
+            <div class="grid is-column of-sidetext">
+              <h2><%= t(:'about-us.history.title') %></h2>
+              <p class="is-body"><%= t(:'about-us.history.text-a') %></p>
+              <p class="is-body"><%= t(:'about-us.history.text-b') %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="giving-back" class="page-about is-giving-back">
+      <span class="divisor has-rounded-top is-righty"></span>
+      <div class="grid is-container">
+        <div class="grid are-columns of-article-content">
+          <h2><%= t(:'about-us.giving-back.title') %></h2>
+          <span class="helper of-float"></span>
+          <blockquote class="is-framed">
+            <%= t(:'about-us.giving-back.quote') %>
+          </blockquote>
+          <p class="is-body"><%= t(:'about-us.giving-back.text') %></p>
+        </div>
+        <figure>
+          <%= image_tag 'picture-tropical-ruby@2x.jpg', class: 'picture of-tropical-rb', alt: t(:'pictures.tropicalrb') %>
+          <figcaption><%= t(:'about-us.giving-back.figcaption') %></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr>
+
+    <footer id="footer" class="footer of-article of-page-about">
+      <div class="grid is-container">
+        <div class="grid are-columns of-article-content">
+          <figure role="presentation">
+            <%= image_tag 'illustration-about-chat@2x.png', class: 'picture of-chat', alt: t(:'illustrations.chat') %>
+          </figure>
+          <small><%= t(:'about-us.footnote.text') %></small>
+        </div>
+      </div>
+    </footer>
+  </main>
+</article>
+
+<%= partial 'cta', locals: { page: 'about-us' } %>
+<%= partial 'footer', locals: { page: 'about-us' } %>
+
+<% content_for :masks do %>
+  <div class="mask is-section" data-menu-class="on-guava-background" data-menu-mask-of="#cover"></div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#team"></div>
+  <div class="mask is-section" data-menu-mask-of="#history">
+    <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#history .divisor"></div>
+  </div>
+  <div class="mask is-section" data-menu-mask-of="#giving-back">
+    <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#giving-back .divisor"></div>
+  </div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#footer"></div>
+<% end %>

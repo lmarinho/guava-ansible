@@ -1,0 +1,218 @@
+///////////////////////////////////////////////////////////
+// Services                                       (Page) //
+///////////////////////////////////////////////////////////
+
+.page-services {
+  position: relative;
+  h2 { margin-top: 0; }
+  .is-container { z-index: 5; }
+  &.is-intro {
+    padding: 6.75rem 0 3rem;
+    h3 { display: none; }
+    .is-row { margin-top: 2rem; }
+    .is-team {
+      margin-top: 2rem;
+      figure, img { pointer-events: none; }
+      figure {
+        display: flex;
+        align-items: center;
+        height: auto;
+      }
+      @media (min-width: $sm) {
+        margin-top: 0;
+        figure { height: 189px; }
+      }
+    }
+  }
+
+  &.is-interlude {
+    position: relative;
+    z-index: 5;
+    &.of-leaves {
+      padding: 2rem $gutter-small;
+      @include make-col-ready;
+      > p {
+        @include font-size(section, 1, 1, .3rem, .5rem);
+        position: relative;
+        z-index: 1;
+        display: block;
+        padding: 2rem 0 3rem;
+        color: $gray-dark;
+        font-weight: $super;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: .6;
+      }
+      &::before {
+        $width: 1197px;
+        $height: 517px;
+        top: -20rem;
+        left: -38%;
+        width: $width;
+        height: $height;
+        margin-top: 10.5rem;
+        background-image: image-url("pattern-leaves-2@2x.png");
+        background-size: $width auto;
+        @media (min-width: $sm) {
+          top: -22rem;
+          left: 50%;
+        }
+        @media (min-width: $md) { top: -22rem; }
+      }
+      @media (min-width: $sm) {
+        @include make-col(12);
+        @include make-col-offset(3);
+      }
+    }
+    &.of-io {
+      $width: 1230px;
+      $height: 141px;
+      @include make-col-ready;
+      height: calc(#{$height} + 4.5rem);
+      padding: 1.5rem 0 3rem;
+      &::before {
+        top: 1.5rem;
+        left: 32%;
+        width: $width;
+        height: $height;
+        background-image: image-url("pattern-interlude@2x.png");
+        background-size: $width auto;
+        @media (min-width: $sm) { left: 50%; }
+      }
+    }
+    &::before {
+      position: absolute;
+      left: 50%;
+      z-index: 0;
+      display: block;
+      content: "";
+      transform: translateX(-50%);
+    }
+  }
+
+  &.is-mastery {
+    z-index: 1;
+    padding: 1rem 0 3rem;
+    @media (min-width: $sm) { padding: 2rem 0 7rem; }
+    h3 {
+      margin-top: .3rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      &::before {
+        display: block;
+        width: 3rem;
+        height: 4px;
+        margin-bottom: ($h2-margin / 3);
+        background-color: $green-darker;
+        content: "";
+      }
+      &.has-recoil::before { margin-top: -1.25rem; }
+    }
+    .is-row { margin-bottom: 3rem; }
+    .is-50-wide {
+      margin-bottom: 1.5rem;
+      &:last-child { margin-bottom: 0; }
+      @media (min-width: $sm) { margin-bottom: 0; }
+    }
+  }
+
+  &.is-stack {
+    z-index: 0;
+    padding: 22rem 0 0;
+    margin-top: -17rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    ul {
+      margin: 0 -.5rem 2rem;
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      margin: .5rem;
+    }
+    h3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+      color: $green-lighter;
+      text-align: center;
+      span {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        padding: 2rem .2rem 0;
+        hyphens: auto;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        background-color: $guava-darker;
+        border-radius: 50%;
+      }
+    }
+    h2, figcaption { color: $white; }
+    h2 {
+      text-align: center;
+      &::after { margin: ($h2-margin / 2) auto; }
+    }
+    figcaption {
+      @include font-size(subtitle-alt, 1.4);
+      margin-top: -.5rem;
+      text-align: center;
+    }
+    .logo { margin: 0 auto; }
+    @media (min-width: $sm) {
+      h2 {
+        text-align: left;
+        &::after { margin: ($h2-margin / 2) auto 0 0; }
+      }
+      ul { text-align: left; }
+      h3 { flex-direction: row; }
+    }
+    .divisor {
+      z-index: -5;
+      background-color: $guava-lighter;
+      &.is-alternative {
+        bottom: -1.65rem;
+        z-index: -6;
+        margin-left: -128rem;
+        background-color: $green-dark;
+      }
+    }
+  }
+
+  &.is-substack {
+    padding-top: 10rem;
+    padding-bottom: 3.5rem;
+    &:not(:first-of-type) { margin-top: -6.5rem; }
+    &.of-mastery {
+      padding-top: 0;
+      .divisor {
+        z-index: -3;
+        margin-left: -128rem;
+        background-color: $guava;
+      }
+    }
+    &.of-skilled {
+      .divisor {
+        z-index: -4;
+        margin-left: -132rem;
+        background-color: $guava-light;
+      }
+    }
+    &.of-experimenting {
+      padding-bottom: 6.5rem;
+      h3 span { padding-top: 1.6rem; }
+    }
+    .of-wide-content {
+      @media (min-width: $sm) and (max-width: ($md - 1px)) {
+        @include make-col(14);
+        @include make-col-offset(2);
+      }
+    }
+  }
+
+  &.is-footer {
+    padding-top: 20rem;
+    margin-top: -15rem;
+  }
+}

@@ -1,0 +1,321 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Pages / About us ................................. //
+
+.about-section {
+  @include clearfix;
+  position: relative;
+  overflow: hidden;
+  background-color: $white;
+}
+
+.about-intro-cont {
+  color: $white;
+  overflow: hidden;
+  padding-bottom: 10vh;
+  margin-bottom: $grid-section-margin;
+}
+
+.about-team {
+  padding: modular-scale(8) 0 modular-scale(10);
+  .type-header-subsection { color: $guava; }
+}
+
+.about-team-content {
+  position: relative;
+  @media (min-width: $break-desk-sm-min) {
+    width: 600px;
+    height: 1170px;
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 660px;
+    height: 700px;
+    left: 30px;
+  }
+  @media (min-width: $break-desk-lg-med) { width: 700px; }
+}
+
+.about-team-guavo {
+  @include transition;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 40px;
+  @media (min-width: $break-desk-sm-min) {
+    width: 230px;
+    position: absolute;
+    margin-bottom: 0;
+  }
+  &.is-chico {
+    @media (min-width: $break-desk-sm-min) {
+      bottom: 40px;
+      right: -47px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      bottom: 0;
+      right: -40px;
+    }
+  }
+  &.is-daniel {
+    @media (min-width: $break-desk-sm-min) {
+      top: 270px;
+      left: 90px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      top: 330px;
+      left: -90px;
+    }
+  }
+  &.is-guilherme {
+    @media (min-width: $break-desk-sm-min) {
+      top: -30px;
+      left: 190px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      top: 20px;
+      left: -30px;
+    }
+  }
+  &.is-juliana {
+    @media (min-width: $break-desk-sm-min) {
+      top: 540px;
+      right: -70px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      top: 240px;
+      right: -140px;
+    }
+  }
+  &.is-lailson {
+    @media (min-width: $break-desk-sm-min) {
+      top: -10px;
+      left: 69%;
+    }
+    @media (min-width: $break-desk-md-min) {
+      top: -20px;
+      left: 40%;
+    }
+  }
+  &.is-leo {
+    @media (min-width: $break-desk-sm-min) {
+      bottom: 150px;
+      left: 251px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      bottom: 30px;
+      left: 56px;
+    }
+  }
+  &.is-lucas {
+    @media (min-width: $break-desk-sm-min) {
+      top: 255px;
+      left: 59%;
+    }
+    @media (min-width: $break-desk-md-min) {
+      top: 240px;
+      left: 24%;
+    }
+  }
+  &.is-renatinha {
+    @media (min-width: $break-desk-sm-min) {
+      bottom: 0;
+      left: 13%;
+    }
+    @media (min-width: $break-desk-md-min) {
+      bottom: -40px;
+      left: 40%;
+    }
+  }
+  &.is-sergio {
+    @media (min-width: $break-desk-sm-min) {
+      top: 520px;
+      right: 130px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      top: 0;
+      right: -90px;
+    }
+  }
+  &.is-tiago {
+    @media (min-width: $break-desk-sm-min) {
+      top: 540px;
+      right: 54%;
+    }
+    @media (min-width: $break-desk-md-min) {
+      top: 180px;
+      right: 10%;
+    }
+  }
+  &:hover, &:active, &:focus {
+    @media (min-width: $break-desk-md-min) {
+      .about-guavo-content { top: -10px; }
+      .about-guavo-extra {
+        display: block;
+        bottom: 10px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.about-guavo-content {
+  @include transition;
+  position: relative;
+  top: 0;
+}
+.about-guavo-extra {
+  @include transition;
+  position: relative;
+  display: block;
+  @media (min-width: $break-desk-md-min) {
+    opacity: 0;
+    bottom: 0;
+  }
+}
+
+.about-guavo-social {
+  margin-top: 5px;
+  .type-icon {
+    margin-right: 8px;
+    &:last-child { margin-right: 0; }
+  }
+  &.is-small {
+    .type-icon { margin-right: 5px; }
+  }
+}
+
+.about-team-newbie {
+  background: url(/images/pattern-x-small.svg) repeat;
+  background-size: 63px auto;
+  background-position: 0px 7px;
+  position: relative;
+  margin: 112px 0;
+  padding: 62px 0 45px;
+  text-align: center;
+  @media (min-width: $break-desk-sm-min) {
+    padding: 62px 0 56px;
+    text-align: left;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: -112px;
+    left: 0;
+    background: url(/images/pattern-x-top.svg) no-repeat;
+    background-size: 2560px 112px;
+    background-position: 43px 0px;
+    width: 100%;
+    height: 112px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -112px;
+    left: 0;
+    background: url(/images/pattern-x-bottom.svg) no-repeat;
+    background-size: 2560px 112px;
+    background-position: 12px 6px;
+    width: 100%;
+    height: 112px;
+  }
+  .type-text-sans {
+    width: 95%;
+    display: inline-block;
+    color: $guava;
+    background-color: $white;
+    margin-left: -3px;
+    padding: 0 10px;
+    vertical-align: -170%;
+    font-weight: $medium;
+    position: relative;
+    .type-link { display: inline-block; }
+    @media (min-width: $break-desk-sm-min) {
+      width: calc(100% - 171px);
+      top: 15px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      width: calc(100% - 171px);
+      top: 0;
+    }
+  }
+}
+
+.about-history {
+  padding-bottom: modular-scale(10);
+  @media (min-width: $break-desk-sm-min) { padding-bottom: modular-scale(13); }
+}
+.about-history-content {
+  width: 100%;
+  .type-text:first-child { margin-bottom: 25px; }
+  @media (min-width: $break-desk-md-min) {
+    width: 50%;
+    float: left;
+  }
+}
+.about-history-image {
+  position: relative;
+  margin-top: 40px;
+  @media (min-width: $break-desk-md-min) { margin-top: 30px; }
+  @media (min-width: $break-desk-md-min) {
+    position: absolute;
+    top: 94px;
+    left: 62%;
+    margin-top: 0;
+  }
+  .type-quote {
+    color: $guava;
+    width: 240px;
+    padding: 3px 0 0 18px;
+    @media (min-width: $break-desk-sm-min) {
+      width: 318px;
+      padding: 30px 0 0 27px;
+    }
+    @media (min-width: $break-desk-md-min) { width: auto; }
+  }
+  &:before {
+    @include size(250px, 240px);
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -14px;
+    left: 0;
+    border: 3px solid $yellow;
+    @media (min-width: $break-desk-sm-min) {
+      @include size(360px);
+      top: 7px;
+      left: 0;
+    }
+    @media (min-width: $break-desk-md-min) { @include size(420px); }
+  }
+}
+
+.about-giving {
+  padding-bottom: modular-scale(6);
+  .type-lead {
+    color: $guava-darker;
+    display: block;
+    margin-bottom: ms-sans(3);
+  }
+}
+
+.about-conferences {
+  padding-bottom: modular-scale(9);
+  @media (min-width: $break-desk-sm-min) { padding-bottom: $grid-section-margin; }
+  .type-text-sans {
+    color: $gray-dark;
+    width: 83%;
+    padding-left: modular-scale(0);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    left: 15px;
+    top: -10px;
+    @media (min-width: $break-desk-sm-min) {
+      width: 68%;
+      left: 0;
+      top: 0;
+    }
+  }
+}

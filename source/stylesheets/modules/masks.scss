@@ -1,0 +1,104 @@
+///////////////////////////////////////////////////////////
+// Masks                                          (Page) //
+///////////////////////////////////////////////////////////
+
+.mask {
+  @media (max-width: ($md - 1px)) { display: none; }
+  %menu-antialiasing {
+    .menu {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  &.is-viewport {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: none;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  &.is-section {
+    position: absolute;
+    overflow: hidden;
+  }
+
+  &.of-services {
+    [data-menu-mask-of="#what-we-do"] { z-index: 0; }
+
+    [data-menu-mask-of="#interlude"] { z-index: 0; }
+
+    [data-menu-mask-of="#what-we-master"] { z-index: 1; }
+    [data-menu-mask-of="#what-we-master .divisor"] { border-radius: 0 0 50% 50%; }
+
+    [data-menu-mask-of="#tech-stack"] {
+      @extend %menu-antialiasing;
+      z-index: 0;
+    }
+    [data-menu-mask-of="#tech-stack .divisor.is-last-one"] { border-radius: 0 0 50% 50%; }
+
+    [data-menu-mask-of="#footer"] {
+      @extend %menu-antialiasing;
+      z-index: -1;
+    }
+  }
+
+  &.of-about-us {
+    [data-menu-mask-of="#cover"] { @extend %menu-antialiasing; }
+
+    [data-menu-mask-of="#team"] {
+      @extend %menu-antialiasing;
+      z-index: 0;
+    }
+
+    [data-menu-mask-of="#history"] {
+      @extend %menu-antialiasing;
+      z-index: 0;
+    }
+    [data-menu-mask-of="#history .divisor"] { border-radius: 50% 50% 0 0; }
+
+    [data-menu-mask-of="#giving-back"] {
+      @extend %menu-antialiasing;
+      z-index: 1;
+    }
+    [data-menu-mask-of="#giving-back .divisor"] { border-radius: 50% 50% 0 0; }
+  }
+
+  &.of-process {
+    [data-menu-mask-of="#cover"] { @extend %menu-antialiasing; }
+
+    [data-menu-mask-of="#intro"] { @extend %menu-antialiasing; }
+
+    [data-menu-mask-of="#kick-off"] {
+      @extend %menu-antialiasing;
+      z-index: 0;
+    }
+
+    [data-menu-mask-of="#immersion"] { z-index: 1; }
+    [data-menu-mask-of="#immersion .divisor"] { border-radius: 50% 50% 0 0; }
+
+    [data-menu-mask-of="#discovery"] { z-index: 2; }
+    [data-menu-mask-of="#discovery .divisor"] { border-radius: 50% 50% 0 0; }
+
+    [data-menu-mask-of="#build"] { z-index: 2; }
+    [data-menu-mask-of="#build .divisor"] { border-radius: 50% 50% 0 0; }
+
+    [data-menu-mask-of="#publishing"] { z-index: 1; }
+    [data-menu-mask-of="#publishing .divisor"] { border-radius: 0 0 50% 50%; }
+
+    [data-menu-mask-of="#maintenance"] {
+      @extend %menu-antialiasing;
+      z-index: 0;
+    }
+    [data-menu-mask-of="#build .divisor"] { border-radius: 0 0 50% 50%; }
+  }
+
+  [data-menu-mask-of=".divisor"] .menu {
+    transform: scale(1 / $divisors-scale-factor);
+    transform-origin: left;
+  }
+}

@@ -1,0 +1,279 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Menu ................................... //
+
+$list: services, process, work, about;
+@each $page in $list {
+  .menu.menu-#{$page} {
+    .menu-content-subgroup.is-#{$page} { display: block; }
+  }
+}
+
+.menu {
+  z-index: 4;
+  width: 100%;
+  &.has-scrolled {
+    .figure-menu-brand { width: 0; }
+    .logo-guava-extra { opacity: 0; }
+    .logo-guava-symbol { opacity: 0; }
+    .menu-brand-tagline { left: 50px; }
+    .menu-brand { pointer-events: none; }
+    @media (min-width: $break-desk-sm-min) {
+      .menu-brand { pointer-events: initial; }
+      .figure-menu-brand { width: 55px; }
+      .logo-guava-symbol { opacity: 1; }
+    }
+  }
+  @media (min-width: $break-desk-sm-min) {
+    width: 380px;
+    &.has-scrolled { width: 210px; }
+  }
+  &.is-open {
+    @include transition;
+    @extend .menu-bkg-guava;
+    height: 100vh !important;
+    width: 100%;
+    background-color: $guava;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    .menu-wrapper { padding-top: 20px; }
+    .logo-guava { width: 210px; }
+    .logo-guava-extra { display: none; }
+    .menu-content {
+      display: block;
+      width: 155px;
+    }
+    .menu-brand-tagline {
+      display: block;
+      left: 43px;
+    }
+    .menu-link-title {
+      font-size: ms-sans(1);
+      line-height: ms-sans(2);
+    }
+    .menu-link-section {
+      font-size: ms-sans(1);
+      line-height: ms-sans(2);
+      &.type-link { font-weight: $book; }
+    }
+    .menu-brand:after {
+      display: block;
+      margin: 18px 0 12px;
+    }
+    .menu-content-group {
+      margin-bottom: 2px;
+      .menu-link-section,
+      .type-link.is-main {
+        @include underline(8px, 10px, $guava-darkest, 0.4);
+        &:hover, &:active, &:focus, &.is-active {
+          @include underline(-17px, 35px, $guava-darkest, 0.4);
+        }
+      }
+    }
+    .menu-content-subgroup {
+      margin-top: 5px;
+      li { margin-bottom: 5px; }
+    }
+    .icon-menu-line {
+      &.is-second { opacity: 0; }
+      &.is-first { transform: rotate(45deg) translate(5px, -6px); }
+      &.is-third { transform: rotate(-45deg) translate(-16px, -5px); }
+    }
+  }
+}
+
+.menu-is-open { position: fixed; }
+
+.menu-wrapper {
+  width: 200px;
+  position: relative;
+  padding: 11px 0 0 20px;
+  .logo-guava { width: 100%; }
+  @media (min-width: $break-desk-sm-min) {
+    width: auto;
+    padding: modular-scale(3) 0 modular-scale(3) modular-scale(3);
+    .logo-guava { width: 240px; }
+  }
+}
+
+.menu-brand {
+  @include clearfix;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  .logo-guava { float: left; }
+  &:after {
+    width: 45px;
+    height: 3px;
+    background-color: $guava;
+    margin: 20px 0 9px;
+    display: none;
+    @media (min-width: $break-desk-sm-min) { display: block; }
+  }
+}
+
+.menu-brand-tagline {
+  @include transition;
+  display: block;
+  width: 100px;
+  margin-left: 10px;
+  line-height: modular-scale(-1);
+  font-weight: $bold;
+  position: absolute;
+  top: 4px;
+  left: 240px;
+  color: $gray;
+  display: none;
+  @media (min-width: $break-desk-sm-min) { display: block; }
+}
+
+.menu-content {
+  list-style: none;
+  width: 142px;
+  position: relative;
+  z-index: 1;
+  display: none;
+  @media (min-width: $break-desk-sm-min) { display: block; }
+}
+
+.menu-content-group {
+  padding: 5px 0;
+  list-style: none;
+}
+
+.menu-content-subgroup {
+  display: none;
+  list-style-type:none ;
+  margin: 0px;
+  padding: 0px;
+}
+
+.menu-link-section { text-decoration: none; }
+
+.menu-steps {
+  @include clearfix;
+  position: fixed;
+  display: block;
+  overflow: hidden;
+  right: modular-scale(2);
+  top: modular-scale(3);
+  width: 112px;
+  height: 53px;
+  z-index: 5;
+  display: none;
+  @media (min-width: $break-desk-md-min) { display: block; }
+}
+.menu-steps-item.active {
+  .figure-process-circle {
+    border-color: $guava;
+    &.figure-publishing { border-color: $green; }
+    &.figure-maintenance { border-color: $green-darkest; }
+  }
+}
+
+.index {
+  .logo-guava-fill { fill: $white; }
+  .menu-brand-tagline { color: $green; }
+  .menu-brand::after { background-color: $green; }
+  .menu-link-title {
+    @include underline(5px, 10px, $guava-darkest, 0);
+    color: $white;
+    &:hover, &:active, &:focus, &.is-active { @include underline(-17px, 31px, $guava-darkest, 0); }
+  }
+  &.menu-is-open {
+    .type-link { color: $white; }
+    .logo-guava-fill { fill: $white; }
+  }
+}
+
+.services, .process, .about-us, .start-a-project {
+  .logo-guava-fill { fill: $guava; }
+  .menu-brand::after { background-color: $guava; }
+  .menu-link-title {
+    @include underline(5px, 10px, $yellow, 0.5);
+    color: $black;
+    &:hover, &:active, &:focus, &.is-active { @include underline(-17px, 31px, $yellow, 0.5); }
+  }
+  .menu-link-section {
+    @include underline(5px, 10px, $yellow, 0.5);
+    color: $black;
+    &:hover, &:active, &:focus, &.is-active { @include underline(-17px, 31px, $yellow, 0.5); }
+  }
+}
+
+.services {
+  .menu-brand-tagline { color: $gray; }
+  .menu-content-group:nth-child(1) {
+    .menu-link-title { @include underline(-17px, 31px, $yellow, 0.5); }
+  }
+}
+
+.process {
+  .menu-brand-tagline { color: $gray; }
+  .menu-content-group:nth-child(2) {
+    .menu-link-title { @include underline(-17px, 31px, $yellow, 0.5); }
+  }
+}
+
+.work {
+  .logo-guava-fill { fill: $guava; }
+  .menu-brand-tagline { color: $gray-darker; }
+  .menu-brand::after { background-color: $guava; }
+  .menu-link-title {
+    @include underline(5px, 10px, $green-darker, 0);
+    color: $black;
+    &:hover, &:active, &:focus, &.is-active { @include underline(-17px, 31px, $green-darker, 0); }
+  }
+  .menu-link-section {
+    @include underline(5px, 10px, $green-darker, 0);
+    color: $black;
+    &:hover, &:active, &:focus, &.is-active { @include underline(-17px, 31px, $green-darker, 0); }
+  }
+  .type-section-symbol { color: $gray-darker; }
+  .menu-content-group:nth-child(3) {
+    .menu-link-title { @include underline(-17px, 31px, $green-darker, 0); }
+  }
+}
+
+.about-us {
+  .menu-brand-tagline { color: $gray-darker; }
+  .menu-content-group:nth-child(4) {
+    .menu-link-title { @include underline(-17px, 31px, $yellow, 0.5); }
+  }
+}
+
+.start-a-project {
+  .menu-brand-tagline { color: $gray-darker; }
+  .menu-content-group:nth-child(5) {
+    .menu-link-title { @include underline(-17px, 31px, $yellow, 0.5); }
+  }
+}
+
+@media (max-width: $break-mobi-max) {
+  .index, .services, .process, .about-us, .work, .start-a-project {
+    .menu-brand-tagline { color: $green; }
+    .menu-brand::after { background-color: $green; }
+    .menu-link-title {
+      @include underline(5px, 10px, $guava-darkest, 0);
+      color: $white;
+      &:hover, &:active, &:focus, &.is-active { @include underline(-17px, 31px, $guava-darkest, 0); }
+    }
+    &.menu-is-open .type-link { color: $white; }
+  }
+  .menu-is-open {
+    &.index, &.services, &.process, &.about-us, &.work, &.start-a-project {
+      .logo-guava-fill { fill: $white; }
+    }
+  }
+}
+
+.footer {
+  .logo-guava-fill { fill: $guava !important; }
+}

@@ -1,0 +1,56 @@
+<button class="button is-toggle at-<%= page_name %>">
+  <%= inline_svg 'icon-menu', class: 'icon of-menu is-fixed' %>
+</button>
+<aside class="menu at-<%= page_name %>" data-scroll-toggle-offset="100" data-scroll-toggle-class="has-scrolled" >
+  <nav>
+    <% link_to 'index.html', class: 'is-menu-header' do %>
+      <figure class="logo of-guava at-menu and-<%= page %> has-tagline is-expanded">
+        <%= inline_svg('guava-ordered', class: '') %>
+        <figcaption><em class="is-subtitle"><%= t(:'guava.tagline') %></em></figcaption>
+      </figure>
+    <% end %>
+
+    <ul>
+      <li class="is-services-sublinks">
+        <%= link_to t('menu.services.title'), 'services.html', class: 'is-menu-link' %>
+        <ol>
+          <li><%= link_to t('menu.services.what-we-do'), 'services.html#what-we-do', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.services.what-we-master'), 'services.html#what-we-master', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.services.tech-stack'), 'services.html#tech-stack', class: 'is-menu-sublink' %></li>
+        </ol>
+      </li>
+
+      <li class="is-about-us-sublinks">
+        <%= link_to t('menu.about-us.title'), 'about-us.html', class: 'is-menu-link' %>
+        <ol>
+          <li><%= link_to t('menu.about-us.team'), 'about-us.html#team', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.about-us.history'), 'about-us.html#history', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.about-us.giving-back'), 'about-us.html#giving-back', class: 'is-menu-sublink' %></li>
+        </ol>
+      </li>
+
+      <li class="is-work-sublinks">
+        <%= link_to t('menu.work.title'), 'work.html', class: 'is-menu-link' %>
+        <ol>
+          <li><%= link_to t('menu.work.projects'), 'work.html#projects', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.work.clients'), 'work.html#clients', class: 'is-menu-sublink' %></li>
+        </ol>
+      </li>
+
+      <li class="is-process-sublinks">
+        <%= link_to t('menu.process.title'), 'process.html', class: 'is-menu-link' %>
+        <ol>
+          <li><%= link_to t('menu.process.kick-off'), 'process.html#kick-off', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.process.immersion'), 'process.html#immersion', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.process.discovery'), 'process.html#discovery', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.process.build'), 'process.html#build', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.process.publishing'), 'process.html#publishing', class: 'is-menu-sublink' %></li>
+          <li><%= link_to t('menu.process.maintenance'), 'process.html#maintenance', class: 'is-menu-sublink' %></li>
+        </ol>
+      </li>
+
+      <li><%= link_to t('menu.start-a-project'), 'start-a-project.html', class: 'is-menu-link' %></li>
+    </ul>
+  </nav>
+  <%= partial 'language-link', locals: { type: 'long', color: 'red' }%>
+</aside>

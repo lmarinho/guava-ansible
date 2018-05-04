@@ -1,0 +1,201 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Headers ............................... //
+
+.header { position: relative; }
+
+.header-title {
+  height: 440px;
+  padding-top: 190px;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 2;
+  @media (min-width: $break-desk-sm-min) and (max-width: $break-desk-sm-max) {
+    padding-top: 260px;
+    height: 520px;
+  }
+  @media (min-width: $break-desk-md-min) { height: 540px; }
+}
+
+.header-intro {
+  clear: both;
+  overflow: hidden;
+  position: relative;
+  padding: 80px 0;
+}
+
+.services .header-intro { padding: 80px 0 60px; }
+
+// Landing
+.header-landing {
+  text-align: center;
+  padding-bottom: 60px;
+  background-color: $white;
+  overflow: visible;
+  @media (min-width: $break-desk-sm-min) {
+    padding-bottom: 0;
+    height: 700px;
+    max-height: 800px;
+  }
+  .header-image {
+    @include texture(guava);
+    background-color: $guava-dark;
+    position: relative;
+    height: 90%;
+  }
+  .header-title {
+    padding-top: 100px;
+    height: 550px;
+    @media (min-width: $break-desk-sm-min) { padding-top: 168px; }
+  }
+  .grid-content {
+    position: initial;
+    @media (min-width: $break-desk-sm-min) and (max-width: $break-desk-md-min) {
+      padding-left: 10%;
+      width: 70%;
+    }
+  }
+  .icon-page-down {
+    bottom: 20px;
+    right: 20px;
+    .icon-fill { stroke: $green; }
+    @media (min-width: $break-mobi-max) {
+      bottom: 3vh;
+      right: modular-scale(2);
+      .icon-fill { stroke: $guava-dark; }
+    }
+  }
+}
+
+// Services
+.header-services {
+  background-color: $white;
+  overflow: hidden;
+  .type-title { color: $guava; }
+  .header-intro {
+    @include texture(guava);
+    background-color: $guava;
+    color: $white;
+  }
+  .type-lead-sans:first-child { margin-bottom: modular-scale(2); }
+}
+
+// Process
+.header-process {
+  background-color: $white;
+  .type-title {
+    color: $white;
+    position: relative;
+    z-index: 1;
+  }
+  .type-subtitle {
+    position: relative;
+    z-index: 1;
+  }
+  .header-intro {
+    color: $gray-darkest;
+    padding: 100px 0 90px;
+    box-sizing: border-box;
+  }
+  .header-intro-content {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
+// Work
+.header-work {
+  overflow: hidden;
+  background-color: $gray-lightest;
+  .type-title {
+    color: $guava;
+    display: inline-block;
+    left: -12px;
+    position: relative;
+    line-height: 6.14rem;
+    @media (min-width: $break-desk-sm-min) { left: -22px; }
+    @media (min-width: $break-desk-sm-min) { left: -22px; }
+  }
+  .type-subtitle {
+    background-color: transparentize($green, 0.6);
+    margin-top: 10px;
+    padding-bottom: 6px;
+  }
+  .header-intro { background-color: $gray-lightest; }
+  .grid-content { z-index: 1; }
+  .header-title {
+    height: 460px;
+    padding-top: 110px;
+    @media (min-width: $break-desk-sm-min) {
+      height: 520px;
+      padding-top: 190px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      height: 540px;
+      padding-top: 190px;
+    }
+  }
+}
+
+// About Us
+.header-about {
+  background-color: $white;
+  .header-title {
+    .grid-content {
+      position: relative;
+      z-index: 1;
+    }
+    .type-title {
+      color: $guava;
+      display: inline-block;
+    }
+    .type-subtitle {
+      width: 102%;
+      background-color: transparentize($white, 0.3);
+    }
+  }
+  .header-intro {
+    background: url(/images/figure-guava-hq.jpg) no-repeat;
+    @include full-background;
+    color: $white;
+    position: relative;
+    overflow: hidden;
+    padding: 110px 0;
+    .type-lead-sans:first-child { margin-bottom: modular-scale(2); }
+  }
+}
+
+// Start a Project
+.header-start {
+  background-color: $white;
+  .header-title {
+    background: url(/images/bkg-start-a-project@1x.png) no-repeat;
+    background-position: 50% 100%;
+    background-size: auto 540px;
+  }
+  .subtitle-alt-start {
+    position: absolute;
+    float: right;
+    top: -6px;
+    left: 144px;
+    @media (min-width: $break-desk-sm-min) {
+      top: 5%;
+      left: 216px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      top: 10%;
+      left: 46%;
+    }
+   }
+  .type-title { color: $guava; }
+  .header-intro {
+    background: url(/images/figure-start-a-project.svg) no-repeat;
+    background-position: top center;
+    background-size: 1605px auto;
+    min-height: 160px;
+    padding: 0;
+  }
+}

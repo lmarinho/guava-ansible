@@ -1,0 +1,18 @@
+///////////////////////////////////////////////////////////
+// Utils                                   (Base styles) //
+///////////////////////////////////////////////////////////
+
+// Ease dimensioning components.
+@mixin dimensions($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Underline technique for links and other stuff.
+@mixin underline($y-position, $y-height, $color, $transparency) {
+  background-image: linear-gradient(to bottom, transparent 50%, transparentize($color, $transparency) 50%);
+  background-position: 0 $y-position;
+  background-repeat: repeat-x;
+  background-size: 4px $y-height;
+  text-decoration: none;
+}

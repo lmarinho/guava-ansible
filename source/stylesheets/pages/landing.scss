@@ -1,0 +1,234 @@
+///////////////////////////////////////////////////////////
+// Landing                                        (Page) //
+///////////////////////////////////////////////////////////
+
+// Temporarily sets background color for all pages.
+.grid.is-body { background-color: $white; }
+
+.index h1 > span {
+  @media (min-width: $sm) { white-space: nowrap; }
+}
+
+.page-landing {
+  &.has-blocks {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: calc(100vw - #{$gutter-small});
+    margin: ($gutter-small / 2) ($gutter-small / 2) 0;
+    @media (min-width: $sm) {
+      width: calc(100% - #{$gutter});
+      margin: ($gutter / 2) ($gutter / 2) 0;
+    }
+  }
+
+  &.is-block {
+    position: relative;
+    z-index: 3;
+    padding: 0 0 ($gutter-small / 2);
+    h2 {
+      margin-top: 0;
+      &::after { transition: width .2s ease-out; }
+    }
+    a {
+      padding: $gutter $gutter-small 4rem;
+      &:focus { outline: none; }
+      &:hover {
+        h2::after { width: 5rem; }
+      }
+    }
+    figure {
+      position: absolute;
+      pointer-events: none;
+    }
+    @media (min-width: $sm) {
+      width: 50%;
+      padding: ($gutter / 4);
+      a { padding: $gutter; }
+    }
+  }
+
+  &.of-services {
+    padding-top: 0;
+    h2, p { color: $brand-primary; }
+    a {
+      background-color: $gray-lighter;
+      background-image: image-url("texture-background-gray@2x.png");
+      background-size: 150px;
+    }
+    figure {
+      right: -23.5rem;
+      bottom: -10rem;
+      transform: rotate(40deg);
+    }
+    .is-cta-link svg { fill: $brand-primary; }
+    @media (min-width: $sm) {
+      a {
+        height: 17rem;
+        &:hover {
+          figure { right: 62%; }
+        }
+      }
+      figure {
+        right: 66%;
+        bottom: 11.5rem;
+        transition: right .5s ease-out;
+        transform: rotate(60deg);
+      }
+    }
+  }
+
+  &.of-about {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    hyphens: auto;
+    h2, p { color: $white; }
+    a {
+      background-image: linear-gradient(to bottom, transparentize($gray-darkest,.9) 0%, transparentize($gray-darkest,.1) 100%), image-url("picture-about-sm.jpg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 100%, 100% auto;
+      transition: background-size .5s ease-out;
+      &:hover { background-size: 100%, 105% auto; }
+    }
+    .is-cta-link {
+      color: $brand-secondary;
+      svg { fill: $brand-secondary; }
+    }
+    @media (min-width: $sm) {
+      padding-top: 0;
+      padding-right: 0;
+      a { height: 23rem; }
+    }
+    @media (min-width: 770px) { hyphens: none; }
+  }
+
+  &.of-work {
+    h2, p { color: $black; }
+    a {
+      padding-bottom: 5rem;
+      background-color: $green-light;
+      background-image: image-url("texture-background-green@2x.png"), image-url("pattern-work@2x.png");
+      background-position: left;
+      background-size: 150px auto, 571px auto;
+    }
+    .is-cta-link {
+      color: $brand-primary;
+      svg { fill: $brand-primary; }
+    }
+    @media (min-width: $sm) {
+      left: 50%;
+      padding-right: 0;
+      a {
+        height: 22rem;
+        transition: background-position 2s ease;
+        &:hover { background-position: left, center; }
+      }
+    }
+    @media (min-width: $md) {
+      a { height: 18rem; }
+    }
+  }
+
+  &.of-process {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    h2, p { color: $white; }
+    a {
+      background-color: $black;
+      background-image: image-url("pattern-stars.png");
+      background-position: top;
+      background-size: 1000px auto;
+    }
+    figure {
+      right: -2.6rem;
+      bottom: -2rem;
+    }
+    .is-cta-link {
+      color: $brand-secondary;
+      svg { fill: $brand-secondary; }
+    }
+    @media (max-width: $xs) { z-index: 4; }
+    @media (min-width: $sm) {
+      top: -6rem;
+      right: auto;
+      left: -50%;
+      a {
+        height: 23rem;
+        transition: background-size 1.5s ease;
+        &:hover {
+          background-size: 1100px auto;
+          figure { bottom: -7rem; }
+        }
+      }
+      figure {
+        bottom: -6rem;
+        left: 0;
+        transition: bottom .5s ease-out;
+      }
+    }
+    @media (min-width: $md) {
+      a { height: 21rem; }
+    }
+  }
+
+  &.of-start {
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    h2 {
+      @extend .is-centered;
+      color: $black;
+    }
+    a {
+      height: 9rem;
+      padding-bottom: $gutter-small;
+      background-color: $white;
+      border: 8px solid $black;
+    }
+    .is-cta-link svg { fill: $brand-primary; }
+    @media (min-width: $sm) {
+      position: absolute;
+      bottom: 17.25rem;
+      left: 30%;
+      z-index: 3;
+      width: 40%;
+      a {
+        height: 13rem;
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  &.at-left {
+    @media (min-width: $sm) {
+      padding-left: 0;
+      text-align: right;
+      h2::after { margin: .75rem 0 0 auto; }
+      h2, p {
+        float: right;
+        max-width: 25rem;
+      }
+      .is-main-content { @include clearfix; }
+    }
+    @media (min-width: $md) {
+      > a { padding-left: 2rem; }
+    }
+    @media (min-width: $lg) {
+      > a { padding-left: 5rem; }
+    }
+  }
+
+  &.at-right {
+    @media (min-width: $sm) {
+      h2, p { max-width: 25rem; }
+    }
+    @media (min-width: $md) {
+      > a { padding-right: 2rem; }
+    }
+    @media (min-width: $lg) {
+      > a { padding-right: 5rem; }
+    }
+  }
+}

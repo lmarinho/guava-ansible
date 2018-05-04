@@ -1,0 +1,89 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Pages / Start a Project  ......................... //
+
+.start-form-wrapper {
+  @include clearfix;
+  position: relative;
+  padding-top: 80px;
+  &:before {
+    content: '';
+    display: block;
+    height: 80px;
+    background: url(/images/figure-start-form-top.svg) no-repeat;
+    background-size: 750px auto;
+    position: absolute;
+    width: 100%;
+    top: 21px;
+    @media (min-width: $break-desk-md-min) { top: 23px; }
+  }
+  &:after {
+    content: '';
+    float: left;
+    width: 20px;
+    height: 390px;
+    background: url(/images/figure-start-form-side.svg) no-repeat;
+    position: absolute;
+    top: 61.5px;
+    right: -20px;
+  }
+}
+
+.start-box {
+  border: 3px solid $yellow;
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  .type-label-box {
+    display: block;
+    width: 180px;
+    position: absolute;
+    @media (min-width: $break-desk-sm-max) { width: 150px; }
+  }
+  &.at-start {
+    @include size(120px);
+    right: -10px;
+    bottom: -120px;
+    text-align: right;
+    @media (min-width: $break-desk-sm-max) { right: -70px; }
+    .type-label-box {
+      top: 51px;
+      left: -105px;
+      bottom: -109px;
+      color: lighten($gray-darker, 5%);
+    }
+  }
+  &.at-landing {
+    @include transition;
+    @include size(180px);
+    color: $guava;
+    text-align: left;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    .type-title-box {
+      width: 80px;
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+    .type-label-box {
+      bottom: -24px;
+      left: 63px;
+    }
+    &:hover, &:focus, &:active {
+      background-color: $yellow;
+      color: $guava-dark;
+    }
+    @media (min-width: $break-desk-sm-min) { margin-left: 0; }
+    @media (min-width: $break-desk-sm-max) {
+      margin: modular-scale(9) 0 0;
+      position: absolute;
+      bottom: 13px;
+      right: -170px;
+    }
+  }
+}

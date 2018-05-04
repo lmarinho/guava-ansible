@@ -1,0 +1,36 @@
+///////////////////////////////////////////////////////////
+// Bootstrap grid                    (Vendor overwrites) //
+///////////////////////////////////////////////////////////
+
+$grid-breakpoints: (
+  xs: 420px,
+  sm: 720px,
+  md: 990px,
+  lg: 1230px,
+  xl: 1430px
+);
+
+$container-max-widths: (
+  sm: 34.5rem, // 690px
+  md: 48rem,   // 960px
+  lg: 58.5rem, // 1170px
+  xl: 70rem    // 1400px
+);
+
+$grid-columns: 16;
+
+$grid-gutter-width-small: 1rem;   // 20px
+$grid-gutter-width-base:  1.5rem; // 30px
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-small,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+);
+
+$xs: map-get($grid-breakpoints, xs);
+$sm: map-get($grid-breakpoints, sm);
+$md: map-get($grid-breakpoints, md);
+$lg: map-get($grid-breakpoints, lg);
+$xl: map-get($grid-breakpoints, xl);

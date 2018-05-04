@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-menu">
+            <g id="Group-2">
+                <circle id="Oval" fill="#F9F9F9" cx="21" cy="21" r="21"></circle>
+                <g id="Group" transform="translate(4.695652, 4.695652)">
+                    <polygon id="Fill-1" fill="#FF5557" points="6.45361043 12.3826212 26.2610963 12.3826212 26.2610963 9.79414292 6.45361043 9.79414292"></polygon>
+                    <polygon id="Fill-2" fill="#FF5557" points="6.6048676 24.5480188 26.4132538 24.5480188 26.4132538 21.9595406 6.6048676 21.9595406"></polygon>
+                    <polygon id="Fill-3" fill="#FF5557" points="18.3318896 17.1490873 14.3694921 14.8870977 10.4115963 17.1490873 6.82644134 15.1007489 6.0809596 17.1581308 10.4115963 19.6326412 14.3694921 17.371782 18.3318896 19.6326412 22.2960878 17.371782 25.8884454 19.4201204 26.6339272 17.3616081 22.2960878 14.8870977"></polygon>
+                    <circle id="Oval-2" stroke="#F6494D" stroke-width="3" cx="16.4347826" cy="16.4347826" r="16.3936957"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

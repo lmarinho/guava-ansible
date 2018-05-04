@@ -1,16 +1,38 @@
 <!doctype html>
 <html>
   <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title><%= current_page.data.title || "Guava — Outstanding software for the web" %></title>
+    <%= partial 'layouts/description.html' %>
+    <%= partial 'layouts/favicons.html' %>
+
+    <%= stylesheet_link_tag 'https://cloud.typography.com/6137892/7918552/css/fonts.css' %>
+    <%= stylesheet_link_tag '/fonts/graphik.css' %>
+    <%= stylesheet_link_tag    :gss %>
+    <%= javascript_include_tag :gjs %>
+    <%= javascript_include_tag :'menu-swipe' %>
+    <% if content_for? :additional_js %>
+      <%= yield_content :additional_js %>
+    <% end %>
   </head>
-  <body>
-    <%= yield %>
+
+  <body class="<%= page_classes %>" data-spy="scroll" data-target="#menu-steps" data-offset="60">
+    <div class="grid is-body-wrapper">
+      <%= partial 'menu', locals: { page: lang_page_class } %>
+      <% if content_for? :language_link %>
+        <%= yield_content :language_link %>
+      <% end %>
+      <div class="grid is-wrapper">
+        <%= yield %>
+      </div>
+    </div>
+    <% if content_for? :masks %>
+    <div class="mask is-viewport of-<%= page_name %>">
+      <%= yield_content :masks %>
+    </div>
+    <% end %>
+    <%= partial 'layouts/analytics.html' %>
   </body>
 </html>

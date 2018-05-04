@@ -1,0 +1,22 @@
+<%#
+
+Call to Action (CTA)
+
+@param page the page identifier
+@param [midnight] mightnight class to be used in the section
+
+%>
+
+<hr>
+
+<section class="call-to-action at-<%= page %>">
+  <div class="grid is-container">
+    <div class="grid are-columns of-ultrawide-content">
+      <p class="is-lead"><%= t("calls-to-action.#{page}") %></p>
+      <% link_to 'start-a-project.html', class: 'button is-default' do %>
+        <%= t('buttons.start-a-project') %>
+        <%= inline_svg 'icon-arrow-small', class: 'icon of-small-arrow' %>
+      <% end %>
+    </div>
+  </div>
+</section>

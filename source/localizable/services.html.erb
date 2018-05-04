@@ -1,0 +1,366 @@
+---
+title: Services by Guava
+---
+
+<% content_for :additional_js do %>
+  <%= javascript_include_tag :'section-highlight' %>
+  <%= javascript_include_tag :'dynamic-menu' %>
+  <%= javascript_include_tag :'logo-transition' %>
+<% end %>
+
+<% content_for :language_link do %>
+  <%= partial 'language-link', locals: { type: 'short', color: 'red' }%>
+<% end %>
+
+<article>
+  <header id="cover">
+    <div class="cover of-services">
+      <span class="logo of-guava at-cover">
+        <%= inline_svg 'guava' %>
+      </span>
+      <div class="grid is-container of-hero">
+        <figure role="presentation">
+          <%= image_tag 'pattern-leaves-1@2x.png' %>
+        </figure>
+        <div class="grid is-row">
+          <div class="grid is-content">
+            <h1><%= t(:'services.title') %></h1>
+            <p class="is-lead also-serif hasnt-widow"><%= t(:'services.subtitle') %></p>
+            <p><%= t(:'services.intro') %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="icon of-arrow-down at-services / js-scroll-indicator"
+      data-scroll-indicator-target=".page-services.is-intro .grid.are-columns" data-scroll-indicator-offset="100">
+      <%= inline_svg 'icon-arrow-big', class: 'icon of-big-arrow' %>
+    </span>
+  </header>
+
+  <hr>
+
+  <main role="main">
+    <section id="what-we-do" class="page-services is-intro">
+      <div class="grid is-container">
+        <div class="grid are-columns of-wide-content">
+
+          <h2 class="has-alternative-color"><%= t(:'services.what-we-do.title') %></h2>
+
+          <div class="grid is-row">
+            <div class="grid is-column is-50-wide / page-services is-studio">
+              <figure role="presentation">
+                <%= image_tag t(:'files.studio.big'), class: 'picture of-stamp is-studio also-big', alt: t(:'graphics.stamps.studio') %>
+              </figure>
+              <h3><%= t(:'services.studio.title') %></h3>
+              <p class="is-lead also-serif"><%= t(:'services.studio.lead') %></p>
+              <p class="is-body"><%= t(:'services.studio.text') %></p>
+              <h4><%= t(:'services.studio.incremental.title') %></h4>
+              <p class="is-body"><%= t(:'services.studio.incremental.text') %></p>
+              <h4><%= t(:'services.studio.flexible.title') %></h4>
+              <p class="is-body"><%= t(:'services.studio.flexible.text') %></p>
+              <h4><%= t(:'services.studio.resilient.title') %></h4>
+              <p class="is-body"><%= t(:'services.studio.resilient.text') %></p>
+              <h4><%= t(:'services.studio.scale.title') %></h4>
+              <p class="is-body"><%= t(:'services.studio.scale.text') %></p>
+            </div>
+
+            <div class="grid is-column is-50-wide / page-services is-team">
+              <figure role="presentation">
+                <%= image_tag t(:'files.team-aug.big'), class: 'picture of-stamp is-team also-big', alt: t(:'graphics.stamps.team-aug') %>
+              </figure>
+              <h3><%= t(:'services.team-aug.title') %></h3>
+              <p class="is-lead also-serif"><%= t(:'services.team-aug.lead') %></p>
+              <p class="is-body"><%= t(:'services.team-aug.text') %></p>
+              <h4><%= t(:'services.team-aug.techbizz.title') %></h4>
+              <p class="is-body"><%= t(:'services.team-aug.techbizz.text') %></p>
+              <h4><%= t(:'services.team-aug.proactive.title') %></h4>
+              <p class="is-body"><%= t(:'services.team-aug.proactive.text') %></p>
+              <h4><%= t(:'services.team-aug.high-quality.title') %></h4>
+              <p class="is-body"><%= t(:'services.team-aug.high-quality.text') %></p>
+              <h4><%= t(:'services.team-aug.hands.title') %></h4>
+              <p class="is-body"><%= t(:'services.team-aug.hands.text') %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="interlude">
+      <div class="page-services is-interlude of-leaves">
+        <p><%= t(:'services.interlude.text') %></p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="what-we-master" class="page-services is-mastery">
+      <div class="grid is-container">
+        <div class="grid are-columns of-wide-content">
+
+          <h2 class="has-alternative-color"><%= t(:'services.what-we-master.title') %></h2>
+
+          <div class="grid is-row has-sideheader">
+            <h3 class="has-recoil"><%= t(:'services.what-we-master.product-design.title') %></h3>
+            <p class="is-body"><%= t(:'services.what-we-master.product-design.text') %></p>
+          </div>
+
+          <div class="grid is-row has-sideheader">
+            <h3 class="has-recoil"><%= t(:'services.what-we-master.thoughtful-experience.title') %></h3>
+            <p class="is-body"><%= t(:'services.what-we-master.thoughtful-experience.text') %></p>
+          </div>
+
+          <div class="grid is-row has-sideheader">
+            <h3 class="has-recoil"><%= t(:'services.what-we-master.adaptive-interface.title') %></h3>
+            <p class="is-body"><%= t(:'services.what-we-master.adaptive-interface.text') %></p>
+          </div>
+        </div>
+      </div>
+
+      <figure class="page-services is-interlude of-io" role="presentation">
+      </figure>
+
+      <div class="grid is-container">
+        <div class="grid are-columns of-wide-content">
+          <div class="grid is-row">
+            <div class="grid is-column is-50-wide">
+              <h3><%= t(:'services.what-we-master.frontend-development.title') %></h3>
+              <p class="is-body"><%= t(:'services.what-we-master.frontend-development.text') %></p>
+            </div>
+            <div class="grid is-column is-50-wide">
+              <h3><%= t(:'services.what-we-master.backend-development.title') %></h3>
+              <p class="is-body"><%= t(:'services.what-we-master.backend-development.text') %></p>
+            </div>
+          </div>
+
+          <div class="grid is-row has-sideheader">
+            <h3 class="has-recoil"><%= t(:'services.what-we-master.deployment.title') %></h3>
+            <p class="is-body"><%= t(:'services.what-we-master.deployment.text') %></p>
+          </div>
+          <div class="grid is-row has-sideheader">
+            <h3 class="has-recoil"><%= t(:'services.what-we-master.big-data.title') %></h3>
+            <p class="is-body"><%= t(:'services.what-we-master.big-data.text') %></p>
+          </div>
+        </div>
+      </div>
+      <span class="divisor has-rounded-bottom is-centered is-white"></span>
+    </section>
+
+    <hr>
+
+    <section id="tech-stack" class="page-services is-stack" data-scroll-offset="300">
+      <section class="page-services is-substack of-mastery">
+        <div class="grid is-container">
+          <div class="grid are-columns of-wide-content">
+            <h2 class="has-alternative-color"><%= t(:'tech-stack.title') %></h2>
+            <div class="grid is-row has-sideheader">
+              <h3><span><%= t(:'tech-stack.categories.mastery') %></span></h3>
+              <ul>
+                <li>
+                  <figure title="Ruby">
+                    <%= inline_svg 'tech-stack-ruby', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.ruby') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="Rails">
+                    <%= inline_svg 'tech-stack-rails', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.rails') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="HTML">
+                    <%= inline_svg 'tech-stack-html', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.html') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="CSS">
+                    <%= inline_svg 'tech-stack-css', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.css') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="JavaScript">
+                    <%= inline_svg 'tech-stack-javascript', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.javascript') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="Git">
+                    <%= inline_svg 'tech-stack-git', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.git') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="AngularJS">
+                    <%= inline_svg 'tech-stack-angularjs', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.angularjs') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="PostgreSQL">
+                    <%= inline_svg 'tech-stack-postgresql', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.postgresql') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="Elasticsearch">
+                    <%= inline_svg 'tech-stack-elasticsearch', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.elasticsearch') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="Heroku">
+                    <%= inline_svg 'tech-stack-heroku', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.heroku') %></figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <span class="divisor has-rounded-bottom is-centered has-guava-texture"></span>
+      </section>
+
+      <section class="page-services is-substack of-skilled">
+        <div class="grid is-container">
+          <div class="grid are-columns of-wide-content">
+            <div class="grid is-row has-sideheader">
+              <h3><span><%= t(:'tech-stack.categories.skilled') %></span></h3>
+              <ul>
+                <li>
+                  <figure title="Java">
+                    <%= inline_svg 'tech-stack-java', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.java') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="D3.js">
+                    <%= inline_svg 'tech-stack-d3js', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.d3js') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="React">
+                    <%= inline_svg 'tech-stack-react', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.react') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="Redux">
+                    <%= inline_svg 'tech-stack-redux', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.redux') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="MySQL">
+                    <%= inline_svg 'tech-stack-mysql', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.mysql') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="MongoDB">
+                    <%= inline_svg 'tech-stack-mongodb', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.mongodb') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="RabbitMQ">
+                    <%= inline_svg 'tech-stack-rabbitmq', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.rabbitmq') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="Docker">
+                    <%= inline_svg 'tech-stack-docker', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.docker') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="AWS">
+                    <%= inline_svg 'tech-stack-aws', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.aws') %></figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <span class="divisor has-rounded-bottom is-centered has-guava-texture"></span>
+      </section>
+
+      <section class="page-services is-substack of-experimenting">
+        <div class="grid is-container">
+          <div class="grid are-columns of-wide-content">
+            <div class="grid is-row has-sideheader">
+              <h3><span><%= t(:'tech-stack.categories.experimenting') %></span></h3>
+              <ul>
+                <li>
+                  <figure title="Elixir">
+                    <%= inline_svg 'tech-stack-elixir', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.elixir') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="Phoenix">
+                    <%= inline_svg 'tech-stack-phoenix', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.phoenix') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="Clojure">
+                    <%= inline_svg 'tech-stack-clojure', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.clojure') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="NodeJS">
+                    <%= inline_svg 'tech-stack-nodejs', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.nodejs') %></figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <figure title="Swift">
+                    <%= inline_svg 'tech-stack-swift', class: 'logo of-stack is-medium at-service' %>
+                    <figcaption><%= t(:'tech-stack.swift') %></figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <span class="divisor has-rounded-bottom is-centered has-guava-texture is-last-one"></span>
+      <span class="divisor has-rounded-bottom is-centered is-alternative has-green-texture"></span>
+    </section>
+
+    <footer id="footer" class="footer of-article / page-services is-footer">
+      <div class="grid is-container">
+        <div class="grid are-columns of-article-content">
+          <figure role="presentation">
+            <%= image_tag 'illustration-services-books@2x.png', class: 'picture of-books', alt: t(:'illustrations.books') %>
+          </figure>
+          <small><%= t(:'services.footnote.text') %></small>
+        </div>
+      </div>
+    </footer>
+  </main>
+</article>
+
+<%= partial 'cta', locals: { page: 'services' } %>
+<%= partial 'footer', locals: { page: 'services' } %>
+
+<% content_for :masks do %>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#cover"></div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#what-we-do"></div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#interlude"></div>
+  <div class="mask is-section" data-menu-mask-of="#what-we-master">
+    <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#what-we-master .divisor"></div>
+  </div>
+  <div class="mask is-section" data-menu-mask-of="#tech-stack">
+    <div class="mask is-section" data-menu-class="on-guava-background" data-menu-mask-of="#tech-stack .divisor.is-last-one"></div>
+  </div>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#footer"></div>
+<% end %>

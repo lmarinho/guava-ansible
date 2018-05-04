@@ -1,0 +1,570 @@
+---
+en:
+  # Content
+  guava:
+    title: "Guava"
+    tagline: "Outstanding software for the web"
+    tagline-alt: "Making a better web, one app at a time."
+
+  landing:
+    hero:
+      title: "We create web apps that <span>transform businesses.</span>"
+      intro-alt: "We design and develop stellar web app<span>lication</span>s that solve real business problems.<br>Nice to meet you."
+    services:
+      title: "Creative software services"
+      text: "Whether by creating new products from scratch or augmenting your team, we make your project work."
+    about-us:
+      title: "A bold and deliberately small team"
+      text: "We are confident, easygoing and proactive. Even more so, we are totally crazy about software, design and internet memes."
+    work:
+      title: "Work to brag about"
+      text: "We've had the pleasure of working with amazing teams, facing the most diverse challenges and turning problems into growth opportunities."
+    process:
+      title: "A down to earth, incremental process"
+      text: "Little by little, we create and validate new products and features for your business, making sure that “a lot” never means “too much”."
+    start-a-project:
+      title: "Let's start a project"
+
+  services:
+    title: "Services"
+    subtitle: "World-class software, tailored to your business."
+    intro: "From concept to deployment, we craft high quality web applications that take your business to the next level. Our team of experts works hand-in-hand, combining strategy, design and development to deliver meaningful, valuable software."
+    what-we-do:
+      title: "What we do"
+    studio:
+      title: "Studio <span>Development</span>"
+      lead: "Your idea from concept to fully functional product."
+      text: "Designers and developers working together to craft a new, engaging, easy-to-use and reliable product from scratch."
+      billing: "Billing by cycle"
+      incremental:
+        title: "Incremental and iterative"
+        text: "Your software with new capabilities every two weeks."
+      flexible:
+        title: "Flexible software"
+        text: "Responsive, lightweight and elegant interfaces running on all the platforms you need."
+      simple:
+        title: "Simple interactions"
+        text: "Simplified solutions to complex problems, carefully designed for users and their context."
+      resilient:
+        title: "Resilient back-end"
+        text: "Sturdy to withstand extensive usage, flexible to adapt to market changes."
+      scale:
+        title: "Scale-ready"
+        text: "Just a few or a thousand accesses per second: we make it work."
+    team-aug:
+      title: "Team <span>Augmentation</span>"
+      lead: "Our expertise improving your staff."
+      text: "We help build the software you need by using technologies that have most value to your business. We deliver high quality code, easy to extend and maintain."
+      billing: "Billing by hour"
+      techbizz:
+        title: "Business oriented technology"
+        text: "Technology analysis from the business perspective. And the other way around."
+      proactive:
+        title: "Proactive developers"
+        text: "Hands-on consultants, always in synergy with your team."
+      high-quality:
+        title: "High-quality work"
+        text: "Robust and carefully tested code incorporated into your system."
+      hands:
+        title: "Extra hands"
+        text: "The strength you need to unburden your company and deliver faster."
+    interlude:
+      text: "Our job is to craft solutions for real problems."
+    what-we-master:
+      title: "What we master"
+      product-design:
+        title: "Digital Product Design"
+        text: "Our team features researchers, usability experts and interaction & visual designers. A dream team, able to transform your ideas into engaging digital solutions. We observe and talk to the people who will use your product to know how they think and what they want to achieve. That way, we can design clear, to-the-point interfaces that help them do more with less."
+      thoughtful-experience:
+        title: "Thoughtful Experience"
+        text: "We practice a human-centered approach. Our goal is to design <em>for</em> experiences, provoking emotional responses that add warmth to interactions. We are constantly seeking to understand users so we can exceed their expectations. The pragmatic and hedonic qualities of your product are taken into consideration to enable a more effective, as well as more affective, experience."
+      adaptive-interface:
+        title: "Adaptive Interfaces"
+        text: "Desktops, notebooks, tablets, smartphones, your fridge, it doesn't matter: we deliver web applications that adapt to any web device. Through <strong>responsive design</strong>, we consider the multiple contexts in which the software will be used and devise optimal interactions for each scenario, putting together an interface that is both sleek on mobile and powerful on desktop. And to make sure the software works in all these situations, we do plenty of testing in multiple devices and browsers."
+      frontend-development:
+        title: "Front-end Development"
+        text: "HTML, CSS, JavaScript — we master them all. Our expertise allows us to create professional, modularized code, easy to understand and maintain. We tailor semantic HTML markup, following the best accessibility practices. We write lean CSS and think of interfaces in terms of reusable components. JavaScript is used in many levels: from simple interactions, to complex, full-featured Single Page Applications."
+      backend-development:
+        title: "Back-end Development"
+        text: "Programming is our specialty. We write world-class code, building performant and robust systems. Our experience with many languages, databases and tools helps us choose the most suitable technologies for your project. Our code is constantly checked by custom-written automated tests, which assure the application works as expected and raise red flags if a bug is introduced. On top of that, we follow the best industry practices regarding <strong>information security</strong> to keep your data safe and sound."
+      deployment:
+        title: "Publishing & Monitoring"
+        text: "We are constantly publishing new versions of your software to test features and changes, be it in a controlled environment or to the general public. But worry not, we don’t waste time whenever it happens: this process is automated and integrated with the tests so new versions of your app are deployed without breaking a sweat. After the system is published, we constantly monitor its availability and performance, to make sure your application is always running, fast and smoothly."
+      big-data:
+        title: "Big Data & Machine Learning"
+        text: "Today we produce more data than ever: usage and behavioral metrics, social media, images and videos… the list goes on. But keep in mind, data is not information. And information is not knowledge. Data has no use unless you can make sense of it and extract relevant insights from the raw facts. That’s where we come in: with a strong background in <strong>statistics</strong> and <strong>machine learning</strong>, we know how to collect, handle and analyze a <strong>huge amount of data</strong>. By applying powerful algorithms, we help you find patterns and extract <strong>useful information</strong> for your business."
+    footnote:
+      text: "We see technology as a mean to reach an end. So this list are always changing, hopefully getting bigger — only if a new tech could improve your product."
+
+  about-us:
+    title: "About us"
+    subtitle: "A small, bold software studio working hard to make the web a bit cooler each day."
+    intro: "You have the challenges, we have a great team to face them. For us, there is no such thing as default solutions or trendiness: we defy the common sense to build you a truly unique product. We are craftsmen (and women) by design."
+    team:
+      title: "All-star team"
+      chico:
+        title: "Francisco<span> Carvalho</span>"
+        role: "Developer"
+        background: "MSc. Candidate in Computer Science by Federal University of Pernambuco"
+        text: "Chico is very passionate about games, music and sports: in other words, a perfect match for the team. He is the third Carvalho working here, and even though none are related, he is part of the family now, capisce? By working hard and playing even harder, he's captivated all of his coworkers."
+      daniel:
+        title: "Daniel<span> Zanzini</span>"
+        role: "Developer"
+        background: "BS. in Information Systems by Federal University of Lavras"
+        text: "As a good fellow from Minas Gerais, Daniel is an easygoing and pleasant guy. But don’t let his quiet personality ©fool you: after all there is no real party without him. Totally crazy about solving problems, he lives the code he writes. And thank the heavens for the traditional “pão de queijo” he brings everyone from each trip back home."
+      filipe:
+        title: "Filipe<span> W. Lima</span>"
+        role: "Developer"
+        background: "BS. in Computer Science by Federal University of Pernambuco"
+        text: "Filipe wakes up at 5 AM, runs a marathon, has a bunch of fruits, cereals and good carbs for breakfast and then tackles the city's crazy traffic with his bicycle. And his day hasn't even started yet. Thoroughly concerned with detail, Filipe is our front-end master here at Guava. Well, that and back-end too. Maybe he's an alien or something."
+      guilherme:
+        title: "Guilherme<span> Carvalho</span>"
+        role: "Co-Founder & Developer"
+        background: "MSc. in Computer Science by Federal University of Pernambuco"
+        text: "Definitely a great guy. Likes to solve problems and his motto is efficiency. Karateka, he also retains multiple talents, like deep knowledge of music, games and random things. Oh, by the way, avoid going near him with pizza, he might lose control… and you, your pizza."
+      juliana:
+        title: "Juliana<span> Carvalho</span>"
+        role: "Designer"
+        background: "MSc. in Design by Federal University of Pernambuco"
+        text: "Juliana, or simply Ju, already proved that the only wavy thing about her is the hair. “Master of infographics” and “queen of meeting notes” are just a few of her titles and, when some melodic metal is going on in her headphones, there’s nothing (and no one) that can break her concentration."
+      lailson:
+        title: "Lailson<span> Bandeira</span>"
+        role: "Co-Founder & Developer"
+        background: "MSc. in Computer Science by Federal University of Pernambuco"
+        text: "Lailson is a great motivator, programmer and designer wannabe. Many qualities, one vision: to create and deliver interactive products that make an impact on people's lives. He is upbeat and critic, but don’t let his honesty shock you: it will make you better (most of the time)."
+      leo:
+        title: "Leonardo<span> Brito</span>"
+        role: "Developer"
+        background: "MSc. in Computer Science by Federal University of Pernambuco"
+        text: "As soon as Leonardo started working here, we offered him a chair and a glass of water so he could rest after carrying his huge chest of knowledge. From politics to beer harmonizing, he is always ready to contribute to any discussion. Superproductive, he holds the belt of PRM recordist (Pull Request per Minute)."
+      lucas:
+        title: "Lucas<span> Marinho</span>"
+        role: "Co-Founder & Developer"
+        background: "BA. in Computer Science by Federal University of Pernambuco"
+        text: "The little details matter, and Lucas knows this very well. Analytical by nature, he writes fantastic code that creates the perfect synergy between hardware and software. He’s a science buff, a recovering Counter Strike addict and is up to any challenge in Rocket League."
+      renatinha:
+        title: "Renata<span> Motta</span>"
+        role: "Designer"
+        background: "BA. in Design by Federal University of Pernambuco"
+        text: "Renata, the shortest of the team, is a graduated professional in grimace making, voice imitation, meme digging and digital product crafting. She may be ~millenial~, but her expertise and commitment are just like oldschool."
+      ronney:
+        title: "Ronney<span> Bezerra</span>"
+        role: "Developer"
+        background: "BS. in Computer Engineering by University of Pernambuco"
+        text: "Ronney is chill. So chill he is almost zen. Sometimes shy, sometimes expansive, he is this very Brazilian mix, far away from the nerd stereotype. He likes samba, forró, bossa nova, jazz and football (the real one). But this quietness ends when he starts coding and turns into a hyper-focused typing machine."
+      sergio:
+        title: "Sérgio<span> Fontes</span>"
+        role: "Lead Designer"
+        background: "BA. in Design by Federal University of Pernambuco"
+        text: "Political activist, Messi fanatic and perfectionist designer, Sérgio still finds time to do his favorite job: being a loving and caring father. And, just like his daughter, everything he creates is beautiful, thoughtful and has unlimited growth potential."
+      tiago:
+        title: "Tiago<span> Farias</span>"
+        role: "Developer"
+        background: "BS. in Computer Science by Federal University of Pernambuco"
+        text: "Tiago belongs to the rare phylum of the no-cellphone-by-choice beings. This may or may not be related to the fact that he can’t whistle, we’re not sure, studies are being conducted. His uniqueness extends to ultra-indie music, an unusual sense of humor, and a complete withdrawal from sleep when he finds a complex problem on his screen."
+      call-to-arms:
+        text: "We’re always seeking talented people. If you are interested in being one of us, don’t be shy and let us know!"
+    history:
+      title: "History"
+      text-a: "It isn’t very hard to imagine how we got started. Just picture three good programmers, back in 2011, who went to college together living in a city packed with software factories. (Almost) no one ever talked about “agile”, and we had a problem with that: full of ideas and opinions on how software should be made, we decided to create a different place, one where we’d actually want to work. That’s how “Guavaberry” started off, as a stronghold of quality software (later we heard “drop the berry” from a Napster dude)."
+      text-b: "From there on, it was all smooth sailing. We've started working with many clients worldwide and kept growing. Our team got bigger, acquiring a whole new set of special skills throughout the years. And we hope this is only the beginning."
+    giving-back:
+      title: "Giving back"
+      text: "We believe in open source software, and that's one of the reasons we love Ruby. In 2009, we founded <a href='http://frevoonrails.com.br/'>Frevo on Rails</a>, the Ruby User Group of Pernambuco, organizing more than 30 meetups since then. For three years in a row, we’ve organized, produced and designed <a href='http://tropicalrb.com/'>Tropical Ruby</a>, the second most important event about Ruby in Brazil and a major conference in Latin America.
+      We also take part in <a href='http://manguez.al'>Manguez.al</a>, the local community of entrepreneurs, and sponsored initiatives like the <a href='http://bit.manguez.al/'>Mangue.bit Conf</a> and <a href='http://railsgirls.com/recife'>Rails Girls Recife</a>."
+      quote: "We believe in open source software, and that's one of the reasons we love Ruby."
+      figcaption: "The grand finale of Tropical Ruby 2015."
+    footnote:
+      text: "Also, we love to go to conferences around the world (don't be shy and say hi if you see us somewhere)."
+
+  work:
+    title: "Work"
+    subtitle: "We've built products that range from startup MVPs to high demand software for clients from Brazil and the U.S."
+    intro: "For more than six years, we’ve been working side by side with amazing teams from many areas of expertise, such as electricity management, healthcare and even lingerie e-commerce."
+    labels:
+      soon: "Case soon"
+    subheaders:
+      solved: "Problems solved"
+      tech-stack: "Tech stack"
+      tech-stack-alt: "Key techonologies"
+    stamps:
+      studio: "We worked as Software Studio"
+      team-aug: "We worked as Team Augmentation"
+    projects:
+      title: "Projects"
+      trueandco:
+        title: "True&Co."
+        intro: "True&Co. grew faster than they imagined, so they needed an expert crew to rapidly scale their infrastructure and technology asto match the growing business."
+        problem: "The brand sells over the web women’s intimate apparel, made to fit like a second skin. We developed and improved several features, and maintained the online store up and running. We also scrutinized and improved their flagship fitting algorithm."
+      teslabit:
+        title: "Teslabit"
+        intro: "Teslabit came to us back in 2014 with a great idea: to help improve power monitoring and management in any company. We had the experience and the expertise to build the product they needed. And that’s exactly what we did."
+        problem: "Most companies end up paying a steep energy bill because, well, they have to. But what if that wasn’t the only option? Teslabit came to bust open the black-box of power usage."
+      buzzmonitor:
+        title: "Buzzmonitor"
+        intro: "Elife was already doing great, but they wanted more. That’s why they came up with the idea of combining all their digital products into a single platform. We've integrated these products into a seamless web application, the Buzzmonitor."
+        problem: "Our biggest challenge was to unify the data that came from independent modules that didn’t communicate. We organized the software through a service-based architecture, able to crosscheck the collected data, giving Elife even more power over the information."
+        quote:
+          text: "“We’ve been working with Guava for almost five years. In this time, they helped us create the vision for our products from zero. Guava surprised me by going beyond simple outsourcing, helping us to think on strategic solutions. They are, hands down, one of the best software studios in Brazil.”"
+          author: "<strong>— Jairson Vitorino</strong>, CEO of Elife"
+      storenvy:
+        title: "Storenvy"
+        intro: "Storenvy is an e-commerce platform for creators to showcase their custom goods and a marketplace for people who want to discover cool, crafted products."
+        problem: "The company wanted to expand their online store but lacked the manpower to move as fast as they needed. We've helped them add new features and fix bugs. We've also kept the application running smoothly, taking care of the day-to-day maintenance tasks."
+      endossa:
+        title: "Endossa"
+        intro: "Endossa brings together small craft brands, providing them with premium shelf space in collaborative stores over Brazil."
+        problem: "Their new collaborative filtering concept lacked a software system to match. We've worked on a stock and sales management system around this concept and adapted their existing points-of-sale to new Brazilian regulations."
+      metamaster:
+        title: "Meta Master"
+        intro: "Meta Master is the sales hub of KFP, one of the leading engine oil distributors in Brazil."
+        problem: "KFP has an innovative and effective sales process, but their team was swamped by an ever-growing number of manually intertwined spreadsheets. We've assisted them in automating the process by creating Meta Master, an application that integrates the entire report chain and makes the numbers available to the whole company in no time."
+      la:
+        title: "L.A. Vite"
+        intro: "L.A. Vite is an innovative system that leverages the best web technologies to optimize management of clinics and small hospitals."
+        problem: "After over a decade selling and providing support for third-party healthcare software, L.A. Informática decided to condense their expertise into their own system. We've recruited, trained and lead their newborn development team, creating the product from its inception to first version."
+      dailyhelper:
+        title: "Daily Helper"
+        intro: "Daily Helper brings together individuals looking for help finishing chores with people looking for a part-time job."
+        problem: "They knew what they wanted, but needed an tech team to help them mature the idea and bring it to life. We've built the web app from scratch, helping them define how it would work and taking care of UX, UI design, front-end, back-end and operations."
+    clients:
+      title: "Clients"
+      trueandco: "True&Co."
+      teslabit: "Teslabit"
+      elife: "E.life"
+      storenvy: "Storenvy"
+      endossa: "Endossa"
+      inloco: "InLoco"
+      kfp: "KFP"
+      la: "L.A. Informática"
+      dailyhelper: "Daily Helper"
+      zurb: "Zurb"
+      hero: "Hero International"
+
+  process:
+    title: "Process"
+    subtitle: "In an incremental and iterative way, we make sure that “a lot” never means “too much”."
+    intro: "Much like ourselves, our process is pretty down to Earth. We follow a direct approach, building and validating solutions in lockstep to make sure we're always in the right direction."
+    overview:
+      title: "Our process at a glance"
+      kick-off:
+        title: "Kick-off"
+        text: "The beginning of everything. We get to know the project, you get to know us."
+      immersion:
+        title: "Immersion"
+        text: "We dive deep into your universe and walk a mile on your shoes."
+      discovery:
+        title: "Discovery"
+        text: "We prototype and validate product’s hypothesis so you can test bold ideas."
+      build:
+        title: "Build"
+        text: "We develop every other aspect, from the charming surface to the solid backend."
+      publishing:
+        title: "Publishing"
+        text: "When your software is ready to use, it's time to publish it to the world."
+      maintenance:
+        title: "Maintenance"
+        text: "We keep your software running smoothly and fast."
+    kick-off:
+      title: "Kick-off"
+      text-a: "This step usually happens once. It’s a meeting... no, more than a meeting: we spend a day with you and your team to explore the strategic aspects of your project. Specifically, we discuss the business opportunities and challenges; gather existing knowledge about what you want to solve, create or improve; list direct and indirect competitors; and, finally, we set expectations and goals for the project."
+      text-b: "After that, we elaborate together an overview of what you want to build, describing requirements as (broad) <span class='is-sidenote-link' data-sidenote='user-stories'>user stories</span>. They are then prioritized by business value, defining a roadmap with milestones. Just like any road, there may be detours and bumps, and the chosen path may not be the best one to reach our destination. But don't panic, we are prepared to change course should the need arise."
+      text-c: "The last part of the Kick-off is defining team and roles: <span class='is-sidenote-link' data-sidenote='derp'>DERP</span>, <span class='is-sidenote-link' data-sidenote='product-owner'>Product Owner</span> and <span class='is-sidenote-link' data-sidenote='builders'>Builders</span>."
+    immersion:
+      title: "Immersion"
+      text-a: "This is where we walk a mile in your shoes. Well, maybe not in your actual shoes, but we sure delve deep into your universe. The goal here is to collect information about the project and have a shared understanding of its context."
+      text-b: "We start by studying <span class='is-sidenote-link' data-sidenote='stakeholders'>stakeholders</span> and people who are going to use the product. By getting to know the users and relating to them, we aim to learn and understand their goals, pain-points and expectations. But don’t worry, we don’t keep them captive: this information is collected through interviews, research and contextual observation. Then, we analyze the data and create personas to represent potential users."
+      text-c: "To have a more complete and immersive process, we carefully study the competition. With an accurate benchmark, we begin to understand how your product will stand out by doing better — not necessarily more — than your competitors."
+      quote: "The goal here is to collect information about the project and have a shared understanding of its context."
+    craft-cycle:
+      lead: "Now the process gets incremental and iterative for real. Working in weekly cycles, we craft one feature at a time. According to the priorities defined in the Kick-off and the current needs of your business, we choose together what part of the puzzle is going to be solved next."
+    discovery:
+      title: "Discovery"
+      understand:
+        title: "Understand"
+        text: "The first order of action is helping you formulate hypotheses about your business. Each one will assist you in correctly evaluating the solutions we are going to propose. This evaluation will guide the <span class='is-sidenote-link' data-sidenote='product-design'>product design</span>. We brainstorm possible solutions by thinking of use case scenarios and illustration a map of possible ways for users to achieve the desired outcome."
+      prototype:
+        title: "Prototype"
+        text: "To start prototyping, we make sketches. They help us to organize information, think about navigation flows, test ideas of interaction models, and arrange elements to form an interface proposal. Then, we create a clickable, interactive prototype. This is the best way we found to make users react more naturally and honestly. During the Discovery phase, a spontaneous reaction is more meaningful than a verbal, rationalized feedback."
+      validate:
+        title: "Validate"
+        text: "Welcome to the watch-and-learn game. It's time to test with real people! That's important for two reasons: we validate the prototypes and use this opportunity to detect and fix usability issues. We then share and discuss the results with you and your team. If the hypotheses proved to be real and the solution is suitable to your needs, we proceed to the next phase. If not, we continue to explore alternatives."
+    build:
+      title: "Build"
+      visual:
+        title: "Visual Design"
+        text: "Here, the interface is given its look and personality. By blending graphic ingredients — colors, typography, iconography, photography and movement —, we compose elegance and reinforce the brand values. Mainly, these aesthetic qualities highlight the usability ones, like visibility, consistency, affordance and feedback."
+      frontend:
+        title: "Front-end Development"
+        text: "With the look and feel defined, it’s time to proceed to the front-end layer, which is carefully hand-coded by designers and developers. From day one, we follow a modular approach, breaking down the interface into reusable components and placing them into a project <span class='is-sidenote-link' data-sidenote='pattern-library'>pattern library</span>. These standalone building blocks make the interface easier to create, extend and maintain."
+      backend:
+        title: "Back-end Development"
+        text: "In a parallel highway, the back-end development truck is going full speed, taking care of the heavy programming stuff. You know, the languages, libraries, tools, databases, platforms and third-party integrations. All that towards building a reliable, performant and secure system. In other words, a solid foundation to back up a great interface."
+        quote: "In a parallel highway, the back-end development truck is going full speed, taking care of the heavy programming stuff."
+    publishing:
+      title: "Publishing"
+      text: "When your software is ready to use — or at least has the minimum viable features your users need —, it's time to publish it to the world. There are two moments of publishing: staging and production. The first one is for limited testing purposes, and the second is when it's deployed for all users to, well, use it. This is also the time when we perform tasks such as migrating data from previous systems or configuring integrations with external services."
+    interlude:
+      lead: "Discovery, Build and Publishing wrap up one iteration. While the application is not complete, we keep getting back to the beginning of the Craft Cycle to develop new features or improve them."
+    maintenance:
+      title: "Maintenance"
+      text-a: "We continuously monitor the app's availability, making sure it is up and running, ready to be used. We also keep track of performance metrics, scaling servers up and down as usage varies. This way we keep your software running fast without wasting resources (a.k.a. money)."
+      text-b: "We set up and track metrics that are relevant to your business, making it easy for you to keep an eye on both standard and custom <span class='is-sidenote-link' data-sidenote='key-performance'>key performance indicators</span>. And, by the way, during maintenance we also fix possible bugs and make small adjustments to make the app work just like you need."
+      quote: "We keep your software running fast without wasting resources."
+    closing:
+      lead: "We know your project is unique, and so is our process each time we follow it. Nothing is set in stone and each step can be adapted to suit your goals and purposes."
+    footnote:
+      text: "We stand on the shoulders of giants. Huge kudos to these great people who inspired us: Gothelf’s Lean UX, Knapp’s Design Sprint, IDEO’s User Centred Design, Garret’s Elements of User Experience, SCRUM and others."
+
+  start-a-project:
+    title: "Start a project"
+    subtitle: "Hey, let’s get down to business.<br>Tell us about your next big thing and we will get back to you soon. :)"
+    form:
+      service:
+        legend: "Type of service"
+        label: "What service you need from us?"
+        service-a: "Software Studio"
+        service-b: "Team Augmentation"
+        option-a: "Create my product"
+        option-b: "Enhance my team"
+        connector: "or"
+      name:
+        legend: "Name"
+        label: "What's your name?"
+        placeholder: "Don't be shy"
+      email:
+        legend: "Email"
+        label: "And your email?"
+        placeholder: "yourname@email.com?"
+      description:
+        legend: "Description"
+        label: "Describe your project a little bit"
+        placeholder: "Ok, you can describe it more than a little bit."
+        sublabel-a: "What technologies are you using? What kind of improvements do you want to make? What skill set are you looking for?"
+        sublabel-b: "What problems are you trying to solve? How much do you know about your market? How far have you designed the solution?"
+      start-date:
+        label: "When to start?"
+        legend: "Start date"
+        option-a: "Immediately"
+        option-b: "In 1 to 2 months"
+        option-c: "In 2 to 4 months"
+        option-d: "Whenever you can"
+        placeholder: "Start date"
+      timeframe:
+        label: "When to finish?"
+        legend: "Timeframe"
+        option-a: "1 to 3 months"
+        option-b: "3 to 6 months"
+        option-c: "Over 6 months"
+        option-d: "As long as it takes"
+        placeholder: "Timeframe"
+      budget:
+        label: "Available budget"
+        legend: "Budget"
+        option-a: "10k to 20k US$"
+        option-b: "20k to 50k US$"
+        option-c: "50k to 100k US$"
+        option-d: "Over 100k US$"
+        placeholder: "Budget"
+      files:
+        legend: "Support file"
+        label:
+          add: "Need to attach a file?"
+          remove: "Remove this file"
+      submit:
+        label: "Ok, send it"
+    encryption: "Your data will be send through an encrypted connection.<br>Don’t worry, your information is safe with us."
+
+  sidenotes:
+    services:
+      html-css-js:
+        title: "HTML, CSS & JS"
+        html: "HypterText Markup Language"
+        css: "Cascading Style Sheets"
+        js: "JavaScript"
+        text: "The core web technologies."
+    process:
+      user-stories:
+        title: "User Stories"
+        text: "The description of a feature, written from the user perspective. It specifies how the feature works, why it's needed and what are its expected outcomes."
+      derp:
+        title: "DERP"
+        text: "Directly Responsive Person. In a fun abbreviation."
+      product-owner:
+        title: "Product Owner"
+        text: "Someone responsible for the project on your end. This person has the final word regarding the project decisions."
+      builders:
+        title: "Builders"
+        text: "Everyone who has the hands on the project. Designers, developers and project managers."
+      stakeholders:
+        title: "Stakeholders"
+        text: "Everyone who has a say in the project. For example, directors and partners of your company."
+      product-design:
+        title: "Product Design"
+        text: "The iterative process of designing digital products. It includes research, interaction and graphic design."
+      pattern-library:
+        title: "Pattern Library"
+        text: "A collection of user interface design patterns. They ensure consistency in user experience, reusability of design elements and maintanainability."
+      key-performance:
+        title: "Key Performance Indicators"
+        text: "Measurable values used to evaluate the success of the organization goals."
+
+  # UI
+  menu:
+    landing:
+      title: "Go to Guava's landing page"
+    services:
+      title: "Services"
+      what-we-do: "What we do"
+      what-we-master: "What we master"
+      tech-stack: "Tech stack"
+    about-us:
+      title: "About us"
+      team: "Team"
+      history: "History"
+      giving-back: "Giving back"
+    work:
+      title: "Work"
+      projects: "Projects"
+      clients: "Clients"
+    process:
+      title: "Process"
+      intro: "At a glance"
+      kick-off: "Kick-off"
+      immersion: "Immersion"
+      discovery: "Discovery"
+      build: "Build"
+      publishing: "Publishing"
+      maintenance: "Maintenance"
+    start-a-project: "Start a project"
+    blog: "Goiabada Blog"
+    manifesto: "Manifesto"
+    work-with-us: "Work with us"
+    email: "hello@guavasoftware.com"
+
+  tech-stack:
+    title: "Tech stack"
+    categories:
+      mastery: "Mastery"
+      skilled: "Skilled"
+      experimenting: "Experimenting"
+    angularjs: "AngularJS"
+    aws: "Amazon Web Services"
+    backbonejs: "Backbone.js"
+    clojure: "Clojure"
+    coffeescript: "CoffeeScript"
+    css: "CSS"
+    d3js: "D3.js"
+    docker: "Docker"
+    ecmascript6: "ECMAScript 6"
+    elasticsearch: "Elasticsearch"
+    elixir: "Elixir"
+    git: "Git"
+    heroku: "Heroku"
+    html: "HTML"
+    java: "Java"
+    javascript: "JavaScript"
+    meteor: "Meteor"
+    mongodb: "MongoDB"
+    mysql: "MySQL"
+    nodejs: "Node.js"
+    phoenix: "Phoenix"
+    postgresql: "PostgreSQL"
+    rabbitmq: "RabbitMQ"
+    rails: "Ruby on Rails"
+    react: "React"
+    redux: "Redux"
+    reflux: "Reflux"
+    ruby: "Ruby"
+    swift: "Swift"
+    typescript: "TypeScript"
+    webpack: "Webpack"
+
+  footer:
+    where-we-are: "We’re based in Recife, a seaside town located in the ever-sunny northeast of Brazil. Come and pay us a visit or send us an email. We'd love to hear about your project."
+    address:
+      street: "Alfredo Coutinho, 74"
+      city: "Poço da Panela, Recife"
+      zip: "52061-130"
+    copyright:
+      text-a: "Proudly"
+      text-a-link: "designed, written and coded"
+      text-b: "by Guava, directly from the"
+      text-b-link: "Manguezal"
+      date: "©2010–2018."
+      cnpj:
+        abbr: "CNPJ:"
+        abbr-full: "Cadastro Nacional da Pessoa Jurídica"
+        number: "13.231.935/0001-20"
+
+  pictures:
+    team: "Photo of Guava team working in our headquarter"
+    guava-hq: "Picture of Guava's office in a cozy afternoon, showing people working"
+    tropicalrb: "Picture of several people with arms up at the end of Tropical Ruby 2015 conference"
+    trueandco: ""
+    teslabit: ""
+    buzzmonitor: ""
+    storenvy: ""
+    endossa: ""
+    metamaster: ""
+
+  graphics:
+    logotype: "Guava logotype"
+    circles: "Graphic made of overlaped circles representing steps of Studio Process"
+    stamps:
+      studio: "Stamp of Software Studio"
+      team-aug: "Stamp of Team Augmentation"
+
+  illustrations:
+    landing: "Illustration of a web application being used in different situations"
+    books: "Illustration of a pile of books"
+    chat: "Illustration of chat bubbles, representing a conversation"
+    code: "Illustration of pieces of code within a browser window"
+    astronaut: "Illustration of an astronaut floating on the space, representing the Immersion step"
+    satellite: "Illustration of a spatial satellite sanding data through electromagnetic waves, representing the Discovery step"
+    spaceship: "Illustration of a spacecraft project, representing the Build step"
+    planets: "Illustration of a spacecraft navigating between planets, representing the Publishing step"
+    rover: "Illustration of a spatial rover analysing an object, representing the Maintenance step"
+    togetherness: "Illustration of people studying together, representing the knowledge construction"
+    team:
+      chico: "Illustration of Francisco dancing on a rave"
+      daniel: "Illustration of Daniel cooking on a barbecue"
+      filipe: "Illustration of Filipe and your pet bike"
+      guilherme: "Illustration of Guilherme playing on a pizza-shapped guitar"
+      juliana: "Illustration of Juliana sitting on a pencil throne, accompanied by a cat"
+      lailson: "Illustration of Lailson searching for diammond imperfections"
+      leonardo: "Picture of Leonardo sitting on his knowledge-filled luggage"
+      lucas: "Illustration of a robot version of Lucas playing videogame"
+      renata: "Illustration of Renata inside a box filled with memes"
+      ronney: "Illustration of Ronney meditating"
+      sergio: "Illustration of Sérgio playing with his daughter"
+      tiago: "Illustration of Tiago as an armored warrior accompanied by a bunny, as seen on a clip from Monty Python's “The Holy Grail”"
+
+  social:
+    twitter: "Talk with us on Twitter"
+    facebook: "Talk with us on Facebook"
+    linkedin: "Talk with us on LinkedIn"
+
+  calls-to-action:
+    more: "Learn more"
+    talk: "Talk with us"
+    work-with-us: Work with us!"
+    services: "Do you need a studio to develop your idea?<br> A hand for your team? Let's chat."
+    about-us: "Hey, you can be the new chapter in our story.<br> Start a project with us."
+    work: "We do great things when we work together.<br> Let's make a new one."
+    process: "Our awesome process calls for an awesome project.<br> Tell us about yours."
+
+  buttons:
+    page-down: "Click to see more"
+    close: "Click to close this"
+    add-a-file: "Add a file"
+    read: "Read the case"
+    start-a-project: "Start a project"
+
+  files:
+    studio:
+      big: "stamp-studio-big@2x.png"
+      small: "stamp-studio-small-green@2x.png"
+    team-aug:
+      big: "stamp-team-aug-big@2x.png"
+      small: "stamp-team-aug-small-green@2x.png"

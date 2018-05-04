@@ -1,0 +1,274 @@
+///////////////////////////////////////////////////////////
+// Work                                           (Page) //
+///////////////////////////////////////////////////////////
+
+.page-work {
+  figcaption { display: none; }
+
+  h2 {
+    @include make-col-ready;
+    margin-top: 0;
+    @media (min-width: $sm) { margin-left: -($gutter-small / 2); }
+    @media (min-width: $md) { margin-left: -($gutter / 2); }
+  }
+
+  blockquote {
+    margin-top: .5rem;
+    &::before { border-color: $green-darker; }
+    @media (min-width: $sm) {
+      padding-right: 2rem;
+      margin: 0;
+      &::before { top: -3.5rem; }
+    }
+    @media (min-width: $md) {
+      &::before { top: -3rem; }
+    }
+  }
+
+  &.are-minicases {
+    padding: 3.5rem 0 0;
+    @media (min-width: $sm) { padding: 4.5rem 0 0; }
+    @media (min-width: $md) { padding: 6.75rem 0 0; }
+  }
+
+  &.is-project {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    @media (min-width: $sm) {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+    header, section { @include make-col-ready; }
+    img { pointer-events: none; }
+    h3 { display: none; }
+    li {  display: inline-block; }
+    .is-image {
+      @media (max-width: ($sm - 1px)) { margin: 0 -#{$gutter}; }
+      @media (min-width: $sm) and (max-width: ($md - 1px)) {
+        &.of-trueandco img { margin-left: -29%; }
+        &.of-teslabit img { margin-left: -25%; }
+        &.of-storenvy img { margin-left: -30%; }
+        &.of-endossa img { margin-left: -90%; }
+        &.of-metamaster img { margin-left: -80%; }
+      }
+    }
+    .button { margin-top: .5rem; }
+    .is-stamp {
+      position: absolute;
+      top: -39px;
+    }
+    .is-client {
+      margin: 1.5rem 0 1rem;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: .75rem;
+        display: block;
+        width: 4rem;
+        height: 4px;
+        background-color: $green-darker;
+        content: "";
+      }
+      &.at-right {
+        &::before {
+          left: calc(100% - 4.5rem);
+          @media (min-width: $sm) { left: .75rem; }
+        }
+      }
+    }
+  }
+
+  &.also-regular {
+    header {
+      @media (min-width: $sm) { @include make-col(8); }
+      @media (min-width: $md) { @include make-col(9); }
+    }
+    section {
+      @media (min-width: $sm) { @include make-col(8); }
+      @media (min-width: $md) { @include make-col(7); }
+    }
+    &:nth-child(odd) {
+      @media (max-width: ($sm - 1px)) { text-align: right; }
+      header {
+        @media (min-width: $sm) { order: 2; }
+      }
+      section {
+        @media (min-width: $sm) { order: 1; }
+      }
+    }
+    .is-image {
+      height: 300px;
+      overflow: hidden;
+      img {
+        width: auto;
+        height: 300px;
+        @media (min-width: 490px) {
+          width: 100%;
+          height: auto;
+        }
+        @media (min-width: $sm) {
+          width: auto;
+          height: 100%;
+        }
+      }
+      @media (min-width: $sm) { height: 550px; }
+      @media (min-width: $md) { height: 500px; }
+    }
+    .is-stamp {
+      left: 10%;
+      &.of-studio {
+        left: -24px;
+        width: 79px;
+        height: 79px;
+        transform: rotate(-20deg);
+      }
+      &.of-team {
+        left: -24px;
+        width: 94px;
+        height: 73px;
+      }
+    }
+  }
+
+  &.also-feat {
+    padding: 2.5rem 0;
+    margin: 1.5rem 0;
+    background-color: $gray-lighter;
+    @media (min-width: $sm) {
+      padding: 4.5rem 0;
+      margin: 1.5rem 0;
+    }
+    header { margin-bottom: 1.5rem; }
+    .is-client {
+      .logo {
+        display: block;
+        margin: 0 auto;
+        @media (min-width: $md) { margin-left: 0; }
+      }
+      &::before {
+        left: calc(50% - 2rem);
+        @media (min-width: $md) { left: .75rem; }
+      }
+    }
+    .is-image {
+      height: 300px;
+      overflow: hidden;
+      @media (min-width: $sm) {
+        height: 350px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .is-quote {
+      @media (min-width: $sm) {
+        @include make-col(7);
+        @include make-col-offset(1);
+      }
+      @media (min-width: $md) { @include make-col(7); }
+    }
+    .is-content {
+      @media (min-width: $sm) { @include make-col(8); }
+      @media (min-width: $md) { @include make-col(7); }
+    }
+    .is-stamp {
+      top: 44px;
+      &.of-studio {
+        right: -24px;
+        width: 79px;
+        height: 79px;
+        transform: rotate(-20deg);
+      }
+      &.of-team {
+        right: -24px;
+        width: 94px;
+        height: 73px;
+      }
+    }
+  }
+
+  &.also-legacy {
+    padding: 2.5rem 0;
+    margin: 1.5rem 0 0;
+    background-color: $gray-lighter;
+    @media (min-width: $sm) {
+      padding: 4.5rem 0;
+      margin: 0;
+    }
+    .is-legacy {
+      .is-client {
+        &::before { top: -1rem; }
+      }
+      &:not(:last-child) { margin-bottom: 2rem; }
+      @media (min-width: $sm) { @include make-col(8); }
+    }
+    .is-stamp {
+      top: -30px;
+      right: 25%;
+      &.of-studio {
+        width: 79px;
+        height: 79px;
+        transform: rotate(10deg);
+        @media (min-width: $sm) { right: 10%; }
+        @media (min-width: $md) { right: 30%; }
+      }
+      &.of-team {
+        width: 94px;
+        height: 73px;
+      }
+    }
+  }
+
+  &.are-clients {
+    padding: 3rem 0 2.5rem;
+    @media (min-width: $sm) {
+      padding: 5rem 1.5rem 6rem 0;
+    }
+    @media (min-width: $md) { padding: 5rem 2rem 4rem 0; }
+    h2 {
+      @media (max-width: ($sm - 1px)) { margin-bottom: 0; }
+    }
+    ul {
+      @include make-col-ready;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      height: 70px;
+      margin: .5rem 0;
+      @media (max-width: ($sm - 1px)) {
+        &:nth-child(odd) {
+          align-self: flex-start;
+          justify-content: flex-start;
+        }
+        &:nth-child(even) {
+          align-self: flex-end;
+          justify-content: flex-end;
+        }
+      }
+      @media (min-width: $sm) {
+        width: 33.3%;
+        height: 110px;
+        &:nth-child(1), &:nth-child(3n+1) {
+          align-self: flex-start;
+          justify-content: flex-start;
+        }
+        &:nth-child(3n) {
+          align-self: flex-end;
+          justify-content: flex-end;
+        }
+      }
+    }
+    .of-client {
+      vertical-align: middle;
+      fill: $gray-dark;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Circles ................................ //
+
+.circle {
+  @include transition;
+  display: block;
+  position: absolute;
+  &.is-full {
+    top: 0;
+    border-radius: 90%;
+  }
+  &.is-on-top {
+    top: 0;
+    border-radius: 90% 90% 0 0;
+  }
+  &.is-on-bottom {
+    bottom: 0;
+    border-radius: 0 0 90% 90%;
+  }
+  &.is-negative {
+    background: url(/images/pattern-stars.svg), url(/images/texture-background-black@2x.png);
+    background-color: $gray-darkest;
+    background-size: 400px 400px, 120px auto;
+  }
+  &.is-default { background-color: lighten($gray-lighter, 2%); }
+  &.is-neutral { background-color: $white; }
+}
+
+.circle-background-centered {
+  width: 4500px;
+  height: 2750px;
+  left: 50%;
+  margin-left: -2250px;
+  z-index: 0;
+  &.is-header-work {
+    background: url(/images/pattern-01-work.svg) center, url(/images/texture-background-green@2x.png);
+    background-size: 520px auto, 120px auto;
+    background-color: $green;
+    background-position-y: 6px;
+  }
+}
+
+.circle-background-uncentered {
+  left: 50%;
+  width: 4500px;
+  height: 3840px;
+  &.is-landing-process { margin-left: -2450px; }
+  &.is-process-immersion { margin-left: -1850px; }
+  &.is-process-publishing { margin-left: -2450px; }
+}

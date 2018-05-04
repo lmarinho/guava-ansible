@@ -1,0 +1,435 @@
+///////////////////////////////////////////////////////////
+// Type                                    (Base styles) //
+///////////////////////////////////////////////////////////
+
+// Font families.
+$sentinel: "Sentinel A", "Sentinel B", Georgia, serif;
+$graphik:  "Graphik Web", "Helvetica Neue", sans-serif;
+
+// Font families.
+$serif:    $sentinel;
+$sans:     $graphik;
+
+// Font weights.
+$light:    300;
+$book:     400;
+$regular:  $book;
+$medium:   500;
+$semibold: 600;
+$bold:     700;
+$blacked:  800;
+$super:    900;
+
+// Base size for every other unit.
+$size-base: 20px;        // 1rem
+
+// Modular scale's semantic variables.
+// TODO: Implement Tim Brown's Modular Scale.
+$size-mobile: (
+  title-serif:  2.3rem,  // 46
+  title:        2.2rem,  // 44
+  section:      1.9rem,  // 38
+  subsection:   1.2rem,  // 24
+  lead:         1.2rem,  // 24
+  body:         .9rem,   // 17
+  body-alt:     .85rem,  // 18
+  caputs:       .8rem,   // 16 (smallcaps)
+  button:       .75rem,  // 15
+  footnote:     .75rem,  // 15
+  menu:         .75rem,  // 15
+  menu-sub:     .75rem,  // 15
+  subtitle:     .75rem,  // 15
+  subtitle-alt: .65rem,  // 13
+  tiny:         .55rem   // 11
+);
+
+$size-desktop: (
+  title-serif:  3.4rem,  // 68
+  title:        3.2rem,  // 64
+  section:      2.2rem,  // 44
+  subsection:   1.75rem, // 35
+  lead:         1.4rem,  // 28
+  body:         .9rem,   // 18
+  body-alt:     .85rem,  // 17
+  caputs:       .9rem,   // 18 (smallcaps)
+  button:       .75rem,  // 15
+  footnote:     .75rem,  // 15
+  menu:         .75rem,  // 15
+  menu-sub:     .65rem,  // 13
+  subtitle:     .75rem,  // 15
+  subtitle-alt: .65rem,  // 13
+  tiny:         .55rem   // 11
+);
+
+$h1-margin:     3rem;
+$h2-margin:     3rem;
+$h3-margin:     2rem;
+$h4-margin:     1.1rem;
+$h5-margin:     1.1rem;
+$lead-margin:   1.2rem;
+
+// Scaffolds typographic styles.
+@mixin font-size(
+  $size:       inherit,
+  $line-xs:    1,
+  $line-md:    $line-xs,
+  $spacing-xs: normal,
+  $spacing-md: $spacing-xs
+  ) {
+  font-size: map-get($size-mobile, $size);
+  line-height: map-get($size-mobile, $size) * $line-xs;
+  @if $spacing-xs != normal { letter-spacing: $spacing-xs; }
+  @media (min-width: $md) {
+    font-size: map-get($size-desktop, $size);
+    line-height: map-get($size-desktop, $size) * $line-md;
+    @if $spacing-md != normal { letter-spacing: $spacing-md; }
+  }
+}
+
+@mixin font-family(
+  $family: inherit,
+  $weight: $regular,
+  $style:  default
+  ) {
+  font-family: $family;
+  font-weight: $weight;
+  @if $style != default { font-style: $style; }
+}
+
+%text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+::selection { background: $yellow-light; }
+
+html, body {
+  color: $text-color;
+  font-family: $sans;
+  font-weight: $regular;
+  font-size: $size-base;
+  font-feature-settings: "liga", "kern";
+  text-rendering: optimizeLegibility;
+}
+
+p, a {
+  @include font-size(body-alt, 1.3, 1.5, -.002rem);
+  display: block;
+  margin: 0;
+  + p, + a { margin-top: 1rem; }
+  > em { font-style: italic; }
+
+  &.is-cta-link {
+    @include font-size(button, $spacing-xs: .1rem);
+    margin-top: .5rem;
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+}
+
+em {
+  @include font-size(body, 1.4, 1.5, -.002rem);
+  @include font-family($serif, $semibold, italic);
+  &.is-small {
+    @include font-size(subtitle);
+    font-weight: $book;
+  }
+  @at-root {
+    .sidenote & {
+      @include font-size(subtitle-alt, 1.4);
+      @include font-family($sans, $regular);
+    }
+  }
+}
+
+h1, h2, h3, h4 { font-weight: $bold; }
+
+h1 {
+  @include font-size(title, 1, .9, -.08rem);
+  margin: 0 0 ($h1-margin / 3);
+  &.is-serif {
+    @include font-size(section, 1, 1, -.14rem);
+    @include font-family($serif, $bold, italic);
+    @media (min-width: $sm){
+      @include font-size(title, 1, 1, -.14rem);
+    }
+  }
+}
+
+h2 {
+  @include font-size(section, .9, .9, -.04rem);
+  $h2-separator: ($h2-margin / 4);
+  margin: $h2-margin 0 $h2-separator;
+  &::after {
+    display: block;
+    width: 3rem;
+    height: 4px;
+    margin: $h2-separator auto 0 0;
+    background-color: $brand-primary;
+    content: "";
+  }
+  &.is-centered::after { margin: $h2-separator auto; }
+  &.is-right-aligned::after { margin: $h2-separator 0 0 auto; }
+  &.has-alternative-color::after { background-color: $green-darker; }
+  &.is-alternative {
+    color: $gray;
+    font-family: $sans;
+    font-weight: $super;
+    font-size: 32px;
+    line-height: .88;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+h3 {
+  @include font-size(body-alt, 1, .9);
+  margin: $h3-margin 0 ($h3-margin / 5);
+}
+
+h4 {
+  @include font-size(body-alt, 1, .9);
+  margin: $h4-margin 0 ($h4-margin / 5);
+}
+
+h5 {
+  @include font-size(subtitle-alt, 1.4, 1.4, .02rem);
+  margin: $h5-margin 0 0;
+  font-weight: $medium;
+  text-transform: uppercase;
+}
+
+small {
+  @include font-size(subtitle, 1.4);
+  display: inline-block;
+  color: $text-subtitle;
+  > a {
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  + small { display: block; }
+}
+
+hr         { display: none; }
+legend     { display: none; }
+em         { font-style: italic; }
+address    { font-style: normal; }
+
+figcaption {
+  @include font-size(subtitle, 1.4);
+  color: $text-footnote;
+}
+
+blockquote {
+  @include font-size(lead, 1.2, 1.2, -.04rem);
+  margin: $lead-margin 0 0;
+  cite {
+    @include font-size(body-alt, 1.4, 1.5, -.002rem);
+    @include font-family($sans, $regular);
+    display: block;
+    margin-top: 1rem;
+  }
+  &.is-quote {
+    padding-left: 1rem;
+    border-left: 3px solid;
+  }
+  &.is-framed {
+    position: relative;
+    z-index: 1;
+    padding-right: 0;
+    margin: 2rem 0;
+    &::before {
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      z-index: 0;
+      display: block;
+      width: calc(100% + 2rem);
+      height: calc(100% + 2rem);
+      border: 4px solid $black;
+      content: "";
+    }
+    &.has-cite {
+      &::first-letter {
+        display: inline-block;
+        margin-left: -.5rem;
+      }
+    }
+    @media (min-width: $sm) {
+      padding-right: 1.5rem;
+      margin: 3rem 0;
+      &::before {
+        top: -3rem;
+        left: -1.5rem;
+        width: calc(100% + 1.5rem);
+        height: calc(100% + 6rem);
+      }
+    }
+    @media (min-width: $md) {
+      &::before {
+        top: -2.5rem;
+        left: -2rem;
+        width: calc(100% + 2rem);
+        height: calc(100% + 5rem);
+      }
+    }
+  }
+}
+
+// For now, all typographic lists will remain unstyled.
+ol, ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: $text-link;
+  text-decoration: none;
+  &:hover, &:focus, &:active { color: $text-link-hover; }
+
+  &.is-menu-link {
+    @include font-size(menu, 1.1, 1.1, .015rem);
+    display: inline-block;
+    margin: 0 0 .35rem;
+    font-weight: $bold;
+    border-bottom-color: $guava;
+    border-bottom-style: solid;
+    border-bottom-width: 0;
+    @media (min-width: $sm) {
+      + ol { margin-bottom: 1rem; }
+    }
+    .is-menu-sublink { margin: .16rem 0; }
+  }
+
+  &.is-menu-sublink {
+    @include font-size(menu-sub, 1.3);
+    display: inline-block;
+    padding: .08rem 0;
+    margin: .25rem 0;
+    &::before {
+      margin-right: .4rem;
+      color: $gray-light;
+      content: "§";
+    }
+    &.is-active {
+      font-weight: $semibold;
+      &::before { font-weight: $regular; }
+    }
+  }
+  &.is-footer-sublink {
+    @include font-size(menu-sub, 1.3);
+    display: inline-block;
+    padding: .25rem 0 .08rem;
+    margin: .25rem 0;
+  }
+}
+
+.is-serif   { font-family: $serif; }
+.is-sans    { font-family: $sans; }
+.is-bold    { font-weight: $bold; }
+.is-regular { font-weight: $regular; }
+.is-light   { font-weight: $light; }
+.is-italic  { font-style:  italic; }
+.is-normal  { font-style:  normal; }
+
+.is-body {
+  @include font-size(body, 1.4);
+  font-family: $serif;
+}
+
+.is-lead {
+  @include font-size(lead, 1.2, 1.2, -.04rem);
+  margin: $lead-margin 0 0;
+  &.also-serif {
+    font-family: $serif;
+    font-style: italic;
+    letter-spacing: -.03rem;
+  }
+}
+
+.is-subtitle {
+  @include font-size(subtitle, 1.1, 1.2, .01rem);
+  @include font-family($serif, $medium, italic);
+  display: block;
+  margin: 0;
+  color: $text-subtitle;
+  &.of-guavo { font-weight: $regular; }
+}
+
+.is-footnote, .is-sidenote {
+  @include font-size(subtitle-alt, 1.4);
+  color: $text-subtitle;
+}
+
+.is-sidenote { color: $text-color; }
+
+.is-sidenote-link {
+  color: inherit;
+  text-decoration: none;
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  cursor: pointer;
+  border-bottom: 2px solid $yellow-light;
+  box-shadow: inset 0 -4px 0 $yellow-light;
+  transition: background .15s cubic-bezier(.33, .66, .66, 1),
+    color .15s cubic-bezier(.33, .66, .66, 1);
+
+  &:hover {
+    color: $text-color;
+    background-color: $yellow-light;
+  }
+}
+
+.is-language-link {
+  z-index: 100;
+  display: flex;
+  flex-basis: 2rem;
+  flex-grow: 1;
+  align-items: flex-end;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  flex-shrink: 0;
+  > .is-menu-link {
+    text-transform: uppercase;
+    &.is-short {
+      display: none;
+      width: 32px;
+      height: 32px;
+      padding: 7px;
+      font-weight: $semibold;
+      font-size: 11px;
+      border: solid 2px;
+      border-radius: 90%;
+      &.and-green {
+        color: $green-light;
+        border-color: $green-light;
+      }
+      &.and-red {
+        color: $guava;
+        border-color: $guava;
+      }
+      &.and-white {
+        color: $white;
+        border-color: $white;
+      }
+    }
+    &.is-long {
+      display: inline-block;
+      font-size: 11px;
+    }
+    @media (min-width: $md) {
+      &.is-short { display: block; }
+      &.is-long { display: none; }
+    }
+  }
+  @media (min-width: $md) {
+    position: absolute;
+    top: 38px;
+    right: 45px;
+    bottom: auto;
+  }
+}

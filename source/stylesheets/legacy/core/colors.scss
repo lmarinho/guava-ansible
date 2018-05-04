@@ -1,0 +1,41 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Core / Colors .................................... //
+
+$white:           #f9f9f9;
+$black:           #1b1b1b;
+
+$gray-darkest:    #1b1b1b;
+$gray-darker:     #353535;
+$gray-dark:       #8c8c8c;
+$gray:            #b6b6b6;
+$gray-light:      #d7d7d7;
+$gray-lighter:    #ebebeb;
+
+$guava-darkest:   #d01f32;
+$guava-darker:    #dd2f3b;
+$guava-dark:      #ea3c44;
+$guava:           #f6494d;
+$guava-light:     #ff5557;
+$guava-lighter:   #ff6160;
+$guava-lightest:  #ff6d6a;
+
+$green-darkest:   #afbe24;
+$green-darker:    #bac932;
+$green-dark:      #c6d43e;
+$green:           #d2df4a;
+$green-light:     #deeb56;
+$green-lighter:   #e9f761;
+$green-lightest:  #f5ff6c;
+
+$yellow-darkest:  #cdb500;
+$yellow-darker:   #d9c000;
+$yellow-dark:     #e5cb00;
+$yellow:          #f2d714;
+$yellow-light:    #fde228;
+$yellow-lighter:  #ffed38;
+$yellow-lightest: #fff846;
+
+body { background-color: $white; }

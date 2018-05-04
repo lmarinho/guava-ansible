@@ -1,0 +1,14 @@
+<div class="is-language-link">
+  <% if type == 'short' %>
+    <% en_text, pt_text = 'en', 'pt' %>
+  <% else %>
+    <% en_text, pt_text = 'english', 'português' %>
+  <% end %>
+  <% link_class = "is-menu-link is-#{type} and-#{color}" %>
+
+  <% if current_language.to_s == 'en' %>
+    <%= link_to pt_text, i18n_current_path('pt'), class: link_class %>
+  <% else %>
+    <%= link_to en_text, i18n_current_path('en'), class: link_class %>
+  <% end %>
+</div>

@@ -1,0 +1,128 @@
+<hr>
+
+<footer class="footer of-whole-page">
+  <div class="grid is-container">
+    <div class="grid is-row">
+      <div class="grid is-left-column at-footer">
+
+        <section class="is-contact">
+          <header class="is-header">
+            <span class="logo is-guava at-footer">
+              <%= inline_svg 'guava', class: 'logo of-guava at-footer' %>
+            </span>
+            <em class="is-subtitle"><%= t(:'footer.where-we-are') %></em>
+          </header>
+          <ul class="is-info">
+            <li>
+              <% link_to 'start-a-project.html', class: 'button is-link has-icon' do %>
+                <%= inline_svg 'icon-flag', class: 'icon of-flag at-footer' %>
+                <%= t('menu.start-a-project') %>
+                <%= inline_svg 'icon-arrow-small', class: 'icon of-small-arrow' %>
+              <% end %>
+            </li>
+            <li>
+              <% link_to "mailto:#{t('menu.email')}", class: 'is-footer-sublink has-icon' do %>
+                <%= inline_svg 'icon-mail', class: 'icon of-mail at-footer' %>
+                <%= t('menu.email') %>
+              <% end %>
+            </li>
+            <li>
+              <address>
+                <% link_to 'https://goo.gl/maps/PcFGh', class: 'is-footer-sublink has-icon' do %>
+                  <%= inline_svg 'icon-pin', class: 'icon of-pin at-footer' %>
+                  <span><%= t(:'footer.address.street') %></span><br>
+                  <span><%= t(:'footer.address.city') %></span><br>
+                  <span><%= t(:'footer.address.zip') %></span>
+                <% end %>
+              </address>
+            </li>
+          </ul>
+          <ul class="is-social">
+            <li>
+              <% link_to 'https://twitter.com/guavasoftware', title: t(:'social.twitter'), target: 'blank' do %>
+                <%= inline_svg 'icon-twitter', class: 'icon of-twitter of-xoxo at-footer' %>
+              <% end %>
+            </li>
+            <li>
+              <% link_to 'https://facebook.com/guavasoftware', title: t(:'social.facebook'), target: 'blank' do %>
+                <%= inline_svg 'icon-facebook', class: 'icon of-facebook of-xoxo at-footer' %>
+              <% end %>
+            </li>
+            <li>
+              <% link_to 'https://www.linkedin.com/company/guava-software', title: t(:'social.linkedin'), target: 'blank' do %>
+                <%= inline_svg 'icon-linkedin', class: 'icon of-linkedin of-xoxo at-footer' %>
+              <% end %>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+
+      <div class="grid is-right-column at-footer">
+        <hr>
+
+        <section class="is-navigation">
+          <nav>
+            <ul class="is-section">
+              <li class="is-subsection">
+                <% link_to 'services.html', class: 'is-menu-link' do %>
+                  <span><%= t('menu.services.title') %></span>
+                <% end %>
+                <ol class="is-subsection">
+                  <li><%= link_to t('menu.services.what-we-do'), 'services.html#what-we-do', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.services.what-we-master'), 'services.html#what-we-master', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.services.tech-stack'), 'services.html#tech-stack', class: 'is-menu-sublink' %></li>
+                </ol>
+              </li>
+              <li class="is-subsection">
+                <% link_to 'about-us.html', class: 'is-menu-link' do %>
+                  <span><%= t('menu.about-us.title') %></span>
+                <% end %>
+                <ol class="is-subsection">
+                  <li><%= link_to t('menu.about-us.team'), 'about-us.html#team', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.about-us.history'), 'about-us.html#history', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.about-us.giving-back'), 'about-us.html#giving-back', class: 'is-menu-sublink' %></li>
+                </ol>
+              </li>
+              <li class="is-subsection">
+                <% link_to 'work.html', class: 'is-menu-link' do %>
+                  <span><%= t('menu.work.title') %></span>
+                <% end %>
+                <ol class="is-subsection">
+                  <li><%= link_to t('menu.work.projects'), 'work.html#projects', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.work.clients'), 'work.html#clients', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.start-a-project'), 'start-a-project.html', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.blog'), 'https://goiabada.blog', class: 'is-menu-sublink', target: 'blank' %></li>
+                </ol>
+              </li>
+              <li class="is-subsection">
+                <% link_to 'process.html', class: 'is-menu-link' do %>
+                  <span><%= t('menu.process.title') %></span>
+                <% end %>
+                <ol class="is-subsection">
+                  <li><%= link_to t('menu.process.kick-off'), 'process.html#kick-off', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.process.immersion'), 'process.html#immersion', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.process.discovery'), 'process.html#discovery', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.process.build'), 'process.html#build', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.process.publishing'), 'process.html#publishing', class: 'is-menu-sublink' %></li>
+                  <li><%= link_to t('menu.process.maintenance'), 'process.html#maintenance', class: 'is-menu-sublink' %></li>
+                </ol>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <hr>
+
+        <section class="is-copyright">
+          <small class="is-footnote">
+            <%= t(:'footer.copyright.text-a') %> <span><%= t(:'footer.copyright.text-a-link') %></span> <%= t(:'footer.copyright.text-b') %> <%= link_to t('footer.copyright.text-b-link'), 'http://manguez.al/', target: '_blank' %>.
+          </small>
+          <small class="is-footnote">
+            <%= t(:'footer.copyright.date') %> <abbr title="<%= t(:'footer.copyright.cnpj.abbr-full') %>"><%= t(:'footer.copyright.cnpj.abbr') %></abbr> <%= t(:'footer.copyright.cnpj.number') %>
+          </small>
+        </section>
+      </div>
+    </div>
+  </div>
+</footer>

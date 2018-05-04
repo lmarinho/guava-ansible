@@ -1,0 +1,61 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Icons .................................. //
+
+.icon {
+  position: relative;
+  background-size: 100% auto;
+  display: inline-block;
+  background-repeat: no-repeat;
+  &.is-small { @include size(16px); }
+}
+
+.icon-fill { @include transition; }
+.icon-stroke { @include transition; }
+
+.icon-services-category {
+  @include size(80px);
+  margin-bottom: 10px;
+}
+
+.icon-services-billing {
+  @include size(34px);
+  background: url(/images/icon-coins.svg);
+}
+
+.icon-start { background: url(/images/icon-flag.svg); }
+.icon-email { background: url(/images/icon-letter.svg); }
+.icon-address { background: url(/images/icon-pin.svg); }
+
+.icon-social {
+  @include size(19px, 32px);
+}
+
+.icon-page-down {
+  @include transition;
+  @include size(45px);
+  position: fixed;
+  cursor: pointer;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+  display: block;
+  &.fade { opacity: 0; }
+  .icon-arrow {
+    @include size(45px);
+    transform: rotate(90deg);
+  }
+  .icon-fill { stroke-width: 0.7px; }
+  &.at-services {
+    .icon-fill { stroke: $white; }
+  }
+  &:hover, &:focus, &:active {
+    bottom: 2vh;
+    .icon-fill { stroke: $guava-darkest; }
+  }
+}
+
+.icon-menu { @include size(26px, 31px); }
+.icon-menu-line { @include transition-slow; }

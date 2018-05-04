@@ -1,0 +1,218 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Pages / Process .................................. //
+
+.process-section {
+  @include clearfix;
+  position: relative;
+  overflow: hidden;
+  background-color: $white;
+  .type-text {
+    margin-bottom: modular-scale(3);
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+.process-resume {
+  background-color: lighten($gray-lighter, 2%);
+  text-align: center;
+  padding-bottom: $grid-section-margin;
+  .type-header-resume {
+    display: inline-block;
+    position: relative;
+    background-color: lighten($gray-lighter, 2%);
+    margin-bottom: 50px;
+    padding: 0 10px;
+    z-index: 1;
+    @media (min-width: $break-desk-md-min) { margin-bottom: 20px; }
+  }
+}
+.process-resume-wrapper {
+  position: relative;
+  &:before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    background-color: $yellow-dark;
+    z-index: 0;
+  }
+}
+.process-resume-item {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 35px;
+  overflow: hidden;
+  &:last-child { margin-bottom: 0; }
+  .type-header-subsection {
+    margin-bottom: 4px;
+    .type-link {
+      display: inline;
+      padding: 4px 0;
+    }
+  }
+  .type-header-subsection,
+  .type-text-sans {
+    width: 58%;
+    float: left;
+    @media (min-width: $break-desk-sm-min) { width: 72%; }
+    @media (min-width: $break-desk-md-min) {
+      width: 100%;
+      float: none;
+    }
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 17%;
+    float: left;
+    margin-right: 3.75%;
+    margin-bottom: 0;
+    &:last-child { margin-right: 0; }
+  }
+}
+
+.process-kick-off {
+  background-color: lighten($gray-lighter, 2%);
+  padding-bottom: modular-scale(5);
+}
+
+.process-immersion {
+  color: $white;
+  position: relative;
+  background-color: lighten($gray-lighter, 2%);
+  padding-top: modular-scale(7);
+  .type-quote {
+    color: $guava;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  @media (min-width: $break-desk-sm-min) {
+    .type-quote {
+      width: 77%;
+      left: -30px;
+    }
+  }
+  @media (min-width: $break-desk-md-min) {
+    .type-quote {
+      width: 50%;
+      position: absolute;
+      margin-bottom: 0;
+    }
+    .type-text.is-half {
+      width: 60%;
+      float: right;
+    }
+  }
+}
+.process-immersion-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: modular-scale(17);
+}
+.process-immersion-content {
+  position: relative;
+  z-index: 1;
+  margin-top: modular-scale(15);
+}
+
+.process-craftcycle {
+  overflow: hidden;
+  top: -250px;
+  margin-bottom: -250px;
+  padding-bottom: modular-scale(10);
+  background-color: $gray-darkest;
+}
+.process-craftcycle-wrapper {
+  z-index: 1;
+  position: relative;
+  padding-top: $grid-section-margin;
+}
+
+.process-discovery { background-color: $white; }
+
+.process-build {
+  z-index: 1;
+  padding-bottom: 145px;
+  background-color: $gray-darkest;
+}
+.process-build-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.process-publishing {
+  color: $white;
+  position: relative;
+  overflow: hidden;
+  padding-top: modular-scale(15);
+  z-index: 0;
+  top: -250px;
+  margin-bottom: -250px;
+  .process-publishing-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: modular-scale(14) 0 modular-scale(12);
+  }
+  .type-divisor { margin-top: 80px; }
+  .type-lead {
+    display: block;
+    @media (min-width: $break-desk-md-min) { padding-right: modular-scale(5); }
+  }
+}
+
+.process-maintenance {
+  background-color: $white;
+  padding: modular-scale(11) 0 modular-scale(7);
+  .wrap-text-helper {
+    display: none;
+    &:before {
+      content: '';
+      display: block;
+      float: left;
+      height: 84px;
+    }
+    &:after {
+      content: '';
+      width: 60%;
+      margin: 0 0 10px -70px;
+      float: left;
+      color: darken($green-darkest, 5%);
+      clear: both;
+    }
+    @media (min-width: $break-desk-md-min) { display: block; }
+  }
+  .type-quote {
+    margin: -10px 0 20px 0;
+    color: darken($green-darkest, 5%);
+    clear: both;
+    position: relative;
+    @media (min-width: $break-desk-sm-min) {
+      width: 77%;
+      left: -30px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      width: 60%;
+      margin: -60px 0 0 -70px;
+      left: 0;
+      float: left;
+    }
+  }
+}
+
+.process-closing-lead {
+  padding-bottom: modular-scale(5);
+}
+
+.process-footnote {
+  padding-bottom: modular-scale(6);
+  .type-text-sans {
+    color: $gray-dark;
+    width: 60%;
+    padding-left: modular-scale(0);
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

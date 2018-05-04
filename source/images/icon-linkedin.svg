@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g fill="#f7494d">
+    <path d="M11.4 10.3c.8 0 1.4.6 1.4 1.4 0 .8-.6 1.4-1.4 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4zM10.2 22h2.4v-7.8h-2.4V22zM14 14.2h2.3v1.1c.4-.7 1.2-1.3 2.4-1.3 2.5 0 2.9 1.6 2.9 3.7V22h-2.4v-3.8c0-.9 0-2.1-1.3-2.1s-1.5 1-1.5 2V22H14v-7.8z"/>
+  </g>
+  <defs>
+    <filter id="a" filterUnits="userSpaceOnUse" x="-2" y="-2" width="36" height="36">
+      <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/>
+    </filter>
+  </defs>
+  <mask maskUnits="userSpaceOnUse" x="-2" y="-2" width="36" height="36" id="b">
+    <circle fill="#fff" cx="16" cy="16" r="16" filter="url(#a)"/>
+  </mask>
+  <circle fill="none" stroke="#f6494d" stroke-width="4" cx="16" cy="16" r="16" mask="url(#b)"/>
+</svg>

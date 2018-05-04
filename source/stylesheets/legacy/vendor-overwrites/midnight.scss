@@ -1,0 +1,64 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Vendor Overwrites / Midnight .................... //
+
+.midnightInner { overflow: hidden!important; }
+
+.midnightHeader {
+  &.menu-bkg-gray {
+    .menu-brand-tagline { color: $gray; }
+    .menu-link-section {color: $gray-darker; }
+  }
+  &.menu-bkg-dark {
+    .logo-guava-fill { fill: $white; }
+    .menu-brand::after { background-color: $guava; }
+    .menu-brand-tagline { color: $green; }
+    .menu-link-title { color: $gray-lighter; }
+    .menu-link-section {color: $gray-lighter; }
+    .type-link.is-main {
+      @include underline(5px, 10px, $green, 0.6);
+      &:hover, &:active, &:focus, &.is-active {
+        @include underline(-17px, 31px, $green, 0.6);
+      }
+    }
+  }
+  &.menu-bkg-guava {
+    .logo-guava-fill { fill: $white; }
+    .menu-brand::after { background-color: $green; }
+    .menu-brand-tagline { color: $green; }
+    .menu-link-title { color: $white; }
+    .type-section-symbol { color: darken($guava-darkest, 10%); }
+    .menu-link-section {
+      color: $white;
+      font-weight: $medium;
+    }
+    .menu-link-section,
+    .type-link.is-main {
+      @include underline(5px, 10px, $guava-darkest, 0.4);
+      &:hover, &:active, &:focus, &.is-active {
+        @include underline(-17px, 31px, $guava-darkest, 0.4);
+      }
+    }
+  }
+  &.menu-bkg-green {
+    .menu-brand-tagline { color: $gray-darker; }
+    .menu-link-title { color: $gray-darker; }
+    .menu-link-section {color: $gray-darker; }
+    .type-section-symbol { color: darken($green-darkest, 20%); }
+    .menu-link-section,
+    .type-link.is-main {
+      @include underline(5px, 10px, $green-darkest, 0);
+      &:hover, &:active, &:focus, &.is-active {
+        @include underline(-17px, 31px, $green-darkest, 0.3);
+      }
+    }
+  }
+  &.is-work {
+    .menu-content a { background-color: $green; }
+  }
+  &.has-pattern-default {
+    .menu-content a { background-color: $white; }
+  }
+}

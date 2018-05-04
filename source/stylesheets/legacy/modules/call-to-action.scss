@@ -1,0 +1,28 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Call-to-action ......................... //
+
+.cta-section {
+  overflow: hidden;
+  width: 100%;
+  padding: 50px 0 60px;
+  .type-lead-sans {
+    margin-bottom: 40px;
+    @media (min-width: $break-desk-sm-min) { margin-bottom: 45px; }
+  }
+  &.is-work {
+    @include texture(guava);
+    background-color: $guava-light;
+  }
+  &.is-about-us {
+    @include texture(yellow);
+    background-color: $yellow-light;
+  }
+  &.is-services,
+  &.is-process {
+    @include texture(green);
+    background-color: $green-light;
+  }
+}

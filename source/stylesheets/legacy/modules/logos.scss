@@ -1,0 +1,124 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Logos .................................. //
+
+.logo {
+  background-size: 100% auto;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.logo-guava { display: block; }
+
+.logo-guava-symbol {
+  @include transition;
+  opacity: 1;
+  -webkit-transition-delay: .12s;
+  transition-delay: .12s;
+}
+.logo-guava-extra {
+  @include transition;
+  opacity: 1;
+  &.is-second {
+    -webkit-transition-delay: .10s;
+    transition-delay: .10s;
+  }
+  &.is-third  {
+    -webkit-transition-delay: .07s;
+    transition-delay: .07s;
+  }
+  &.is-fourth {
+    -webkit-transition-delay: .05s;
+    transition-delay: .05s;
+  }
+}
+
+.logo-menu {
+  float: left;
+  margin-right: 10px;
+}
+
+.logo-tech-stack { @include size(100px, 80px); }
+
+.logo-clients-featured {
+  margin-bottom: modular-scale(0);
+  .logo { @include size(100%, auto); }
+  .logo-fill { fill: $green-light; }
+  @media (min-width: $break-mobi-max-alt) { margin-bottom: modular-scale(1); }
+}
+
+.logo-elife {
+  @include size(115px, auto);
+  @media (min-width: $break-mobi-max-alt) { @include size(135px, auto); }
+}
+.logo-trueandco {
+  @include size(160px, auto);
+  @media (min-width: $break-mobi-max-alt) { @include size(180px, auto); }
+}
+.logo-teslabit {
+  @include size(220px, auto);
+  @media (min-width: $break-mobi-max-alt) { @include size(240px, auto); }
+}
+
+.logo-clients-regular {
+  display: inline-block;
+  margin-bottom: modular-scale(0);
+  .logo { @include size(100%, auto); }
+  .logo-fill { fill: $guava-dark; }
+  @media (min-width: $break-mobi-max-alt) { margin-bottom: modular-scale(1); }
+}
+
+.logo-storenvy {
+  @include size(132px, auto);
+  @media (min-width: $break-mobi-max-alt) { @include size(152px, 35px); }
+  @media (min-width: $break-desk-sm-min) {
+    margin-top: 11px;
+    margin-bottom: 29px;
+  }
+}
+
+.logo-zurb {
+  @include size(138px, auto);
+  @media (min-width: $break-mobi-max-alt) {
+    @include size(158px, 35px);
+    .logo { margin-top: 7px; }
+  }
+}
+
+.logo-jacobian {
+  @include size(105px, auto);
+  @media (min-width: $break-mobi-max-alt) { @include size(125px, 96px); }
+}
+
+.logo-kfp {
+  @include size(153px, auto);
+  @media (min-width: $break-mobi-max-alt) {
+    @include size(173px, 54px);
+    // .logo { margin-top: 40px; }
+  }
+}
+
+.logo-la {
+  @include size(136px, auto);
+  @media (min-width: $break-mobi-max-alt) {
+    @include size(166px, 100px);
+    .logo { margin-top: 18px; }
+  }
+}
+
+.logo-dailyhelper {
+  @include size(160px, auto);
+  @media (min-width: $break-mobi-max-alt) { @include size(180px, 100px); }
+}
+
+.logo-endossa {
+  @include size(160px, auto);
+  @media (min-width: $break-mobi-max-alt) { @include size(180px, auto); }
+}
+
+.logo-hero {
+  @include size(79px, auto);
+  @media (min-width: $break-mobi-max-alt) { @include size(99px, 114px); }
+}

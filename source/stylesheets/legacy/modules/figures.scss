@@ -1,0 +1,734 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Figures ................................ //
+
+.figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  img { @include size(100%, auto); }
+}
+
+.figure-menu-brand { @include clearfix; }
+
+.figure-landing-hero {
+  @include size(900px, auto);
+  display: inline-block;
+  position: absolute;
+  bottom: -59px;
+  left: 50%;
+  margin-left: -420px;
+  z-index: 0;
+  @media (min-width: $break-mobi-max) {
+    @include size(1117px, auto);
+    bottom: -71px;
+    margin-left: -490px;
+  }
+}
+
+.figure-process-circle {
+  &.has-color {
+    &.figure-kickoff {
+      background: url(/images/texture-kickoff@2x.png) $guava no-repeat;
+      background-size: 100% auto;
+    }
+    &.figure-immersion {
+      background: url(/images/texture-immersion@2x.png) $guava no-repeat;
+      background-size: 100% auto;
+    }
+    &.figure-discovery {
+      background: url(/images/texture-discovery@2x.png) $guava no-repeat;
+      background-size: 100% auto;
+    }
+    &.figure-build {
+      background: url(/images/texture-build@2x.png) $guava no-repeat;
+      background-size: 100% auto;
+    }
+    &.figure-publishing {
+      background: url(/images/texture-publishing@2x.png) $green no-repeat;
+      background-size: 100% auto;
+    }
+    &.figure-maintenance {
+      background: url(/images/texture-maintenance@2x.png) $green-darkest no-repeat;
+      background-size: 100% auto;
+    }
+  }
+}
+
+.figure-process {
+  &.at-hero {
+    width: 310px;
+    height: 155px;
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    z-index: 0;
+    @media (min-width: $break-desk-sm-min) {
+      width: 100%;
+      height: 285px;
+      top: 152px;
+      left: auto;
+    }
+    @media (min-width: $break-desk-md-min) {
+      top: 100px;
+      height: 315px;
+      left: 34px;
+    }
+    .figure-process-circle {
+      position: absolute;
+      mix-blend-mode: multiply;
+    }
+    .figure-kickoff {
+      @include size(modular-scale(5));
+      top: 48px;
+      left: -16px;
+      @media (min-width: $break-desk-sm-min) {
+        top: 128px;
+        left: -45px;
+        @include size(modular-scale(8));
+      }
+    }
+    .figure-immersion {
+      @include size(modular-scale(7));
+      top: 39px;
+      left: 17px;
+      @media (min-width: $break-desk-sm-min) {
+        top: 110px;
+        left: 7px;
+        @include size(modular-scale(10));
+      }
+      @media (min-width: $break-desk-md-min) {
+        top: 104px;
+        left: 17px;
+        @include size(modular-scale(11));
+      }
+    }
+    .figure-discovery {
+      @include size(modular-scale(10));
+      bottom: 0;
+      left: 55px;
+      @media (min-width: $break-desk-sm-min) {
+        bottom: 0;
+        left: 77px;
+        @include size(modular-scale(12));
+      }
+      @media (min-width: $break-desk-md-min) {
+        left: 125px;
+        @include size(modular-scale(13));
+      }
+    }
+    .figure-build {
+      @include size(modular-scale(11));
+      top: 0;
+      left: 99px;
+      @media (min-width: $break-desk-sm-min) {
+        top: 0;
+        left: 150px;
+        @include size(modular-scale(14));
+      }
+      @media (min-width: $break-desk-md-min) {
+        left: 210px;
+        @include size(modular-scale(15));
+      }
+    }
+    .figure-publishing {
+      @include size(modular-scale(5));
+      top: 48px;
+      left: 217px;
+      @media (min-width: $break-desk-sm-min) {
+        top: 128px;
+        left: 357px;
+        @include size(modular-scale(8));
+      }
+      @media (min-width: $break-desk-md-min) { left: 467px; }
+    }
+    .figure-maintenance {
+      @include size(modular-scale(6));
+      top: 43px;
+      left: 241px;
+      @media (min-width: $break-desk-sm-min) {
+        top: 110px;
+        left: 400px;
+        @include size(modular-scale(10));
+      }
+      @media (min-width: $break-desk-md-min) {
+        top: 113px;
+        left: 520px;
+      }
+    }
+  }
+  &.at-landing {
+    width: 210px;
+    height: 380px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    @media (min-width: $break-desk-sm-min) {
+      width: 320px;
+      height: 508px;
+      margin: 0;
+    }
+    @media (min-width: $break-desk-md-min) {
+      width: auto;
+      height: 315px;
+    }
+    .figure-process-circle {
+      position: absolute;
+      mix-blend-mode: multiply;
+    }
+    .figure-kickoff {
+      @include size(50px);
+      top: 0;
+      left: calc(45% - (50px / 2));
+      @media (min-width: $break-desk-sm-min) {
+        @include size(77px);
+        left: calc(50% - (77px / 2));
+      }
+      @media (min-width: $break-desk-md-min) {
+        @include size(modular-scale(8));
+        top: 128px;
+        left: -47px;
+      }
+    }
+    .figure-immersion {
+      @include size(87px);
+      top: 10%;
+      left: calc(43% - (87px / 2));
+      @media (min-width: $break-desk-sm-min) {
+        @include size(133px);
+        left: calc(50% - (133px / 2));
+      }
+      @media (min-width: $break-desk-md-min) {
+        @include size(modular-scale(11));
+        top: 104px;
+        left: 17px;
+      }
+    }
+    .figure-discovery {
+      @include size(105px);
+      bottom: 53%;
+      left: calc(100% - 105px);
+      @media (min-width: $break-desk-sm-min) {
+        @include size(160px);
+        left: calc(100% - 160px);
+        bottom: 47%;
+      }
+      @media (min-width: $break-desk-md-min) {
+        @include size(modular-scale(13));
+        bottom: 0;
+        left: 125px;
+      }
+    }
+    .figure-build {
+      @include size(150px);
+      top: 29%;
+      left: 20px;
+      @media (min-width: $break-desk-sm-min) {
+        @include size(230px);
+        top: 28%;
+        left: 30px;
+      }
+      @media (min-width: $break-desk-md-min) {
+        @include size(modular-scale(15));
+        top: 0;
+        left: 210px;
+      }
+    }
+    .figure-publishing {
+      @include size(50px);
+      top: 64%;
+      left: calc(60% - (50px / 2));
+      @media (min-width: $break-desk-sm-min) {
+        @include size(77px);
+        top: 70%;
+        left: calc(56% - (77px / 2));
+      }
+      @media (min-width: $break-desk-md-min) {
+        top: 128px;
+        left: 467px;
+      }
+    }
+    .figure-maintenance {
+      @include size(105px);
+      top: calc(100% - 105px);
+      left: calc(50% - (105px / 2));
+      @media (min-width: $break-desk-sm-min) {
+        @include size(111px);
+        top: calc(100% - 111px);
+        left: calc(50% - (111px / 2));
+      }
+      @media (min-width: $break-desk-md-min) {
+        top: 113px;
+        left: 520px;
+      }
+    }
+  }
+  &.at-aside {
+    .figure-process-circle {
+      @include transition;
+      border: 3px solid transparentize($gray-dark, 0.7);
+      position: absolute;
+    }
+    .figure-kickoff {
+      @include size(modular-scale(-3));
+      top: 20px;
+      &.active { border-color: $guava; }
+    }
+    .figure-immersion {
+      @include size(modular-scale(0));
+      top: 16px;
+      left: 9px;
+      &.active { border-color: $guava; }
+    }
+    .figure-discovery {
+      @include size(modular-scale(3));
+      top: 16px;
+      left: 24px;
+      &.active { border-color: $guava; }
+    }
+    .figure-build {
+      @include size(modular-scale(4));
+      top: 0;
+      left: 40px;
+      &.active { border-color: $guava; }
+    }
+    .figure-publishing {
+      @include size(modular-scale(-3));
+      top: 20px;
+      left: 79px;
+      &.active { border-color: $green; }
+    }
+    .figure-maintenance {
+      @include size(modular-scale(-1));
+      top: 18px;
+      left: 89px;
+      &.active { border-color: $green-darkest; }
+    }
+  }
+  &.at-content {
+    width: 36%;
+    height: 74px;
+    margin: 0 3% 0 3%;
+    float: left;
+    @media (min-width: $break-desk-sm-min) { width: 22%; }
+    @media (min-width: $break-desk-md-min) {
+      width: 100%;
+      height: 80px;
+      margin: 0 0 10px 0;
+      float: none;
+    }
+    .figure-process-circle {
+      border: 3px solid $guava;
+      position: absolute;
+      top: 2px;
+      @media (min-width: $break-desk-md-min) {
+        top: auto;
+        bottom: 0;
+      }
+    }
+    .figure-kickoff     { @include size(modular-scale(-1)); }
+    .figure-immersion   { @include size(modular-scale(2)); }
+    .figure-discovery   {
+      @include size(modular-scale(4));
+      top: 30px;
+      @media (min-width: $break-desk-md-min) { top: auto; }
+    }
+    .figure-build {
+      @include size(modular-scale(6));
+      bottom: 11px;
+      left: 17px;
+    }
+    .figure-publishing {
+      @include size(modular-scale(-1));
+      border-color: $green;
+    }
+    .figure-maintenance {
+      @include size(modular-scale(1));
+      border-color: $green-darkest;
+    }
+  }
+}
+
+.figure-process-circle { border-radius: 50%; }
+
+.figure-inspector,
+.figure-layers {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .figure-symbol {
+    @include size(180px, auto);
+    position: relative;
+    z-index: 2;
+  }
+  &:after {
+    content: '';
+    background-color: transparentize($gray-lighter, 0.4);
+    height: 60px;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: -20%;
+    width: 140%;
+    z-index: 0;
+  }
+  @media (min-width: $break-desk-sm-min) {
+    width: 98px;
+    float: left;
+    height: calc(100% - 50px);
+    .figure-symbol {
+      @include size(200px, auto);
+      position: absolute;
+      top: calc(50% - 95px);
+    }
+    &:after {
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+    }
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 128px;
+    .figure-symbol {
+      @include size(260px, auto);
+      top: calc(50% - 105px);
+    }
+  }
+}
+
+.figure-inspector {
+  text-align: left;
+  .figure-symbol { left: -10px; }
+  @media (min-width: $break-desk-sm-min) {
+    text-align: center;
+    right: 0;
+    left: auto;
+    &:after {
+      left: auto;
+      right: 0;
+    }
+    .figure-symbol {
+      left: 50%;
+      margin-left: -105px;
+    }
+  }
+  @media (min-width: $break-desk-md-min) {
+    .figure-symbol { margin-left: -138px; }
+  }
+}
+.figure-layers {
+  text-align: right;
+  .figure-symbol { right: -3px; }
+  @media (min-width: $break-desk-sm-min) {
+    text-align: center;
+    left: 0;
+    &:after { left: 0; }
+    .figure-symbol {
+      right: 50%;
+      left: auto;
+      margin-right: -105px;
+    }
+  }
+  @media (min-width: $break-desk-md-min) {
+    .figure-symbol { margin-right: -125px; }
+  }
+}
+
+.figure-coding {
+  position: absolute;
+  width: 158px;
+  right: -10px;
+  bottom: -55px;
+  overflow-x: hidden;
+  .figure-symbol { @include size(100%, auto); }
+  @media (min-width: $break-desk-sm-min) {
+   width: 192px;
+   bottom: -69px;
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 218px;
+    bottom: -80px;
+  }
+}
+
+.figure-social {
+  width: 160px;
+  top: -35px;
+  right: -56px;
+  display: inline-block;
+  margin-top: 0;
+  position: absolute;
+  @media (min-width: $break-desk-sm-min) {
+    width: 210px;
+    top: 56px;
+    right: -60px;
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 210px;
+    right: -50px;
+  }
+}
+
+.figure-underwear {
+  width: 180px;
+  top: -35px;
+  left: 185px;
+  display: inline-block;
+  margin-top: 0;
+  position: absolute;
+  @media (min-width: $break-desk-sm-min) {
+    width: 250px;
+    top: 9px;
+    left: -100px;
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 292px;
+    height: 194px;
+    left: -120px;
+  }
+}
+
+.figure-plug {
+  width: 360px;
+  top: -85px;
+  left: 170px;
+  display: inline-block;
+  position: absolute;
+  transform: rotate(180deg);
+  @media (min-width: $break-desk-sm-min) {
+    width: 428px;
+    top: -33px;
+    left: 260px;
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 508px;
+    top: 16px;
+    left: 270px;
+    transform: none;
+  }
+}
+
+.figure-astronaut {
+  @include size(228px, auto);
+  position: absolute;
+  left: 20%;
+  top: 28px;
+  z-index: 1;
+  @media (min-width: $break-desk-sm-min) {
+    @include size(288px, auto);
+    left: 50%;
+    top: 0;
+  }
+}
+.figure-satellite {
+  @include size(500px, auto);
+  left: -50px;
+  margin-bottom: modular-scale(2);
+  @media (min-width: $break-desk-sm-min) {
+    @include size(710px, auto);
+    left: 0;
+  }
+}
+.figure-rocket {
+  @include size(100%, auto);
+  margin: 0 auto;
+  padding: modular-scale(5) 0 modular-scale(5);
+  @media (min-width: $break-desk-sm-min) { @include size(437px, auto); }
+}
+.figure-spacetrip {
+  @include size(294px, auto);
+  position: absolute;
+  top: 40px;
+  right: -14px;
+  @media (min-width: $break-desk-sm-min) {
+    @include size(354px, auto);
+    top: 20px;
+    right: -20px;
+  }
+  @media (min-width: $break-desk-md-min) { top: 40px; }
+}
+.figure-rover {
+  @include size(415px, auto);
+  margin: 0 auto;
+  left: -70px;
+  @media (min-width: $break-desk-sm-min) {
+    @include size(435px, auto);
+    left: 0;
+  }
+}
+
+.figure-team {
+  @include size(85px, auto);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.figure-guavo {
+  &.is-small {
+    @include size(230px, auto);
+    display: inline-block;
+    position: relative;
+  }
+  &.is-big {
+    @include size(240px, auto);
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 120px);
+    @media (min-width: $break-desk-sm-min) {
+      @include size(300px, auto);
+      top: -100px;
+      left: 100px;
+    }
+  }
+}
+
+.figure-guavo-chico {
+  &.is-big {
+    top: -50px;
+    margin-left: 10px;
+    @media (min-width: $break-desk-sm-min) {
+      top: -130px;
+      left: 120px;
+      margin-left: 0;
+    }
+  }
+}
+.figure-guavo-daniel {
+  &.is-big {
+    margin-left: -25px;
+    @media (min-width: $break-desk-sm-min) {
+      top: -120px;
+      left: 72px;
+      margin-left: 0;
+    }
+  }
+}
+.figure-guavo-guilherme {
+  &.is-big {
+    top: -50px;
+    margin-left: 16px;
+    @media (min-width: $break-desk-sm-min) {
+      top: -130px;
+      left: 140px;
+      margin-left: 0;
+    }
+  }
+}
+.figure-guavo-juliana {
+  &.is-big {
+    top: -50px;
+    margin-left: 10px;
+    @media (min-width: $break-desk-sm-min) {
+      top: -116px;
+      left: 116px;
+      margin-left: 0;
+    }
+  }
+}
+.figure-guavo-leo {
+  &.is-big {
+    top: -50px;
+    margin-left: 3px;
+    @media (min-width: $break-desk-sm-min) {
+      top: -110px;
+      margin-left: 10px;
+    }
+  }
+}
+.figure-guavo-renatinha {
+  &.is-big {
+    @include size(230px, auto);
+    top: -50px;
+    margin-left: 5px;
+    @media (min-width: $break-desk-sm-min) {
+      @include size(280px, auto);
+      top: -120px;
+      margin-left: 7px;
+    }
+  }
+}
+.figure-guavo-sergio {
+  &.is-big {
+    top: -20px;
+    margin-left: 10px;
+    @media (min-width: $break-desk-sm-min) {
+      top: -90px;
+      left: 120px;
+      margin-left: 0;
+    }
+  }
+}
+.figure-guavo-tiago {
+  &.is-big {
+    margin-left: -1px;
+    @media (min-width: $break-desk-sm-min) { margin-left: 0; }
+  }
+}
+.figure-newbie {
+  @include size(112px, auto);
+  display: inline-block;
+  vertical-align: middle;
+  left: -13px;
+  @media (min-width: $break-desk-sm-min) { left: 0; }
+}
+
+.figure-speech {
+  @include size(94px, auto);
+  display: inline-block;
+  vertical-align: middle;
+  @media (min-width: $break-desk-sm-min) { @include size(114px, auto); }
+}
+
+.figure-photo {
+  &.of-cards {
+    height: 300px;
+    img { @include size(auto, 100%); }
+    @media (min-width: $break-desk-sm-min) { height: 435px; }
+    @media (min-width: $break-desk-md-min) { height: 555px; }
+  }
+  &.of-tropicalrb {
+    margin-top: modular-scale(7);
+    text-align: center;
+    img {
+      @include size(auto, 100%);
+      position: absolute;
+      left: 50%;
+      margin-left: -370px;
+      @media (min-width: $break-desk-sm-min) { margin-left: -765px; }
+      @media (min-width: $break-desk-md-min) { margin-left: -886px; }
+    }
+    .figure-photo-wrapper {
+      background: url(/images/pattern-x-small.svg) repeat;
+      background-size: 63px auto;
+      background-position: 0px 13px;
+      height: 215px;
+      position: relative;
+      overflow: hidden;
+      @media (min-width: $break-desk-sm-min) { height: 445px; }
+      @media (min-width: $break-desk-md-min) { height: 515px; }
+    }
+    .type-caption { margin-top: 6px; }
+  }
+  &.of-hq {
+    @include size(280px, auto);
+    position: relative;
+    top: 10px;
+    left: 20px;
+    z-index: 0;
+    @media (min-width: $break-desk-sm-min) {
+      @include size(350px, auto);
+      top: 24px;
+      left: 110px;
+    }
+    @media (min-width: $break-desk-md-min) {
+      @include size(420px, auto);
+      left: 50px;
+    }
+  }
+}

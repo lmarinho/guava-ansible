@@ -1,0 +1,17 @@
+///////////////////////////////////////////////////////////
+// Helpers                                      (Module) //
+///////////////////////////////////////////////////////////
+
+.helper {
+  // Used to make elements float on bottom right of the text
+  &.of-float {
+    display: none;
+    @media (min-width: $sm) {
+      display: block;
+      float: right;
+      width: 0;
+      height: 2.5rem;
+      content: "";
+    }
+  }
+}

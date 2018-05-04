@@ -1,0 +1,169 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Modules / Buttons ................................ //
+
+.button {
+  @include transition;
+  border: none;
+  background-color: transparent;
+}
+
+.button-cta {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 7px 0 4px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: modular-scale(-1);
+  line-height: modular-scale(2);
+  font-weight: $bold;
+  letter-spacing: 0.2rem;
+  @media (min-width: $break-desk-sm-min) {
+    width: 48%;
+    float: left;
+    margin-left: 4%;
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 40%;
+    margin-left: 6%;
+  }
+  &.is-work {
+    color: $yellow-lightest;
+    border: 3px solid $yellow-lightest;
+    .icon-fill { stroke: $yellow-lightest; }
+    &:hover, &:focus, &:active {
+      background-color: $yellow-light;
+      border-color: $yellow-light;
+      color: $guava;
+      .icon { left: 5px; }
+      .icon-fill { stroke: $guava; }
+    }
+  }
+  &.is-services, &.is-process, &.is-about-us {
+    color: $guava-light;
+    border: 3px solid $guava-light;
+    &:hover, &:focus, &:active {
+      background-color: $guava-light;
+      border-color: $guava-light;
+      color: $white;
+      .icon { left: 5px; }
+      .icon-fill { stroke: $white; }
+    }
+  }
+  .icon {
+    @include transition;
+    display: inline-block;
+    width: 14px;
+    height: 15px;
+    position: relative;
+    left: -2px;
+    vertical-align: -2px;
+  }
+}
+
+.button-close {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: url(/images/icon-close.svg) no-repeat;
+  background-position: center;
+  &.at-about-us {
+    background-color: $yellow;
+    position: fixed;
+    top: 130px;
+    right: 5px;
+    &:hover, &:focus, &:active { background-color: $yellow-light; }
+    @media (min-width: $break-desk-sm-min) {
+      position: absolute;
+      top: 80px;
+      right: 30px;
+    }
+  }
+  &.at-sidenote {
+    position: absolute;
+    right: 15px;
+    top: -22px;
+    background-color: $yellow;
+    &:hover, &:focus, &:active { background-color: $yellow-light; }
+    @media (min-width: $break-desk-sm-min) { display: none; }
+  }
+}
+.button-file-remove,
+.button-file-upload {
+  width: 30px;
+  height: 30px;
+  border-width: 3px;
+  border-style: solid;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.button-file-upload {
+  display: inline-block;
+  box-sizing: border-box;
+  border-color: $yellow-darkest;
+  .icon-fill { fill: darken($yellow-darkest, 6%); }
+  &:hover, &:focus, &:active {
+    background-color: $yellow-darkest;
+    .icon-fill { fill: $white; }
+  }
+}
+
+.button-file-remove {
+  border-color: $guava-light;
+  .icon { transform: rotate(45deg); }
+  .icon-fill { fill: $guava-light; }
+  &:hover, &:focus, &:active {
+    background-color: $guava-light;
+    .icon-fill { fill: $white; }
+  }
+}
+
+.button-submit-form {
+  width: 100%;
+  padding: 20px 0;
+  border: 3px solid $guava;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: ms-sans(3);
+  line-height: ms-sans(2);
+  font-weight: $bold;
+  color: $guava;
+  position: absolute;
+  bottom: -12px;
+  left: 18px;
+  z-index: 2;
+  .icon {
+    @include transition;
+    width: 22px;
+    height: 22px;
+    position: relative;
+    top: 3px;
+    left: 6px;
+  }
+  .icon-fill { stroke-width: 1.5px; }
+  &:hover, &:focus, &:active {
+    background-color: $guava-light;
+    border-color: $guava-light;
+    color: $white;
+    .icon { left: 11px; }
+    .icon-fill { stroke: $white; }
+  }
+}
+
+.button-menu {
+  @include transition;
+  position: fixed;
+  top: 16px;
+  right: 0;
+  z-index: 5;
+  padding: 5px 16px 3px 10px;
+  height: 42px;
+  background-color: $guava;
+  .icon-fill { stroke: $white; }
+  @media (min-width: $break-mobi-max) { display: none; }
+}

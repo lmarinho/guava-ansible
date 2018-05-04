@@ -1,0 +1,46 @@
+///////////////////////////////////////////////////////////
+// Sidenotes                                    (Module) //
+///////////////////////////////////////////////////////////
+
+.sidenote {
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .3s ease-in;
+  h5 { margin-top: 0; }
+  .is-container, .is-column { padding: 0; }
+  .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  @media (max-width: ($md - 1px)) {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: calc(100vw - 20px);
+    padding: 1rem;
+    color: $text-color;
+    background-color: $white;
+    filter: drop-shadow(0 1px 10px transparentize($black, .8));
+  }
+
+  @media (min-width: $md) {
+    position: absolute;
+    right: 2rem;
+    width: 10rem;
+    .is-close-button { display: none; }
+  }
+
+  &.of-stakeholders {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    @media (min-width: $md) {
+      h5, p { color: $white; }
+    }
+  }
+
+  &.is-active {
+    z-index: 100;
+    opacity: 1;
+  }
+}

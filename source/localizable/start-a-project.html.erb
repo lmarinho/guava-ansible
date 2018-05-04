@@ -1,0 +1,155 @@
+---
+title: Start a project at Guava
+---
+
+<% content_for :language_link do %>
+  <%= partial 'language-link', locals: { type: 'short', color: 'red' }%>
+<% end %>
+<% content_for :additional_js do %>
+  <%= javascript_include_tag :'autosize' %>
+  <%= javascript_include_tag :'dynamic-menu' %>
+  <%= javascript_include_tag :'logo-transition' %>
+  <%= javascript_include_tag :'form-validation' %>
+<% end %>
+
+<div id="form" class="page-start has-border">
+  <header class="page-start is-header">
+    <div class="grid is-container">
+      <div class="grid are-columns of-ultrawide-form">
+        <h1><%= t('start-a-project.title') %></h1>
+        <p><%= t('start-a-project.subtitle') %></p>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <div class="grid is-container">
+      <div class="grid are-columns of-ultrawide-form">
+        <% form_tag 'start-a-project.html', class: '', name: 'start-a-project', novalidate: true, multipart: true, netlify: true, 'netlify-honeypot' => 'pooh' do %>
+        <%= hidden_field_tag :pooh, value: '' %>
+
+        <span class="picture of-stamp is-studio also-small / is-lang-<%= current_language %>" alt="<%= t(:'graphics.stamps.studio') %>"></span>
+        <span class="picture of-stamp is-team also-small / is-lang-<%= current_language %> is-not-checked" alt="<%= t(:'graphics.stamps.team-aug') %>"></span>
+        <fieldset class="is-radio-group has-two">
+          <legend><%= t('start-a-project.form.service.legend') %></legend>
+          <div class="is-radio">
+            <div class="is-radio-input">
+              <%= radio_button_tag :service, value: t('.start-a-project.form.service.option-a'), id: 'studio-radio', tabindex: 3, checked: true, class: 'of-studio' %>
+              <span class="is-fake-radio"><%= inline_svg 'icon-check', class: '' %></span>
+            </div>
+            <label for="service"><%= t('.start-a-project.form.service.service-a') %></label>
+            <p><%= t('.start-a-project.form.service.option-a') %></p>
+            <label class="is-radio-label" for="studio-radio"></label>
+          </div>
+          <span class="is-connector"><%= t('.start-a-project.form.service.connector') %></span>
+          <div class="is-radio is-not-checked">
+            <div class="is-radio-input">
+              <%= radio_button_tag :service, value: t('.start-a-project.form.service.option-b'), id: 'team-aug-radio', tabindex: 4, class: 'of-team' %>
+              <span class="is-fake-radio"><%= inline_svg 'icon-check', class: '' %></span>
+            </div>
+            <label for="service"><%= t('.start-a-project.form.service.service-b') %></label>
+            <p><%= t('.start-a-project.form.service.option-b') %></p>
+            <label class="is-radio-label" for="team-aug-radio"></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="is-text-input">
+          <legend><%= t('start-a-project.form.name.legend') %></legend>
+          <%= text_field_tag :name, placeholder: t('.start-a-project.form.name.placeholder'), tabindex: 1 %>
+          <label for="name"><%= t('.start-a-project.form.name.label') %></label>
+        </fieldset>
+
+        <fieldset class="is-text-input">
+          <legend><%= t('start-a-project.form.email.legend') %></legend>
+          <%= email_field_tag :email, placeholder: t('.start-a-project.form.email.placeholder'), tabindex: 2 %>
+          <label for="email"><%= t('.start-a-project.form.email.label') %></label>
+        </fieldset>
+
+        <fieldset class="is-textarea-input">
+          <legend><%= t('.start-a-project.form.description.legend') %></legend>
+          <%= text_area_tag :description, id: 'description', placeholder: t('.start-a-project.form.description.placeholder'), rows: 1, tabindex: 5 %>
+          <label for="description"><%= t('start-a-project.form.description.label') %></label>
+          <!-- Changes text according to selected radio button -->
+          <small class="of-software-studio is-checked"><%= t('.start-a-project.form.description.sublabel-b') %></small>
+          <small class="of-team-augmentation"><%= t('.start-a-project.form.description.sublabel-a') %></small>
+        </fieldset>
+
+        <fieldset class="is-select-input">
+          <legend><%= t('.start-a-project.form.start-date.legend') %></legend>
+          <select name="start-date" tabindex="6">
+            <option><%= t('.start-a-project.form.start-date.placeholder') %></option>
+            <option><%= t('.start-a-project.form.start-date.option-a') %></option>
+            <option><%= t('.start-a-project.form.start-date.option-b') %></option>
+            <option><%= t('.start-a-project.form.start-date.option-c') %></option>
+            <option><%= t('.start-a-project.form.start-date.option-d') %></option>
+          </select>
+          <label for="start-date"><%= t('.start-a-project.form.start-date.label') %></label>
+          <%= inline_svg 'icon-arrow-small' %>
+        </fieldset>
+
+        <fieldset class="is-select-input">
+          <legend><%= t('.start-a-project.form.timeframe.legend') %></legend>
+          <select name="timeframe" tabindex="7">
+            <option><%= t('.start-a-project.form.timeframe.placeholder') %></option>
+            <option><%= t('.start-a-project.form.timeframe.option-a') %></option>
+            <option><%= t('.start-a-project.form.timeframe.option-b') %></option>
+            <option><%= t('.start-a-project.form.timeframe.option-c') %></option>
+            <option><%= t('.start-a-project.form.timeframe.option-d') %></option>
+          </select>
+          <label for="timeframe"><%= t('.start-a-project.form.timeframe.label') %></label>
+          <%= inline_svg 'icon-arrow-small' %>
+        </fieldset>
+
+        <fieldset class="is-select-input">
+          <legend><%= t('.start-a-project.form.budget.legend') %></legend>
+          <select name="budget" tabindex="8">
+            <option><%= t('.start-a-project.form.budget.placeholder') %></option>
+            <option><%= t('.start-a-project.form.budget.option-a') %></option>
+            <option><%= t('.start-a-project.form.budget.option-b') %></option>
+            <option><%= t('.start-a-project.form.budget.option-c') %></option>
+            <option><%= t('.start-a-project.form.budget.option-d') %></option>
+          </select>
+          <label for="budget"><%= t('.start-a-project.form.budget.label') %></label>
+          <%= inline_svg 'icon-arrow-small' %>
+        </fieldset>
+
+        <fieldset class="is-file-input hasnt-uploaded">
+          <legend><%= t('.start-a-project.form.files.legend') %></legend>
+          <button type="button" class="button is-huge has-icon" tabindex="9">
+            <%= t('.start-a-project.form.files.label.add') %>
+            <%= inline_svg 'icon-plus' %>
+          </button>
+          <input name="file" type="file">
+        </fieldset>
+
+        <fieldset class="is-file-input has-uploaded">
+          <legend><%= t('.start-a-project.form.files.legend') %></legend>
+          <button type="button" class="button is-huge has-icon" tabindex="9">
+            <label>
+              <%= t('.start-a-project.form.files.label.remove') %>
+              <%= inline_svg 'icon-plus', class: "of-remove" %>
+            </label>
+            <p></p>
+          </button>
+        </fieldset>
+
+        <button class="button is-huge is-submit has-icon" type="submit" role="button" tabindex="10">
+          <%= t('.start-a-project.form.submit.label') %>
+          <%= inline_svg 'icon-arrow-small' %>
+        </button>
+        <% end %>
+
+        <small class="type is-footnote at-content">
+          <%= inline_svg 'icon-lock', class: 'icon of-lock' %>
+          <%= t('.start-a-project.encryption') %>
+        </small>
+      </div>
+    </div>
+  </main>
+</div>
+
+<%= partial 'footer', locals: { page: 'start' } %>
+
+<% content_for :masks do %>
+  <div class="mask is-section" data-menu-class="on-white-background" data-menu-mask-of="#form"></div>
+<% end %>

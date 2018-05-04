@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('./graphik/Graphik-Light-Web.eot');
+  src: url('./graphik/Graphik-Light-Web.eot?#iefix') format('embedded-opentype'),
+  url('./graphik/Graphik-Light-Web.woff2') format('woff2'),
+  url('./graphik/Graphik-Light-Web.woff') format('woff');
+  font-weight:  300;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('./graphik/Graphik-Regular-Web.eot');
+  src: url('./graphik/Graphik-Regular-Web.eot?#iefix') format('embedded-opentype'),
+  url('./graphik/Graphik-Regular-Web.woff2') format('woff2'),
+  url('./graphik/Graphik-Regular-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('./graphik/Graphik-RegularItalic-Web.eot');
+  src: url('./graphik/Graphik-RegularItalic-Web.eot?#iefix') format('embedded-opentype'),
+  url('./graphik/Graphik-RegularItalic-Web.woff2') format('woff2'),
+  url('./graphik/Graphik-RegularItalic-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('./graphik/Graphik-Medium-Web.eot');
+  src: url('./graphik/Graphik-Medium-Web.eot?#iefix') format('embedded-opentype'),
+  url('./graphik/Graphik-Medium-Web.woff2') format('woff2'),
+  url('./graphik/Graphik-Medium-Web.woff') format('woff');
+  font-weight:  500;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('./graphik/Graphik-Bold-Web.eot');
+  src: url('./graphik/Graphik-Bold-Web.eot?#iefix') format('embedded-opentype'),
+  url('./graphik/Graphik-Bold-Web.woff2') format('woff2'),
+  url('./graphik/Graphik-Bold-Web.woff') format('woff');
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('./graphik/Graphik-Super-Web.eot');
+  src: url('./graphik/Graphik-Super-Web.eot?#iefix') format('embedded-opentype'),
+  url('./graphik/Graphik-Super-Web.woff2') format('woff2'),
+  url('./graphik/Graphik-Super-Web.woff') format('woff');
+  font-weight:  900;
+  font-style:   normal;
+  font-stretch: normal;
+}

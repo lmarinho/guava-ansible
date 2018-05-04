@@ -2,3 +2,4 @@ Some sneaky commands used to step through history in this tutorial.
 
 git config --local alias.begin '!git checkout $(git rev-list --all | tail -n 1)'
 git config --local alias.step '!git checkout $(git rev-list HEAD..master | tail -n 1)'
+git config --local alias.whatsup 'diff head~2 head~1'

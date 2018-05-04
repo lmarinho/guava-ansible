@@ -1,0 +1,109 @@
+---
+title: Guava — Outstanding software for the web
+---
+
+<% content_for :language_link do %>
+  <%= partial 'language-link', locals: { type: 'short', color: 'green' }%>
+<% end %>
+
+<header id="cover">
+  <div class="cover of-landing">
+    <span class="logo of-guava at-cover">
+      <%= inline_svg 'guava' %>
+    </span>
+    <h1 class="is-title is-serif"><%= t(:'landing.hero.title') %></h1>
+  </div>
+</header>
+
+<hr>
+
+<article class="page-landing has-blocks">
+  <article class="page-landing is-block of-services at-left">
+    <% link_to 'services.html' do %>
+      <div class="is-main-content">
+        <h2 class="has-alternative-color"><%= t(:'landing.services.title') %></h2>
+        <p><%= t(:'landing.services.text') %></p>
+      </div>
+      <p class="is-cta-link">
+        <%= t(:'calls-to-action.more') %>
+        <%= inline_svg 'icon-arrow-small', class: 'icon of-small-arrow' %>
+      </p>
+      <figure role="presentation">
+        <%= image_tag 'pattern-leaves-1@2x.png', class: 'picture of-leaves at-landing', alt: t(:'illustrations.astronaut') %>
+      </figure>
+    <% end %>
+  </article>
+
+  <hr>
+
+  <article class="page-landing is-block of-about at-right">
+    <% link_to 'about-us.html' do %>
+      <div class="is-main-content">
+        <h2><%= t(:'landing.about-us.title') %></h2>
+        <p><%= t(:'landing.about-us.text') %></p>
+      </div>
+      <p class="is-cta-link">
+        <%= t(:'calls-to-action.more') %>
+        <%= inline_svg 'icon-arrow-small', class: 'icon of-small-arrow' %>
+      </p>
+    <% end %>
+  </article>
+
+  <hr>
+
+  <article class="page-landing is-block of-work at-right">
+    <% link_to 'work.html' do %>
+      <div class="is-main-content">
+        <h2><%= t(:'landing.work.title') %></h2>
+        <p><%= t(:'landing.work.text') %></p>
+      </div>
+      <p class="is-cta-link">
+        <%= t(:'calls-to-action.more') %>
+        <%= inline_svg 'icon-arrow-small', class: 'icon of-small-arrow' %>
+      </p>
+    <% end %>
+  </article>
+
+  <hr>
+
+  <article class="page-landing is-block of-process at-left">
+    <% link_to 'process.html' do %>
+      <div class="is-main-content">
+        <h2><%= t(:'landing.process.title') %></h2>
+        <p><%= t(:'landing.process.text') %></p>
+      </div>
+      <p class="is-cta-link">
+        <%= t(:'calls-to-action.more') %>
+        <%= inline_svg 'icon-arrow-small', class: 'icon of-small-arrow' %>
+      </p>
+      <figure role="presentation">
+        <%= image_tag 'illustration-process-astronaut@2x.png', class: 'picture of-astronaut at-landing', alt: t(:'illustrations.astronaut') %>
+      </figure>
+    <% end %>
+  </article>
+
+  <hr>
+
+  <article class="page-landing is-block of-start">
+    <% link_to 'start-a-project.html', class: 'calls-to-action' do %>
+      <h2><%= t(:'landing.start-a-project.title') %></h2>
+      <p class="is-cta-link">
+        <%= t(:'calls-to-action.talk') %>
+        <%= inline_svg 'icon-arrow-small', class: 'icon of-small-arrow' %>
+      </p>
+    <% end %>
+  </article>
+
+  <hr>
+
+  <footer class="footer of-landing">
+    <figure role="presentation">
+      <%= inline_svg 'guava-symbol-extruded', class: 'logo of-guava is-extruded' %>
+    </figure>
+    <em><%= t(:'guava.tagline-alt') %></em>
+  </footer>
+</article>
+
+<hr>
+
+<%= partial 'footer', locals: { page: 'landing' } %>

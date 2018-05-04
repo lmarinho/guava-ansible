@@ -1,0 +1,215 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Pages / Services ................................. //
+
+.services-categories {
+  @include transition;
+  clear: both;
+  position: relative;
+  .grid-content { position: relative; }
+}
+
+.services-categories-wrapper {
+  @include clearfix;
+  border: 3px solid $guava;
+  padding: 20px 15px 20px 20px;
+  position: relative;
+  background-color: $white;
+  margin-top: $grid-section-margin;
+  margin-bottom: $grid-section-margin;
+  @media (min-width: $break-desk-sm-min) { padding: modular-scale(3) modular-scale(4) 100px; }
+  @media (min-width: $break-desk-md-min) { padding: modular-scale(3) modular-scale(6) 110px; }
+}
+
+.services-categories-type {
+  width: 100%;
+  .icon-team-augmentation,
+  .icon-studio { margin-bottom: 10px; }
+  .icon-team-augmentation { left: -6px; }
+  .type-header-subsection { line-height: ms-sans(2); }
+  .type-text { margin-bottom: 25px; }
+  .type-text-alt { margin-bottom: 20px; }
+  .type-header-subsection { margin-bottom: 2px; }
+  &.is-studio { margin-bottom: 50px; }
+  &.is-team { margin-top: 40px; }
+  @media (min-width: $break-desk-sm-min) {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    .type-text { height: 156px; }
+    &.is-studio {
+      text-align: right;
+      padding-right: 20px;
+      margin-bottom: 0;
+      .type-header-subsection:first-of-type { padding-left: 45px; }
+    }
+    &.is-team {
+      padding-left: 20px;
+      margin-top: 0;
+    }
+    .type-text-alt:last-of-type { margin-bottom: 0; }
+  }
+  @media (min-width: $break-desk-md-min) {
+    .type-text { height: 116px; }
+    .type-text-alt {
+      height: 70px;
+      &.is-small { height: 50px; }
+    }
+
+  }
+}
+.services-categories-billing {
+  @include clearfix;
+  margin: 25px 0 11px;
+  .icon-hour,
+  .icon-iteration { float: left; }
+  @media (min-width: $break-desk-sm-min) {
+    width: calc(50% - 2.0736rem - 20px);
+    position: absolute;
+    bottom: 21px;
+    .icon-iteration { float: right; }
+    &.is-studio { left: modular-scale(4); }
+  }
+  @media (min-width: $break-desk-md-min) { bottom: 30px; }
+}
+.services-billing-text {
+  color: $guava-dark;
+  margin-top: 6px;
+  &.is-iteration,
+  &.is-hour {
+    float: left;
+    margin-left: 5px;
+  }
+  .type-header-subsection {
+    display: block;
+    line-height: ms-sans(0);
+    margin-top: 0;
+  }
+  .type-text {
+    display: block;
+    height: auto;
+    line-height: modular-scale(0);
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: $medium;
+  }
+  @media (min-width: $break-desk-sm-min) {
+    &.is-iteration {
+      float: right;
+      margin-right: 5px;
+    }
+    &.is-hour {
+      float: left;
+      margin-left: 5px;
+    }
+  }
+}
+
+.services-categories-divider {
+  width: 140%;
+  height: 3px;
+  left: -20%;
+  position: relative;
+  display: block;
+  top: calc(50% - 23px);
+  background-color: $yellow;
+  opacity: 0.5;
+  margin-left: -1px;
+  @media (min-width: $break-desk-sm-min) {
+    width: 3px;
+    height: calc(100% + 60px);
+    left: 50%;
+    top: -30px;
+    position: absolute;
+  }
+}
+
+.services-master-front {
+  .services-master-content {
+    text-align: right;
+    float: right;
+  }
+}
+
+.services-master-subsection {
+  @include clearfix;
+  position: relative;
+  clear: both;
+  .type-text { margin-bottom: 50px; }
+}
+.services-master-design {
+  .type-text:last-of-type { margin-bottom: 20px; }
+  @media (min-width: $break-desk-sm-min) {
+    .type-text:last-of-type { margin-bottom: 50px; }
+  }
+}
+
+.services-master-content {
+  width: 100%;
+  padding-top: 165px;
+  @media (min-width: $break-desk-sm-min) {
+    width: 64%;
+    float: left;
+    padding-top: 0;
+  }
+}
+
+.services-master-back {
+  background-color: transparentize($gray-lighter, 0.4);
+  padding: 60px 0 120px;
+  .type-text:last-child { margin-bottom: 0; }
+}
+
+.services-tech {
+  @include texture(guava);
+  background-color: $guava-light;
+  padding: 70px 0;
+  color: $white;
+}
+
+.services-tech-subsection {
+  position: relative;
+  &:before {
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: $green;
+  }
+  .type-header-subsection {
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    padding-right: 15px;
+    background-color: $guava-light;
+  }
+  .tech-list {
+    margin-top: 20px;
+    &.is-skilled { margin-bottom: 5px; }
+  }
+  .tech-list-item {
+    text-align: center;
+    width: 50%;
+    float: left;
+    margin-bottom: 40px;
+    display: inline-block;
+    .logo {
+      width: 80%;
+      height: auto;
+      .logo-fill { fill: $gray-lightest; }
+    }
+    @media (min-width: $break-mobi-min-alt) {  width: 33%; }
+    @media (min-width: $break-desk-sm-min)  {  width: 25%; }
+    @media (min-width: $break-desk-md-min)  {  width: 20%; }
+  }
+  .text-sans {
+    font-size: ms-sans(0);
+    line-height: ms-sans(0);
+    font-weight: $medium;
+    color: transparentize($gray-darkest, 0.5);
+  }
+}

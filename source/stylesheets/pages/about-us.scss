@@ -1,0 +1,228 @@
+///////////////////////////////////////////////////////////
+// About us                                       (Page) //
+///////////////////////////////////////////////////////////
+
+.page-about {
+  padding: 4rem 0;
+  @media (min-width: $sm) { padding-top: 4.75rem; }
+  @media (min-width: $md) { padding-top: 6.75rem; }
+  &.is-team {
+    padding-bottom: 22rem;
+    h2 {
+      margin-top: 0;
+      text-align: center;
+      &::after {
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media (min-width: $sm) {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        margin: 15rem 0 0;
+        span {
+          display: inline-block;
+          width: 180px;
+        }
+      }
+      @media (min-width: $md) { margin-left: -1rem; }
+    }
+    h4 {
+      margin: .5rem 0 0;
+      span { @media (max-width: ($md - 1px)) { display: none; } }
+    }
+    ul {
+      @include clearfix;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: $sm) { height: 47rem; }
+    }
+    li {
+      width: 140px;
+      margin-bottom: 1rem;
+      text-align: center;
+      @media (min-width: $sm) {
+        position: absolute;
+        top: calc(50% - 130px);
+        left: calc(50% - 130px);
+        width: 230px;
+      }
+      @media (min-width: $sm) {
+        &.is-guilherme { transform: translate(-83%, -139%); }
+        &.is-lailson { transform: translate(10%, -180%); }
+        &.is-lucas { transform: translate(90%, -145%); }
+        &.is-chico { transform: translate(-96%, 184%); }
+        &.is-daniel { transform: translate(113%, 96%); }
+        &.is-filipe { transform: translate(-48%, 10%); }
+        &.is-juliana { transform: translate(-111%, -34%); }
+        &.is-leo { transform: translate(99%, 219%); }
+        &.is-renatinha { transform: translate(101%, -24%); }
+        &.is-ronney { transform: translate(-115%, 109%); }
+        &.is-sergio { transform: translate(-37%, 149%); }
+        &.is-tiago { transform: translate(38%, 61%); }
+        &.is-new-position { transform: translate(141%, 420%); }
+      }
+      @media (min-width: $md) {
+        &.is-lucas { transform: translate(90%, -145%); }
+        &.is-chico { transform: translate(163%, -62%); }
+        &.is-leo { transform: translate(-104%, 221%); }
+        &.is-renatinha { transform: translate(83%, -24%); }
+        &.is-ronney { transform: translate(-146%, 109%); }
+        &.is-tiago { transform: translate(31%, 61%); }
+        &.is-new-position { transform: translate(160%, 390%); }
+      }
+    }
+    .is-new-position {
+      z-index: 2;
+      width: 100px;
+      a {
+        @include font-size(subtitle-alt, 1.4, 1.5, .05rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        padding: 20px 2px;
+        font-weight: $bold;
+        text-align: center;
+        text-transform: uppercase;
+        border: 4px solid $brand-primary;
+        border-radius: 50%;
+        span { display: block; }
+        &:hover { border-color: $text-link-hover; }
+      }
+    }
+  }
+
+  &.is-history {
+    position: relative;
+    padding: 6rem 0 26rem;
+    margin-top: -21rem;
+    @media (min-width: $sm) { padding: 8rem 0 22rem; }
+    h2 { margin-top: 0; }
+    figure {
+      position: absolute;
+      bottom: -15rem;
+      left: calc(50% - 5rem);
+      z-index: 1;
+      width: 10rem;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      @media (min-width: $sm) {
+        top: 0;
+        right: -10rem;
+        bottom: auto;
+        left: auto;
+        z-index: auto;
+        width: 22rem;
+      }
+      @media (min-width: $md) { right: 2rem; }
+      @media (min-width: $lg) {
+        top: -2rem;
+        width: 25rem;
+      }
+    }
+    .divisor {
+      z-index: 0;
+      margin-top: 0;
+      background-color: $green-light;
+      background-image: image-url("texture-background-green@2x.png");
+      background-size: 150px auto;
+    }
+  }
+
+  &.is-giving-back {
+    position: relative;
+    padding: 11rem 0 0;
+    margin-top: -18rem;
+    @media (min-width: $sm) { padding-top: 9rem; }
+    @media (min-width: $md) { padding-top: 8rem; }
+    h2 { margin-top: 0; }
+    a {
+      display: inline-block;
+      margin: 0;
+      font-size: inherit;
+    }
+    figure {
+      position: relative;
+      left: -$gutter;
+      width: 100vw;
+      height: 21rem;
+      margin-top: 2rem;
+      overflow: hidden;
+      @media (min-width: $sm) {
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+      }
+      @media (min-width: $md) {
+        @include make-col-ready;
+        @include make-col(12);
+        @include make-col-offset(4);
+      }
+      img {
+        position: relative;
+        left: -27.5rem;
+        @media (min-width: $sm) { left: -17.5rem; }
+        @media (min-width: $md) { left: -20rem; }
+        @media (min-width: $lg) { left: -12.5rem; }
+      }
+      figcaption {
+        @include font-size(subtitle-alt);
+        margin-top: .5rem;
+        color: $gray-darker;
+        text-align: center;
+        @media (min-width: $sm) and (max-width: ($md - 1px)) {
+          @include make-col-ready;
+          @include make-col-offset(2);
+          text-align: left;
+        }
+        @media (min-width: $md) {
+          @include make-col-offset(0);
+          text-align: left;
+        }
+      }
+    }
+    blockquote {
+      &::before { border-color: $brand-primary; }
+      width: calc(100% - 2rem);
+      margin-left: 1rem;
+      color: $brand-primary;
+      @media (min-width: $sm) {
+        position: relative;
+        top: 0;
+        left: 1.5rem;
+        float: right;
+        width: 50%;
+        padding-bottom: 0;
+        margin: 3.5rem -3rem 1rem 1.5rem;
+        clear: both;
+        &::before {
+          top: -2rem;
+          height: calc(100% + 5rem);
+        }
+      }
+      @media (min-width: $md) {
+        width: 75%;
+        margin-right: -12rem;
+        &::before {
+          top: -2.5rem;
+          height: calc(100% + 6rem);
+        }
+      }
+    }
+    .helper { height: 5rem; }
+    .divisor {
+      z-index: 0;
+      margin-top: 0;
+      background-color: $white;
+    }
+  }
+}

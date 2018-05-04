@@ -1,0 +1,198 @@
+///////////////////////////////////////////////////////////
+// Menus                                        (Module) //
+///////////////////////////////////////////////////////////
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: $menu-width;
+  height: 100%;
+  padding-top: 2rem;
+  padding-left: 1.5rem;
+  pointer-events: auto;
+  background-color: $white;
+  transition: transform .3s ease;
+  transform: translateX($menu-width);
+  ol { display: none; }
+
+  @media (min-width: $md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: auto;
+    padding-left: 2rem;
+    background-color: transparent;
+    transition: none;
+  }
+
+  [class*="-sublinks"] { margin-bottom: .5rem; }
+
+  &.on-dark-background {
+    .logo > svg { fill: $guava; }
+    .is-subtitle { color: $gray-light; }
+    .is-menu-link {
+      color: $white;
+      border-bottom-color: $guava;
+    }
+    .is-menu-sublink {
+      color: $white;
+      &::before { color: $gray-dark; }
+    }
+  }
+
+  &.on-white-background {
+    .logo > svg { fill: $guava; }
+    .is-subtitle { color: $guava; }
+    .is-menu-link {
+      color: $guava;
+      border-bottom-color: $guava;
+    }
+    .is-menu-sublink {
+      color: $guava;
+      &::before { color: $gray-dark; }
+    }
+  }
+
+  &.on-guava-background {
+    .logo > svg { fill: $white; }
+    .is-subtitle { color: $white; }
+    .is-menu-link {
+      color: $white;
+      border-bottom-color: $green-dark;
+    }
+    .is-menu-sublink {
+      color: $white;
+      &::before { color: $gray-light; }
+    }
+  }
+
+  &.on-green-background {
+    .logo > svg { fill: $guava; }
+    .is-subtitle {
+      color: $gray-darker;
+      opacity: .5;
+    }
+    .is-menu-link {
+      color: $guava;
+      border-bottom-color: $guava;
+    }
+    .is-menu-sublink {
+      color: $guava;
+      &::before { color: $guava; }
+    }
+  }
+
+  &[class*="-landing"] {
+    @media (min-width: $md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      display: block;
+      width: auto;
+      max-width: $grid-body-max-width;
+      padding-top: 2rem;
+      margin: 0 auto;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      background-color: transparent;
+      transform: translateX(0);
+      .logo {
+        width: 240px;
+        > svg { fill: $white; }
+      }
+      .is-menu-link {
+        font-size: .7rem;
+        text-transform: uppercase;
+      }
+      .is-subtitle { display: none; }
+      a:not(.is-menu-header) { color: $white; }
+      nav {
+        display: flex;
+        > ul {
+          display: flex;
+          flex-grow: 1;
+          align-items: flex-start;
+          justify-content: flex-end;
+        }
+      }
+      ul > li {
+        display: flex;
+        align-items: top;
+        margin: .25rem 1.35rem;
+        text-align: center;
+        &:last-child { padding-right: 5rem; }
+        &.is-language-link > a { color: $green-light; }
+      }
+
+      &::after {
+        position: absolute;
+        top: 86px;
+        left: 290px;
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $green-lighter;
+        content: "";
+      }
+    }
+  }
+
+  &[class*="services"] {
+    .is-services-sublinks {
+      > .is-menu-link { border-bottom-width: 2px; }
+      ol { display: block; }
+    }
+    &.on-white-background {
+      .is-menu-link { border-bottom-color: $green-dark; }
+    }
+  }
+  &[class*="about-us"] {
+    .is-about-us-sublinks {
+      > .is-menu-link { border-bottom-width: 2px; }
+      ol { display: block; }
+    }
+    &.on-guava-background {
+      .is-menu-link { border-bottom-color: $guava; }
+    }
+    &.on-white-background {
+      .is-subtitle { color: $gray-dark; }
+      .is-menu-link { border-bottom-color: $gray-darker; }
+    }
+  }
+  &[class*="work"] {
+    .is-work-sublinks {
+      > .is-menu-link { border-bottom-width: 2px; }
+      ol { display: block; }
+    }
+
+    &.on-white-background {
+      .is-subtitle { color: $gray-dark; }
+      .is-menu-link { border-bottom-color: $green-dark; }
+    }
+  }
+  &[class*="process"] {
+    .is-process-sublinks {
+      > .is-menu-link { border-bottom-width: 2px; }
+      ol { display: block; }
+    }
+    &.on-white-background {
+      .is-subtitle { color: $gray-dark; }
+      .is-menu-link {
+        color: $guava;
+        border-bottom-color: $yellow;
+      }
+      .is-menu-sublink {
+        color: $guava;
+        &::before { color: $gray-dark; }
+      }
+    }
+  }
+}
+
+.is-menu-header { display: inline-block; }

@@ -1,0 +1,30 @@
+///////////////////////////////////////////////////////////
+// Start a project                                (Page) //
+///////////////////////////////////////////////////////////
+
+[class*="start-a-project"] {
+  .page-start {
+    h1 { padding-top: 8rem; }
+    &.has-border { border: solid .5rem $black; }
+  }
+  .is-footnote {
+    display: block;
+    &.at-content {
+      padding-bottom: 5.5rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  select:active { font-size: 15px; }
+  form {
+    > .picture {
+      position: absolute;
+      top: -1.8rem;
+      display: none;
+      z-index: 0;
+      &.is-studio { left: -1.5rem; }
+      &.is-team { right: -1.5rem; }
+      @media (min-width: $sm) { display: block; }
+    }
+  }
+}

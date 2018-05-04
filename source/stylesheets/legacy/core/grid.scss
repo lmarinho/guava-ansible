@@ -1,0 +1,95 @@
+///////////////////////////////////////////////////////////
+// 🍎 Guava                                (c) 2010–2016 //
+///////////////////////////////////////////////////////////
+
+// 📦 Core / Grid ...................................... //
+
+$grid-columns: 16;
+$grid-gutter-width: modular-scale(2);
+$grid-section-margin: modular-scale(11);
+
+$break-mobi-min:     320px;
+$break-mobi-min-alt: 375px;
+$break-mobi-md-min:  480px;
+$break-mobi-max-alt: 550px;
+$break-mobi-max:     767px;
+$break-desk-sm-min:  768px;
+$break-desk-sm-max:  991px;
+$break-desk-md-min:  992px;
+$break-desk-md-med:  1000px;
+$break-desk-md-max:  1199px;
+$break-desk-lg-min:  1200px;
+$break-desk-lg-med:  1281px;
+
+html,
+body {
+  min-height: 100%;
+  min-width: $break-mobi-min;
+  width: auto;
+  position: relative;
+  background-color: $gray-lighter;
+}
+
+.grid-body-wrapper {
+  overflow: hidden;
+  background-color: $gray-lighter;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.grid-main {
+  overflow: hidden;
+  background-color: $white;
+}
+
+.grid-footer-about {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  @media (min-width: $break-desk-sm-min) {
+    width: 34%;
+    padding-right: 30px;
+    float: left;
+  }
+  @media (min-width: $break-desk-md-min) {
+    width: 25%;
+    padding-right: 50px;
+  }
+  @media (min-width: $break-desk-sm-min) { margin-bottom: 0; }
+}
+
+.grid-footer-content {
+  width: 100%;
+  float: left;
+  @media (min-width: $break-desk-sm-min) { width: 66%; }
+  @media (min-width: $break-desk-md-min) { width: 75%; }
+}
+
+.grid-menu {
+  position: absolute;
+  z-index: 1;
+}
+
+.grid-content {
+  @include clearfix;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  @media (min-width: $break-mobi-md-min) {
+    padding-right: 0;
+    width: 80%;
+    &.is-big { width: 80%; }
+  }
+  @media (min-width: $break-desk-sm-min) {
+    padding-left: 20%;
+    &.is-big { width: 90%; }
+  }
+  @media (min-width: $break-desk-md-min) {
+    padding-left: 70px;
+    width: 670px;
+    &.is-big { width: 820px; }
+  }
+}
