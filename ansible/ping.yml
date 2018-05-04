@@ -2,5 +2,7 @@
 - hosts: webservers
   gather_facts: no
   remote_user: root
+  vars_files:
+    - variables/python.yml
   roles:
     - health-checker
